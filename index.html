@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amir Dehestani - Software Developer | Backend Developer (Python) | Automation Specialist">
+    <meta name="keywords" content="Backend Developer, Python, FastAPI, Flask, AI Developer, n8n Automation, PostgreSQL">
+    <meta name="author" content="Amir Dehestani">
+    <title>Amir Dehestani - Backend Developer & AI Specialist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="particles-background" id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">&lt;Amir /&gt;</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-greeting fade-in">Hi, I'm</h1>
+                <h2 class="hero-name gradient-text fade-in-delay-1">Amir Dehestani</h2>
+                <div class="typewriter-container">
+                    <span class="typewriter-text" id="typewriter"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-tagline fade-in-delay-2">
+                    Building scalable backend solutions and AI-driven systems
+                </p>
+                <div class="hero-buttons fade-in-delay-3">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Me
+                    </a>
+                    <a href="assets/resume.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <div class="social-links fade-in-delay-4">
+                    <a href="https://linkedin.com/in/amir-dehestani" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/amirdehestani" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:amirmo800@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-terminal">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-button red"></span>
+                        <span class="terminal-button yellow"></span>
+                        <span class="terminal-button green"></span>
+                        <span class="terminal-title">amir@portfolio:~$</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="prompt">$</span> cat about.txt</p>
+                        <p class="terminal-output">Location: Germany 🇩🇪</p>
+                        <p class="terminal-output">Role: Backend Developer</p>
+                        <p class="terminal-output">Specialization: Python | AI | Automation</p>
+                        <p><span class="prompt">$</span> ls skills/</p>
+                        <p class="terminal-output">Python Flask FastAPI PostgreSQL Docker n8n AI/ML</p>
+                        <p><span class="prompt">$</span> <span class="terminal-cursor">_</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">01.</span> About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-wrapper">
+                        <img src="assets/profile.jpg" alt="Amir Dehestani">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Back-End Developer | AI Developer | Automation Specialist</h3>
+                    <p>
+                        I am a versatile back-end and AI developer with a strong foundation in 
+                        <strong>Python, Flask, FastAPI, and SQL</strong>, having completed Masterschool's 
+                        Software Engineering program. My background includes WordPress development and 
+                        automation with n8n, giving me a comprehensive understanding of how front-end, 
+                        back-end, and workflow automation come together to create seamless, scalable solutions.
+                    </p>
+                    
+                    <h4>What I Do:</h4>
+                    <ul class="about-list">
+                        <li>
+                            <i class="fas fa-chevron-right"></i>
+                            Develop and optimize RESTful APIs and backend services using Flask and FastAPI
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-right"></i>
+                            Design and manage high-performance databases (PostgreSQL, SQLite)
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-right"></i>
+                            Implement JWT authentication and follow security best practices
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-right"></i>
+                            Build, customize, and automate workflows with n8n to improve efficiency
+                        </li>
+                        <li>
+                            <i class="fas fa-chevron-right"></i>
+                            Develop AI-powered solutions and integrate ML models into applications
+                        </li>
+                    </ul>
+
+                    <p>
+                        I'm passionate about creating backend and AI-driven systems that boost user experience, 
+                        security, and operational efficiency. Always eager to learn, collaborate, and take on 
+                        new challenges in software development and automation.
+                    </p>
+
+                    <div class="language-badges">
+                        <span class="badge">🇬🇧 English</span>
+                        <span class="badge">🇩🇪 German</span>
+                        <span class="badge">🇮🇷 Persian</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">02.</span> Tech Stack & Skills
+            </h2>
+            
+            <div class="skills-grid">
+                <!-- Backend Development -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bolt"></i>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Flask</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>JWT Auth</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQLite</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-table"></i>
+                            <span>SQLAlchemy</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Automation & Workflow -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-robot"></i> Automation & Workflow</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>n8n</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>Workflow Automation</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>Process Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Integration</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>ML Models</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & Tools -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>CLI Tools</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend & CMS -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                    <h3><i class="fas fa-window-maximize"></i> Frontend & CMS</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-wordpress"></i>
+                            <span>WordPress</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">03.</span> Work Experience
+            </h2>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">April 2021 - December 2023</div>
+                    <div class="timeline-content">
+                        <h3>Web Developer</h3>
+                        <h4>Nature's Gold Kohrang</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mashhad, Razavi Khorasan, Iran</p>
+                        <ul>
+                            <li>Designed and managed custom WordPress websites tailored to client specifications, improving user engagement and overall site performance</li>
+                            <li>Boosted SEO efforts, resulting in a <strong>20% increase in organic traffic</strong> and significant improvements in Google rankings</li>
+                            <li>Optimized website performance, reducing load time by <strong>30%</strong> through image compression, caching, and code minification</li>
+                            <li>Maintained websites, resolving technical issues promptly and ensuring <strong>99% uptime</strong></li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">Performance Optimization</span>
+                            <span class="tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">May 2021 - April 2022</div>
+                    <div class="timeline-content">
+                        <h3>Freelance Video Editor</h3>
+                        <h4>Self-Employed</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mashhad, Razavi Khorasan, Iran</p>
+                        <ul>
+                            <li>Edited high-quality videos for a YouTube channel, enhancing storytelling through precise cuts, color grading, and sound design</li>
+                            <li>Utilized Adobe Premiere Pro and After Effects to create engaging visuals, motion graphics, and seamless transitions</li>
+                            <li>Optimized videos for YouTube, ensuring proper resolution, aspect ratios, and compression settings</li>
+                            <li>Implemented creative effects, animations, and dynamic text overlays to improve audience engagement</li>
+                            <li>Collaborated with content creators to align video edits with brand identity and audience expectations</li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">Adobe Premiere Pro</span>
+                            <span class="tag">After Effects</span>
+                            <span class="tag">Video Editing</span>
+                            <span class="tag">YouTube Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">February 2020 - March 2021</div>
+                    <div class="timeline-content">
+                        <h3>Web Developer</h3>
+                        <h4>Agroloader</h4>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mashhad, Razavi Khorasan, Iran</p>
+                        <ul>
+                            <li>Built responsive WordPress websites with custom functionality, improving mobile user experience and accessibility</li>
+                            <li>Led SEO campaigns, increasing organic traffic by <strong>35%</strong> through targeted keyword research and content optimization strategies</li>
+                            <li>Improved website performance, achieving a <strong>15% reduction in page load times</strong></li>
+                        </ul>
+                        <div class="tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">SEO</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">04.</span> Featured Projects
+            </h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="assets/project-1.svg" alt="AI-Powered API System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered API System</h3>
+                        <p>
+                            A comprehensive RESTful API built with FastAPI integrating machine learning models 
+                            for intelligent data processing. Features JWT authentication, PostgreSQL database, 
+                            and Docker containerization for seamless deployment.
+                        </p>
+                        <div class="project-tags">
+                            <span>FastAPI</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                            <span>AI/ML</span>
+                            <span>JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="assets/project-2.svg" alt="n8n Automation Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Business Workflow Automation</h3>
+                        <p>
+                            Custom n8n workflows automating business processes including data synchronization, 
+                            email notifications, and CRM integration. Reduced manual tasks by 60% and improved 
+                            operational efficiency across departments.
+                        </p>
+                        <div class="project-tags">
+                            <span>n8n</span>
+                            <span>Automation</span>
+                            <span>API Integration</span>
+                            <span>Webhooks</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="assets/project-3.svg" alt="Flask Backend System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Backend Platform</h3>
+                        <p>
+                            Scalable e-commerce backend built with Flask and SQLAlchemy. Features include user 
+                            authentication, order management, payment processing integration, and real-time 
+                            inventory tracking with comprehensive API documentation.
+                        </p>
+                        <div class="project-tags">
+                            <span>Flask</span>
+                            <span>SQLAlchemy</span>
+                            <span>REST API</span>
+                            <span>JWT</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="assets/project-4.svg" alt="Data Analytics Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>
+                            Python-based analytics platform processing large datasets with machine learning 
+                            insights. Features real-time data visualization, predictive analytics, and 
+                            automated reporting with export capabilities.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Machine Learning</span>
+                            <span>Data Analysis</span>
+                            <span>FastAPI</span>
+                            <span>Charts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="assets/project-5.svg" alt="Microservices Architecture">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Microservices Architecture</h3>
+                        <p>
+                            Distributed microservices system using Docker and Docker Compose. Implements 
+                            service discovery, API gateway, message queues, and centralized logging for 
+                            a scalable, maintainable architecture.
+                        </p>
+                        <div class="project-tags">
+                            <span>Docker</span>
+                            <span>Microservices</span>
+                            <span>FastAPI</span>
+                            <span>PostgreSQL</span>
+                            <span>Redis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="assets/project-6.svg" alt="AI Chatbot Integration">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" target="_blank" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chatbot Integration</h3>
+                        <p>
+                            Intelligent chatbot system using natural language processing and machine learning. 
+                            Features context-aware responses, multi-language support, and seamless integration 
+                            with existing business systems via REST API.
+                        </p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>AI/ML</span>
+                            <span>FastAPI</span>
+                            <span>WebSocket</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">05.</span> Certifications
+            </h2>
+            
+            <div class="certifications-grid">
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Software Engineering</h3>
+                    <p class="cert-issuer">Masterschool</p>
+                    <p class="cert-focus">Back-end Development</p>
+                    <div class="cert-badge">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Machine Learning with Python</h3>
+                    <p class="cert-issuer">Professional Certificate</p>
+                    <p class="cert-focus">Foundations</p>
+                    <div class="cert-badge">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <h3>Docker Foundations</h3>
+                    <p class="cert-issuer">Professional Certificate</p>
+                    <p class="cert-focus">Container Technology</p>
+                    <div class="cert-badge">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Webflow Layouts</h3>
+                    <p class="cert-issuer">Professional Certificate</p>
+                    <p class="cert-focus">Web Design</p>
+                    <div class="cert-badge">
+                        <i class="fas fa-check-circle"></i> Verified
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">06.</span> Education
+            </h2>
+            
+            <div class="education-grid">
+                <div class="education-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Computer Software Engineering</h3>
+                        <h4>Masterschool</h4>
+                        <p class="education-date"><i class="far fa-calendar-alt"></i> September 2024 - May 2025</p>
+                        <p class="education-description">
+                            Comprehensive software engineering program focused on backend development, 
+                            API design, database management, and modern development practices.
+                        </p>
+                        <div class="education-tags">
+                            <span>Python</span>
+                            <span>Backend Development</span>
+                            <span>APIs</span>
+                            <span>Databases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Bachelor's Degree in Avionics Engineering</h3>
+                        <h4>Civil Aviation Technology College</h4>
+                        <p class="education-date"><i class="far fa-calendar-alt"></i> Graduated 2016</p>
+                        <p class="education-description">
+                            Specialized in aviation electronics, systems integration, and technical problem-solving. 
+                            Developed strong analytical and engineering fundamentals.
+                        </p>
+                        <div class="education-tags">
+                            <span>Engineering</span>
+                            <span>Systems</span>
+                            <span>Technical Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">07.</span> Get In Touch
+            </h2>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Connect and Build the Future Together!</h3>
+                    <p>
+                        I'm always interested in hearing about new projects, opportunities, and collaborations. 
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:amirmo800@gmail.com">amirmo800@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Germany 🇩🇪</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/amir-dehestani" target="_blank">linkedin.com/in/amir-dehestani</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://linkedin.com/in/amir-dehestani" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/amirdehestani" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:amirmo800@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Amir Dehestani. All rights reserved.</p>
+                <p>Designed & Built with <i class="fas fa-heart"></i> by Amir Dehestani</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

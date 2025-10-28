@@ -1,0 +1,37 @@
+<!-- Project 4: Data Analytics Dashboard -->
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d0d0d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg4)"/>
+  
+  <!-- Dashboard mockup -->
+  <rect x="80" y="80" width="640" height="300" rx="10" fill="#000000" opacity="0.8" stroke="#ff6b00" stroke-width="2"/>
+  
+  <!-- Chart 1 - Bar chart -->
+  <rect x="110" y="250" width="30" height="80" fill="#ff6b00" opacity="0.6"/>
+  <rect x="150" y="220" width="30" height="110" fill="#ff6b00" opacity="0.7"/>
+  <rect x="190" y="200" width="30" height="130" fill="#ff6b00" opacity="0.8"/>
+  <rect x="230" y="240" width="30" height="90" fill="#ff6b00" opacity="0.6"/>
+  
+  <!-- Chart 2 - Line chart -->
+  <polyline points="320,280 360,240 400,250 440,200 480,220" 
+            fill="none" stroke="#ff8c00" stroke-width="3" opacity="0.7"/>
+  <circle cx="320" cy="280" r="5" fill="#ff8c00"/>
+  <circle cx="360" cy="240" r="5" fill="#ff8c00"/>
+  <circle cx="400" cy="250" r="5" fill="#ff8c00"/>
+  <circle cx="440" cy="200" r="5" fill="#ff8c00"/>
+  <circle cx="480" cy="220" r="5" fill="#ff8c00"/>
+  
+  <!-- Stats boxes -->
+  <rect x="530" y="120" width="160" height="50" rx="5" fill="#2a2a2a" stroke="#ff6b00" stroke-width="1"/>
+  <text x="610" y="145" font-family="Arial, sans-serif" font-size="16" fill="#ff6b00" text-anchor="middle">Analytics</text>
+  
+  <rect x="530" y="190" width="160" height="50" rx="5" fill="#2a2a2a" stroke="#ff6b00" stroke-width="1"/>
+  <text x="610" y="215" font-family="Arial, sans-serif" font-size="16" fill="#ff6b00" text-anchor="middle">ML Insights</text>
+  
+  <text x="400" y="390" font-family="Arial, sans-serif" font-size="20" fill="#ff6b00" text-anchor="middle">Data Analytics Platform</text>
+</svg>

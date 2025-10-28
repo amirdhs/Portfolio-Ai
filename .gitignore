@@ -1,0 +1,70 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies (if using npm/yarn)
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build directories (if using build tools)
+dist/
+build/
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# System files
+.directory
+
+# Optional: Uncomment if you want to ignore your actual resume
+# assets/resume.pdf
+
+# Optional: Uncomment if you want to ignore actual profile photos
+# assets/profile-photo.*
+
+# Optional: Keep placeholder images but ignore real project images
+# assets/project-*.jpg
+# assets/project-*.png
+# !assets/project-*.svg

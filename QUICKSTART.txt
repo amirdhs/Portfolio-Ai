@@ -1,0 +1,187 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║    🚀 AMIR DEHESTANI - PORTFOLIO WEBSITE QUICK START 🚀      ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+📁 PROJECT STRUCTURE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Portfolio-Ai/
+├── index.html                  ✓ Main website file
+├── README.md                   ✓ Documentation
+├── QUICKSTART.txt             ✓ This file
+├── css/
+│   └── style.css              ✓ All styling
+├── js/
+│   └── script.js              ✓ All interactivity
+└── assets/
+    ├── profile-placeholder.svg ✓ Profile image
+    ├── project-1.svg          ✓ AI API project
+    ├── project-2.svg          ✓ n8n automation
+    ├── project-3.svg          ✓ Flask backend
+    ├── project-4.svg          ✓ Data analytics
+    ├── project-5.svg          ✓ Microservices
+    ├── project-6.svg          ✓ AI chatbot
+    └── resume.txt             ✓ Resume placeholder
+
+
+🚀 HOW TO RUN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OPTION 1 - SIMPLE (Double-click):
+   ✓ Open index.html directly in your browser
+   ✓ Some features may not work (like particles background)
+
+OPTION 2 - LOCAL SERVER (Recommended):
+
+   Using Python (if installed):
+   ─────────────────────────────
+   Open PowerShell in this folder and run:
+   
+   python -m http.server 8000
+   
+   Then open: http://localhost:8000
+
+   Using Node.js (if installed):
+   ─────────────────────────────
+   npm install -g http-server
+   http-server -p 8000
+   
+   Then open: http://localhost:8000
+
+   Using VS Code:
+   ─────────────────────────────
+   Install "Live Server" extension
+   Right-click index.html
+   Select "Open with Live Server"
+
+
+✅ CHECKLIST BEFORE GOING LIVE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+[ ] Replace profile-placeholder.svg with your photo
+[ ] Replace project SVGs with real screenshots
+[ ] Add your actual resume PDF (replace resume.txt)
+[ ] Update GitHub username in social links
+[ ] Test all navigation links
+[ ] Test contact form
+[ ] Check responsive design on mobile
+[ ] Update meta tags for SEO
+[ ] Test on multiple browsers
+
+
+🎨 CUSTOMIZATION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. CHANGE COLORS:
+   Open: css/style.css
+   Find: :root { ... }
+   Edit color variables
+
+2. UPDATE CONTENT:
+   Open: index.html
+   Search for section you want to edit
+   Update text directly
+
+3. ADD/REMOVE PROJECTS:
+   Open: index.html
+   Find: <!-- Projects Section -->
+   Copy/paste project-card div
+
+4. MODIFY ANIMATIONS:
+   Open: js/script.js
+   Find function you want to change
+   Adjust timing/effects
+
+
+🌐 DEPLOYMENT OPTIONS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. GITHUB PAGES (Free & Easy):
+   • Create GitHub repository
+   • Upload files
+   • Enable Pages in Settings
+   • URL: username.github.io/repo-name
+
+2. NETLIFY (Free):
+   • Sign up at netlify.com
+   • Drag & drop folder
+   • Get instant URL
+   • Custom domain available
+
+3. VERCEL (Free):
+   • Sign up at vercel.com
+   • Import from GitHub
+   • Auto-deploy on push
+   • Custom domain available
+
+
+📧 CONTACT FORM SETUP:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Current Status: Simulated (shows success message)
+
+To make it work:
+1. Sign up at formspree.io (free)
+2. Get your form endpoint
+3. Open js/script.js
+4. Find "// const response = await fetch"
+5. Uncomment and add your endpoint
+6. Replace YOUR_FORM_ID with actual ID
+
+
+🐛 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problem: Particles background not showing
+Solution: Use a local server, not direct file opening
+
+Problem: Form not submitting
+Solution: Configure form endpoint in js/script.js
+
+Problem: Images not loading
+Solution: Check file paths and extensions
+
+Problem: Navigation not working
+Solution: Ensure JavaScript is enabled
+
+Problem: Mobile menu not opening
+Solution: Clear browser cache
+
+
+📱 BROWSER TESTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Test on:
+✓ Chrome (latest)
+✓ Firefox (latest)
+✓ Safari (latest)
+✓ Edge (latest)
+✓ Mobile browsers
+
+
+📞 SUPPORT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Email: amirmo800@gmail.com
+LinkedIn: linkedin.com/in/amir-dehestani
+
+
+🎉 YOU'RE ALL SET!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your professional portfolio is ready to launch!
+
+Next steps:
+1. Run local server
+2. Test all features
+3. Customize content
+4. Deploy online
+5. Share with the world!
+
+Good luck! 🚀
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Built with ❤️ by Amir Dehestani | October 2025
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

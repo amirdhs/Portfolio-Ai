@@ -1,0 +1,33 @@
+<!-- Project 2: n8n Automation Platform -->
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg2)"/>
+  
+  <!-- Workflow nodes -->
+  <circle cx="200" cy="225" r="40" fill="#ff6b00" opacity="0.3" stroke="#ff6b00" stroke-width="2"/>
+  <text x="200" y="235" font-family="Arial, sans-serif" font-size="16" fill="#ff6b00" text-anchor="middle">Start</text>
+  
+  <circle cx="400" cy="150" r="40" fill="#ff6b00" opacity="0.3" stroke="#ff6b00" stroke-width="2"/>
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="14" fill="#ff6b00" text-anchor="middle">Process</text>
+  
+  <circle cx="400" cy="300" r="40" fill="#ff6b00" opacity="0.3" stroke="#ff6b00" stroke-width="2"/>
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="14" fill="#ff6b00" text-anchor="middle">Check</text>
+  
+  <circle cx="600" cy="225" r="40" fill="#ff6b00" opacity="0.3" stroke="#ff6b00" stroke-width="2"/>
+  <text x="600" y="235" font-family="Arial, sans-serif" font-size="16" fill="#ff6b00" text-anchor="middle">End</text>
+  
+  <!-- Connecting lines -->
+  <line x1="240" y1="225" x2="360" y2="175" stroke="#ff6b00" stroke-width="2" opacity="0.6"/>
+  <line x1="240" y1="225" x2="360" y2="275" stroke="#ff6b00" stroke-width="2" opacity="0.6"/>
+  <line x1="440" y1="150" x2="560" y2="200" stroke="#ff6b00" stroke-width="2" opacity="0.6"/>
+  <line x1="440" y1="300" x2="560" y2="250" stroke="#ff6b00" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Automation icon -->
+  <path d="M 100 100 L 120 80 L 140 100 L 120 120 Z" fill="none" stroke="#ff8c00" stroke-width="2" opacity="0.5"/>
+  <circle cx="120" cy="100" r="5" fill="#ff8c00" opacity="0.7"/>
+</svg>
