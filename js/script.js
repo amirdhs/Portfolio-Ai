@@ -311,10 +311,8 @@ if (contactForm) {
     });
     
     // Form submission
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        // Validate all fields
+    contactForm.addEventListener('submit', (e) => {
+        // Validate all fields before submitting
         let isFormValid = true;
         formInputs.forEach(input => {
             // Skip hidden fields in validation
@@ -326,58 +324,16 @@ if (contactForm) {
         });
         
         if (!isFormValid) {
+            e.preventDefault();
             return;
         }
         
-        // Disable submit button
+        // If validation passes, disable submit button and let form submit naturally
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        try {
-            // Submit form using FormSubmit service
-            const formData = new FormData(contactForm);
-            
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-            
-            if (response.ok) {
-                // Show success message
-                formStatus.textContent = 'Thank you! Your message has been sent successfully. I\'ll get back to you soon!';
-                formStatus.className = 'form-status success';
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    formStatus.className = 'form-status';
-                    formStatus.textContent = '';
-                }, 5000);
-            } else {
-                throw new Error('Form submission failed');
-            }
-            
-        } catch (error) {
-            // Show error message
-            formStatus.textContent = 'Oops! Something went wrong. Please try again or contact me directly at info@amirdhs.com';
-            formStatus.className = 'form-status error';
-            
-            setTimeout(() => {
-                formStatus.className = 'form-status';
-                formStatus.textContent = '';
-            }, 5000);
-        } finally {
-            // Re-enable submit button
-            submitBtn.innerHTML = originalBtnText;
-            submitBtn.disabled = false;
-        }
+        // Form will submit normally to FormSubmit
     });
 }
 
