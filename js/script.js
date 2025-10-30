@@ -317,8 +317,11 @@ if (contactForm) {
         // Validate all fields
         let isFormValid = true;
         formInputs.forEach(input => {
-            if (!validateField(input)) {
-                isFormValid = false;
+            // Skip hidden fields in validation
+            if (input.type !== 'hidden' && input.name !== '_honey') {
+                if (!validateField(input)) {
+                    isFormValid = false;
+                }
             }
         });
         
@@ -326,48 +329,44 @@ if (contactForm) {
             return;
         }
         
-        // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-        
         // Disable submit button
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Simulate form submission (replace with actual API call)
         try {
-            // In a real application, you would send data to your backend:
-            // const response = await fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formData)
-            // });
+            // Submit form using FormSubmit service
+            const formData = new FormData(contactForm);
             
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 2000));
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            // Show success message
-            formStatus.textContent = 'Thank you! Your message has been sent successfully. I\'ll get back to you soon!';
-            formStatus.className = 'form-status success';
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                formStatus.className = 'form-status';
-                formStatus.textContent = '';
-            }, 5000);
+            if (response.ok) {
+                // Show success message
+                formStatus.textContent = 'Thank you! Your message has been sent successfully. I\'ll get back to you soon!';
+                formStatus.className = 'form-status success';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formStatus.className = 'form-status';
+                    formStatus.textContent = '';
+                }, 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
             
         } catch (error) {
             // Show error message
-            formStatus.textContent = 'Oops! Something went wrong. Please try again or contact me directly at amirmo800@gmail.com';
+            formStatus.textContent = 'Oops! Something went wrong. Please try again or contact me directly at info@amirdhs.com';
             formStatus.className = 'form-status error';
             
             setTimeout(() => {
@@ -569,7 +568,7 @@ window.addEventListener('scroll', debouncedScroll);
 
 console.log('%c👋 Hello there!', 'color: #ff6b00; font-size: 24px; font-weight: bold;');
 console.log('%cLooking at the code? I like your style!', 'color: #b0b0b0; font-size: 16px;');
-console.log('%cFeel free to reach out: amirmo800@gmail.com', 'color: #ff6b00; font-size: 14px;');
+console.log('%cFeel free to reach out: info@amirdhs.com', 'color: #ff6b00; font-size: 14px;');
 console.log('%c🚀 Built with HTML, CSS, and JavaScript', 'color: #ff8c00; font-size: 14px;');
 
 // ============================================
