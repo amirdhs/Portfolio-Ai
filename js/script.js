@@ -650,3 +650,228 @@ gtag('config', 'YOUR-GA-ID');
 */
 
 console.log('🎉 Portfolio loaded successfully!');
+
+// ============================================
+// Chatbot Logic
+// ============================================
+
+const chatWidget = {
+    elements: {
+        toggleBtn: document.getElementById('chat-toggle-btn'),
+        closeBtn: document.getElementById('chat-close-btn'),
+        container: document.getElementById('chat-container'),
+        messages: document.getElementById('chat-messages'),
+        form: document.getElementById('chat-form'),
+        input: document.getElementById('chat-input'),
+        sendBtn: document.getElementById('chat-send-btn')
+    },
+    
+    state: {
+        isOpen: false,
+        // API Key is loaded from js/config.js (which is gitignored)
+        apiKey: (typeof CONFIG !== 'undefined' ? CONFIG.GROQ_API_KEY : '') || localStorage.getItem('groq_api_key') || '',
+        context: '',
+        history: []
+    },
+
+    init() {
+        this.addEventListeners();
+        this.loadContext();
+    },
+
+    addEventListeners() {
+        this.elements.toggleBtn.addEventListener('click', () => this.toggleChat());
+        this.elements.closeBtn.addEventListener('click', () => this.toggleChat());
+        this.elements.form.addEventListener('submit', (e) => this.handleSubmit(e));
+    },
+
+    toggleChat() {
+        this.state.isOpen = !this.state.isOpen;
+        this.elements.container.classList.toggle('active', this.state.isOpen);
+        
+        if (this.state.isOpen && this.elements.input) {
+            setTimeout(() => this.elements.input.focus(), 300);
+        }
+    },
+
+    async loadContext() {
+        try {
+            const response = await fetch('aboutme.md');
+            if (response.ok) {
+                this.state.context = await response.text();
+            } else {
+                console.warn('Could not load aboutme.md, using fallback context.');
+                this.state.context = this.getFallbackContext();
+            }
+        } catch (error) {
+            console.error('Error loading context:', error);
+            this.state.context = this.getFallbackContext();
+        }
+    },
+
+    getFallbackContext() {
+        return `
+        Name: Amir Dehestani
+        Role: Backend Developer | AI Specialist | Automation Expert
+        Location: Germany
+        Skills: Python, FastAPI, Flask, PostgreSQL, n8n, AI/ML, Docker
+        Experience: Freelance AI Developer, Web Developer at Nature's Gold Kohrang & Agroloader.
+        Projects: AI-Powered API System, Business Workflow Automation, E-Commerce Backend.
+        Contact: info@amirdhs.com
+        `;
+    },
+
+    addMessage(content, type) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${type}-message`;
+        
+        const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        
+        // Parse Markdown for bot messages
+        const formattedContent = type === 'bot' && typeof marked !== 'undefined' 
+            ? marked.parse(content) 
+            : content;
+
+        messageDiv.innerHTML = `
+            <div class="message-content">${formattedContent}</div>
+            <div class="message-time">${time}</div>
+        `;
+        
+        this.elements.messages.appendChild(messageDiv);
+        this.scrollToBottom();
+    },
+
+    addTypingIndicator() {
+        const indicator = document.createElement('div');
+        indicator.className = 'typing-indicator';
+        indicator.id = 'typing-indicator';
+        indicator.innerHTML = `
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+        `;
+        this.elements.messages.appendChild(indicator);
+        this.scrollToBottom();
+    },
+
+    removeTypingIndicator() {
+        const indicator = document.getElementById('typing-indicator');
+        if (indicator) {
+            indicator.remove();
+        }
+    },
+
+    scrollToBottom() {
+        this.elements.messages.scrollTop = this.elements.messages.scrollHeight;
+    },
+
+    async handleSubmit(e) {
+        e.preventDefault();
+        const message = this.elements.input.value.trim();
+        
+        if (!message) return;
+
+        // Add user message
+        this.addMessage(message, 'user');
+        this.elements.input.value = '';
+        this.elements.sendBtn.disabled = true;
+
+        // Check for API Key
+        if (!this.state.apiKey) {
+            if (message.startsWith('gsk_')) {
+                this.state.apiKey = message;
+                localStorage.setItem('groq_api_key', message);
+                this.addMessage("Thanks! API key saved. You can now ask me questions about Amir.", 'bot');
+            } else {
+                this.addMessage("To use this chatbot, please enter your Groq API Key first. (It will be saved locally in your browser).", 'bot');
+                this.addMessage("You can get one at: https://console.groq.com/keys", 'bot');
+            }
+            this.elements.sendBtn.disabled = false;
+            return;
+        }
+
+        // Show typing indicator
+        this.addTypingIndicator();
+
+        try {
+            const response = await this.callGroqAPI(message);
+            this.removeTypingIndicator();
+            this.addMessage(response, 'bot');
+        } catch (error) {
+            this.removeTypingIndicator();
+            this.addMessage(`Sorry, I encountered an error: ${error.message}. Please check your API key or try again later.`, 'bot');
+            console.error('Groq API Error:', error);
+            
+            // If 401/403, maybe clear key
+            if (error.message.includes('401') || error.message.includes('403')) {
+                this.state.apiKey = '';
+                localStorage.removeItem('groq_api_key');
+                this.addMessage("It seems your API key is invalid. Please provide a new one.", 'bot');
+            }
+        }
+
+        this.elements.sendBtn.disabled = false;
+        this.elements.input.focus();
+    },
+
+    async callGroqAPI(userMessage) {
+        const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
+        
+        const systemPrompt = `
+        You are an AI assistant for Amir Dehestani's portfolio website. 
+        Your role is to answer questions about Amir based strictly on the provided context.
+        
+        Context about Amir:
+        ${this.state.context}
+        
+        Instructions:
+        1. Be polite, professional, and concise.
+        2. Only answer questions related to Amir's professional life, skills, projects, and experience.
+        3. If the answer is not in the context, say "I don't have that information about Amir."
+        4. Keep answers short (under 3-4 sentences) unless asked for details.
+        5. You can use emojis occasionally.
+        `;
+
+        const requestBody = {
+            model: "openai/gpt-oss-20b", // Using a standard high-performance model on Groq
+            messages: [
+                {
+                    role: "system",
+                    content: systemPrompt
+                },
+                {
+                    role: "user",
+                    content: userMessage
+                }
+            ]
+        };
+
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${this.state.apiKey}`
+            },
+            body: JSON.stringify(requestBody)
+        });
+
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => null);
+            const errorMessage = errorData?.error?.message || `Status ${response.status}`;
+            throw new Error(`API request failed: ${errorMessage}`);
+        }
+
+        const data = await response.json();
+        
+        if (data.choices && data.choices.length > 0 && data.choices[0].message) {
+            return data.choices[0].message.content;
+        } else {
+            throw new Error('Invalid response format from Groq API');
+        }
+    }
+};
+
+// Initialize Chatbot
+document.addEventListener('DOMContentLoaded', () => {
+    chatWidget.init();
+});

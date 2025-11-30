@@ -68,3 +68,6 @@ tmp/
 # assets/project-*.jpg
 # assets/project-*.png
 # !assets/project-*.svg
+
+# Configuration files
+js/config.js
