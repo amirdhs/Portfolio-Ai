@@ -2,7 +2,7 @@
 
 **Back-End Developer \| AI Specialist \| Automation Expert**
 
-**Location:** Coswig, Germany\
+**Location:** Dresden, Germany\
 **Email:** info@amirdhs.com\
 **Website:** https://amirdhs.com\
 **LinkedIn:** https://www.linkedin.com/in/amir-dehestani/

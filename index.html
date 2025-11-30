@@ -14,9 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Animated Background -->
-    <div class="particles-background" id="particles-js"></div>
-
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -48,29 +45,32 @@
     <!-- Hero Section -->
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Animated Background -->
+        <div class="particles-background" id="particles-js"></div>
+        
         <div class="container hero-container">
             <div class="hero-text-content">
-                <div class="hero-badge fade-in">
+                <div class="hero-badge fade-in" data-i18n="hero-badge">
                     <span class="status-dot"></span> Available for new projects
                 </div>
                 
-                <h1 class="hero-title fade-in-delay-1">
+                <h1 class="hero-title fade-in-delay-1" data-i18n="hero-title">
                     Building Intelligent <br>
                     <span class="text-gradient">Backend Solutions</span>
                 </h1>
                 
-                <p class="hero-description fade-in-delay-2">
+                <p class="hero-description fade-in-delay-2" data-i18n="hero-desc">
                     I'm Amir Dehestani, a Software Engineer specializing in Python, AI integration, and scalable backend architecture. I transform complex problems into elegant, automated solutions.
                 </p>
                 
                 <div class="hero-actions fade-in-delay-3">
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero-btn-projects">
                         View Projects <i class="fas fa-arrow-right"></i>
                     </a>
-                    <button id="hero-chat-btn" class="btn btn-secondary">
+                    <button id="hero-chat-btn" class="btn btn-secondary" data-i18n="hero-btn-chat">
                         Talk to AI Agent <i class="fas fa-robot"></i>
                     </button>
-                    <a href="https://calendly.com/amirmo800/30min" target="_blank" class="btn btn-secondary">
+                    <a href="https://calendly.com/amirmo800/30min" target="_blank" class="btn btn-secondary" data-i18n="hero-btn-meeting">
                         Book a Meeting <i class="fas fa-calendar-check"></i>
                     </a>
                 </div>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="experience-badge">
                             <span class="years">3+</span>
-                            <span class="text">Years of<br>Experience</span>
+                            <span class="text" data-i18n="about-exp-badge">Years of<br>Experience</span>
                         </div>
                     </div>
                     
@@ -165,26 +165,26 @@
                     <div class="focus-grid">
                         <div class="focus-card">
                             <div class="focus-icon"><i class="fas fa-server"></i></div>
-                            <h5>Backend Excellence</h5>
-                            <p>Production-ready APIs with FastAPI & Flask, focused on security & scale.</p>
+                            <h5 data-i18n="focus-backend-title">Backend Excellence</h5>
+                            <p data-i18n="focus-backend-desc">Production-ready APIs with FastAPI & Flask, focused on security & scale.</p>
                         </div>
                         
                         <div class="focus-card">
                             <div class="focus-icon"><i class="fas fa-brain"></i></div>
-                            <h5>AI Integration</h5>
-                            <p>Intelligent chatbots & agents using NLP and modern ML frameworks.</p>
+                            <h5 data-i18n="focus-ai-title">AI Integration</h5>
+                            <p data-i18n="focus-ai-desc">Intelligent chatbots & agents using NLP and modern ML frameworks.</p>
                         </div>
                         
                         <div class="focus-card">
                             <div class="focus-icon"><i class="fas fa-project-diagram"></i></div>
-                            <h5>Workflow Automation</h5>
-                            <p>Sophisticated n8n workflows that streamline business operations.</p>
+                            <h5 data-i18n="focus-auto-title">Workflow Automation</h5>
+                            <p data-i18n="focus-auto-desc">Sophisticated n8n workflows that streamline business operations.</p>
                         </div>
                         
                         <div class="focus-card">
                             <div class="focus-icon"><i class="fas fa-database"></i></div>
-                            <h5>Database Architecture</h5>
-                            <p>Efficient schema design for PostgreSQL handling high-volume data.</p>
+                            <h5 data-i18n="focus-db-title">Database Architecture</h5>
+                            <p data-i18n="focus-db-desc">Efficient schema design for PostgreSQL handling high-volume data.</p>
                         </div>
                     </div>
                 </div>
@@ -408,10 +408,10 @@
     <!-- Cross-Functional Team Section -->
     <section class="section" style="text-align: center; padding: 4rem 0;">
         <div class="container">
-            <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1rem;">
+            <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1rem;" data-i18n="cross-func-title">
                 I'm currently looking to join a <span style="color: var(--primary-color);">cross-functional</span> team
             </h3>
-            <p style="color: var(--text-secondary); margin-bottom: 3rem;">
+            <p style="color: var(--text-secondary); margin-bottom: 3rem;" data-i18n="cross-func-desc">
                 that values improving people's lives through accessible design
             </p>
             
@@ -696,10 +696,10 @@
                         <a href="https://linkedin.com/in/amir-dehestani" target="_blank" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://github.com/amirdehestani" target="_blank" aria-label="GitHub">
+                        <a href="https://github.com/amirdhs" target="_blank" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="mailto:amirmo800@gmail.com" aria-label="Email">
+                        <a href="mailto:info@amirdhs.com" aria-label="Email">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </div>
