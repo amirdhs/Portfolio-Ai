@@ -89,7 +89,7 @@ document.addEventListener('click', (e) => {
 // ============================================
 
 const typewriter = document.getElementById('typewriter');
-const phrases = [
+let phrases = [
     'Software Developer',
     'Backend Developer (Python)',
     'AI Developer',
@@ -683,6 +683,12 @@ const chatWidget = {
         this.elements.toggleBtn.addEventListener('click', () => this.toggleChat());
         this.elements.closeBtn.addEventListener('click', () => this.toggleChat());
         this.elements.form.addEventListener('submit', (e) => this.handleSubmit(e));
+
+        // Add listener for hero button
+        const heroChatBtn = document.getElementById('hero-chat-btn');
+        if (heroChatBtn) {
+            heroChatBtn.addEventListener('click', () => this.toggleChat());
+        }
     },
 
     toggleChat() {
@@ -874,4 +880,72 @@ const chatWidget = {
 // Initialize Chatbot
 document.addEventListener('DOMContentLoaded', () => {
     chatWidget.init();
+});
+
+// ============================================
+// Language Switcher
+// ============================================
+
+const langButtons = document.querySelectorAll('.lang-btn');
+const currentLang = localStorage.getItem('language') || 'en';
+
+function updateContent(lang) {
+    // Update text content
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            // Check if element has HTML content (for bold tags etc)
+            if (translations[lang][key].includes('<')) {
+                element.innerHTML = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            element.placeholder = translations[lang][key];
+        }
+    });
+
+    // Update typewriter phrases
+    if (translations[lang] && translations[lang]['typewriter-phrases']) {
+        phrases = translations[lang]['typewriter-phrases'];
+        // Reset typewriter to start with new language
+        phraseIndex = 0;
+        charIndex = 0;
+        isDeleting = false;
+    }
+
+    // Update HTML lang attribute
+    document.documentElement.lang = lang;
+
+    // Update active button state
+    langButtons.forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // Save preference
+    localStorage.setItem('language', lang);
+}
+
+// Event listeners for language buttons
+langButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const lang = btn.getAttribute('data-lang');
+        updateContent(lang);
+    });
+});
+
+// Initialize language
+document.addEventListener('DOMContentLoaded', () => {
+    updateContent(currentLang);
 });
