@@ -24,13 +24,18 @@
                 <a href="#home">&lt;Amir /&gt;</a>
             </div>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav-home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav-about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav-skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav-experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav-projects">Projects</a></li>
+                <li><a href="#certifications" class="nav-link" data-i18n="nav-certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+                <li class="lang-switcher">
+                    <a href="#" class="lang-btn active" data-lang="en">EN</a>
+                    <span class="lang-separator">|</span>
+                    <a href="#" class="lang-btn" data-lang="de">DE</a>
+                </li>
             </ul>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -41,135 +46,146 @@
     </nav>
 
     <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-greeting fade-in">Hi, I'm</h1>
-                <h2 class="hero-name gradient-text fade-in-delay-1">Amir Dehestani</h2>
-                <div class="typewriter-container">
-                    <span class="typewriter-text" id="typewriter"></span>
-                    <span class="cursor">|</span>
+        <div class="container hero-container">
+            <div class="hero-text-content">
+                <div class="hero-badge fade-in">
+                    <span class="status-dot"></span> Available for new projects
                 </div>
-                <p class="hero-tagline fade-in-delay-2">
-                    Building scalable backend solutions and AI-driven systems
+                
+                <h1 class="hero-title fade-in-delay-1">
+                    Building Intelligent <br>
+                    <span class="text-gradient">Backend Solutions</span>
+                </h1>
+                
+                <p class="hero-description fade-in-delay-2">
+                    I'm Amir Dehestani, a Software Engineer specializing in Python, AI integration, and scalable backend architecture. I transform complex problems into elegant, automated solutions.
                 </p>
-                <div class="hero-buttons fade-in-delay-3">
+                
+                <div class="hero-actions fade-in-delay-3">
                     <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i> View Projects
+                        View Projects <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Contact Me
-                    </a>
-                    <a href="assets/resume.pdf" class="btn btn-outline" download>
-                        <i class="fas fa-download"></i> Download Resume
+                    <button id="hero-chat-btn" class="btn btn-secondary">
+                        Talk to AI Agent <i class="fas fa-robot"></i>
+                    </button>
+                    <a href="https://calendly.com/amirmo800/30min" target="_blank" class="btn btn-secondary">
+                        Book a Meeting <i class="fas fa-calendar-check"></i>
                     </a>
                 </div>
-                <div class="social-links fade-in-delay-4">
-                    <a href="https://linkedin.com/in/amir-dehestani" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/amirdhs" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:info@amirdhs.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+
+                <div class="hero-social fade-in-delay-4">
+                    <a href="https://github.com/amirdehestani" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/amir-dehestani" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:info@amirdhs.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            <div class="hero-terminal">
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <span class="terminal-button red"></span>
-                        <span class="terminal-button yellow"></span>
-                        <span class="terminal-button green"></span>
-                        <span class="terminal-title">amir@portfolio:~$</span>
+
+            <div class="hero-visual fade-in-delay-2">
+                <div class="hero-image-wrapper">
+                    <img src="assets/profile.jpg" alt="Amir Dehestani" class="hero-img">
+                    <div class="hero-glow"></div>
+                    
+                    <!-- Floating Icons -->
+                    <div class="floating-icon icon-python">
+                        <i class="fab fa-python"></i>
                     </div>
-                    <div class="terminal-body">
-                        <p><span class="prompt">$</span> cat about.txt</p>
-                        <p class="terminal-output">Location: Germany 🇩🇪</p>
-                        <p class="terminal-output">Role: Backend Developer</p>
-                        <p class="terminal-output">Specialization: Python | AI | Automation</p>
-                        <p><span class="prompt">$</span> ls skills/</p>
-                        <p class="terminal-output">Python Flask FastAPI PostgreSQL Docker n8n AI/ML</p>
-                        <p><span class="prompt">$</span> <span class="terminal-cursor">_</span></p>
+                    <div class="floating-icon icon-docker">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="floating-icon icon-db">
+                        <i class="fas fa-database"></i>
                     </div>
                 </div>
             </div>
         </div>
+        
         <div class="scroll-indicator">
             <div class="mouse"></div>
             <p>Scroll Down</p>
         </div>
-    </section>
-
-    <!-- About Section -->
+    </section>    <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">01.</span> About Me
+                <span class="title-number">01.</span> <span data-i18n="section-about">About Me</span>
             </h2>
-            <div class="about-content">
-                <div class="about-image" data-aos="fade-right">
-                    <div class="image-wrapper">
-                        <img src="assets/profile.jpg" alt="Amir Dehestani">
-                        <div class="image-overlay"></div>
+            
+            <div class="about-grid">
+                <!-- Left Column: Image & Quick Stats -->
+                <div class="about-visual" data-aos="fade-right">
+                    <div class="about-image-container">
+                        <div class="image-frame">
+                            <img src="assets/profile.jpg" alt="Amir Dehestani">
+                        </div>
+                        <div class="experience-badge">
+                            <span class="years">3+</span>
+                            <span class="text">Years of<br>Experience</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-languages">
+                        <div class="lang-item">
+                            <span class="flag">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                            <span class="lang-level">Fluent</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="flag">🇩🇪</span>
+                            <span class="lang-name">German</span>
+                            <span class="lang-level">Professional</span>
+                        </div>
+                        <div class="lang-item">
+                            <span class="flag">🇮🇷</span>
+                            <span class="lang-name">Persian</span>
+                            <span class="lang-level">Native</span>
+                        </div>
                     </div>
                 </div>
-                <div class="about-text" data-aos="fade-left">
-                    <h3>Back-End Developer | AI Specialist | Automation Expert</h3>
-                    <p>
-                        I'm a passionate backend developer and AI specialist based in Germany, dedicated to crafting 
-                        robust, scalable solutions that solve real-world problems. With expertise in 
-                        <strong>Python, FastAPI, Flask, and PostgreSQL</strong>, I transform complex business 
-                        requirements into elegant, efficient code that powers modern applications.
+
+                <!-- Right Column: Bio & Focus Areas -->
+                <div class="about-details" data-aos="fade-left">
+                    <h3 class="about-headline" data-i18n="about-title">
+                        Architecting Digital Solutions with <span class="highlight">Python & AI</span>
+                    </h3>
+                    
+                    <p class="about-bio" data-i18n="about-p1">
+                        I'm a passionate backend developer and AI specialist based in Germany. I don't just write code; 
+                        I build robust ecosystems where <strong>Python, FastAPI, and AI</strong> converge to solve complex real-world problems.
                     </p>
                     
-                    <p>
-                        My journey in software engineering is driven by a fascination with how technology can 
-                        automate workflows, enhance decision-making through AI, and create seamless user experiences. 
-                        From building high-performance RESTful APIs to developing intelligent chatbots and automation 
-                        systems, I thrive at the intersection of backend development and artificial intelligence.
+                    <p class="about-bio" data-i18n="about-p2">
+                        My philosophy is simple: automate the boring, optimize the complex, and innovate the future. 
+                        Whether it's designing high-performance APIs or creating intelligent agents, I thrive on turning abstract concepts into deployed reality.
                     </p>
+
+                    <h4 class="focus-title" data-i18n="about-bring">My Core Focus:</h4>
                     
-                    <h4>What I Bring to the Table:</h4>
-                    <ul class="about-list">
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <strong>Backend Excellence:</strong> Architecting and deploying production-ready APIs with 
-                            FastAPI and Flask, emphasizing clean code, security, and performance optimization
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <strong>AI Integration:</strong> Building intelligent chatbots and AI agents that leverage 
-                            NLP and machine learning to deliver context-aware, conversational experiences
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <strong>Workflow Automation:</strong> Designing sophisticated n8n workflows that reduce manual 
-                            tasks by up to 60%, streamlining operations across multiple platforms
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <strong>Database Design:</strong> Creating efficient database schemas and optimizing queries 
-                            for PostgreSQL and SQLite to handle high-volume transactions
-                        </li>
-                        <li>
-                            <i class="fas fa-chevron-right"></i>
-                            <strong>Security First:</strong> Implementing JWT authentication, secure API design, and 
-                            following industry best practices to protect data and user privacy
-                        </li>
-                    </ul>
-
-                    <p>
-                        When I'm not coding, I'm exploring the latest developments in AI and automation, contributing 
-                        to open-source projects, and sharing knowledge with the developer community. I believe in 
-                        continuous learning and collaboration—technology evolves fast, and so should we.
-                    </p>
-
-                    <div class="language-badges">
-                        <span class="badge">🇬🇧 English - Fluent</span>
-                        <span class="badge">🇩🇪 German - Professional</span>
-                        <span class="badge">🇮🇷 Persian - Native</span>
+                    <div class="focus-grid">
+                        <div class="focus-card">
+                            <div class="focus-icon"><i class="fas fa-server"></i></div>
+                            <h5>Backend Excellence</h5>
+                            <p>Production-ready APIs with FastAPI & Flask, focused on security & scale.</p>
+                        </div>
+                        
+                        <div class="focus-card">
+                            <div class="focus-icon"><i class="fas fa-brain"></i></div>
+                            <h5>AI Integration</h5>
+                            <p>Intelligent chatbots & agents using NLP and modern ML frameworks.</p>
+                        </div>
+                        
+                        <div class="focus-card">
+                            <div class="focus-icon"><i class="fas fa-project-diagram"></i></div>
+                            <h5>Workflow Automation</h5>
+                            <p>Sophisticated n8n workflows that streamline business operations.</p>
+                        </div>
+                        
+                        <div class="focus-card">
+                            <div class="focus-icon"><i class="fas fa-database"></i></div>
+                            <h5>Database Architecture</h5>
+                            <p>Efficient schema design for PostgreSQL handling high-volume data.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,13 +196,13 @@
     <section id="skills" class="skills section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">02.</span> Tech Stack & Skills
+                <span class="title-number">02.</span> <span data-i18n="section-skills">Tech Stack & Skills</span>
             </h2>
             
             <div class="skills-grid">
                 <!-- Backend Development -->
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <h3><i class="fas fa-server"></i> <span data-i18n="skill-backend">Backend Development</span></h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <i class="fab fa-python"></i>
@@ -213,7 +229,7 @@
 
                 <!-- Databases -->
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <h3><i class="fas fa-database"></i> <span data-i18n="skill-db">Databases</span></h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <i class="fas fa-database"></i>
@@ -236,7 +252,7 @@
 
                 <!-- Automation & Workflow -->
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3><i class="fas fa-robot"></i> Automation & Workflow</h3>
+                    <h3><i class="fas fa-robot"></i> <span data-i18n="skill-auto">Automation & Workflow</span></h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <i class="fas fa-project-diagram"></i>
@@ -255,7 +271,7 @@
 
                 <!-- AI & Machine Learning -->
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                    <h3><i class="fas fa-brain"></i> AI & Machine Learning</h3>
+                    <h3><i class="fas fa-brain"></i> <span data-i18n="skill-ai">AI & Machine Learning</span></h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <i class="fas fa-brain"></i>
@@ -274,7 +290,7 @@
 
                 <!-- DevOps & Tools -->
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
-                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                    <h3><i class="fas fa-tools"></i> <span data-i18n="skill-devops">DevOps & Tools</span></h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <i class="fab fa-docker"></i>
@@ -297,7 +313,7 @@
 
                 <!-- Frontend & CMS -->
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
-                    <h3><i class="fas fa-window-maximize"></i> Frontend & CMS</h3>
+                    <h3><i class="fas fa-window-maximize"></i> <span data-i18n="skill-frontend">Frontend & CMS</span></h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <i class="fab fa-wordpress"></i>
@@ -325,104 +341,97 @@
     <section id="experience" class="experience section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">03.</span> Work Experience
+                <span data-i18n="section-experience">Work Experience</span>
             </h2>
             
-            <div class="timeline">
+            <div class="experience-grid">
                 <!-- Experience 1 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">January 2024 - Present</div>
-                    <div class="timeline-content">
-                        <h3>AI Agent & Chatbot Developer</h3>
-                        <h4>Freelance / Self-Employed</h4>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Germany 🇩🇪</p>
-                        <ul>
-                            <li>Developed intelligent AI agents and chatbot solutions using Python, natural language processing, and machine learning frameworks</li>
-                            <li>Built custom conversational AI systems integrated with FastAPI backends, enabling real-time interactions and context-aware responses</li>
-                            <li>Implemented AI-powered automation workflows combining chatbots with n8n for seamless business process optimization</li>
-                            <li>Integrated AI agents with multiple platforms including Telegram, WhatsApp, and web applications using REST APIs and WebSocket connections</li>
-                            <li>Delivered solutions that improved customer service response times by <strong>70%</strong> and reduced operational costs for clients</li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">AI/ML</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">Chatbots</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">OpenAI</span>
-                        </div>
+                <div class="experience-card" data-aos="fade-up">
+                    <div class="exp-icon-container">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="exp-content">
+                        <h3 class="exp-title" data-i18n="exp-1-title">AI Agent & Chatbot Developer</h3>
+                        <p class="exp-desc">
+                            Developed intelligent AI agents and chatbot solutions using Python, NLP, and ML frameworks.
+                            Built custom conversational AI systems integrated with FastAPI backends.
+                        </p>
+                        <a href="#" class="exp-btn">LEARN MORE</a>
                     </div>
                 </div>
 
                 <!-- Experience 2 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">April 2021 - December 2023</div>
-                    <div class="timeline-content">
-                        <h3>Web Developer</h3>
-                        <h4>Nature's Gold Kohrang</h4>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mashhad, Razavi Khorasan, Iran</p>
-                        <ul>
-                            <li>Designed and managed custom WordPress websites tailored to client specifications, improving user engagement and overall site performance</li>
-                            <li>Boosted SEO efforts, resulting in a <strong>20% increase in organic traffic</strong> and significant improvements in Google rankings</li>
-                            <li>Optimized website performance, reducing load time by <strong>30%</strong> through image compression, caching, and code minification</li>
-                            <li>Maintained websites, resolving technical issues promptly and ensuring <strong>99% uptime</strong></li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">SEO</span>
-                            <span class="tag">Performance Optimization</span>
-                            <span class="tag">Web Development</span>
-                        </div>
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="exp-icon-container">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="exp-content">
+                        <h3 class="exp-title" data-i18n="exp-2-title">Web Developer</h3>
+                        <p class="exp-desc">
+                            Designed and managed custom WordPress websites. Boosted SEO efforts resulting in 20% increase in organic traffic.
+                        </p>
+                        <a href="#" class="exp-btn">LEARN MORE</a>
                     </div>
                 </div>
 
                 <!-- Experience 3 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">May 2023 - April 2024</div>
-                    <div class="timeline-content">
-                        <h3>Freelance n8n Automation Specialist</h3>
-                        <h4>Self-Employed</h4>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Germany 🇩🇪</p>
-                        <ul>
-                            <li>Designed and implemented custom n8n workflows for multiple clients, automating complex business processes and reducing manual workload by <strong>50%</strong></li>
-                            <li>Built integrations connecting various platforms (CRM systems, email services, databases, and APIs) to create seamless data flows</li>
-                            <li>Developed automated notification systems and data synchronization workflows, improving response times and operational efficiency</li>
-                            <li>Created custom webhooks and API endpoints to enable real-time communication between different business tools</li>
-                            <li>Provided documentation and training to clients, ensuring smooth adoption and maintenance of automated workflows</li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">n8n</span>
-                            <span class="tag">Workflow Automation</span>
-                            <span class="tag">API Integration</span>
-                            <span class="tag">Webhooks</span>
-                            <span class="tag">Process Optimization</span>
-                        </div>
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="exp-icon-container">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="exp-content">
+                        <h3 class="exp-title" data-i18n="exp-3-title">n8n Automation Specialist</h3>
+                        <p class="exp-desc">
+                            Designed and implemented custom n8n workflows, automating complex business processes and reducing manual workload by 50%.
+                        </p>
+                        <a href="#" class="exp-btn">LEARN MORE</a>
                     </div>
                 </div>
 
                 <!-- Experience 4 -->
-                <div class="timeline-item" data-aos="fade-up">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">February 2020 - March 2021</div>
-                    <div class="timeline-content">
-                        <h3>Web Developer</h3>
-                        <h4>Agroloader</h4>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Mashhad, Razavi Khorasan, Iran</p>
-                        <ul>
-                            <li>Built responsive WordPress websites with custom functionality, improving mobile user experience and accessibility</li>
-                            <li>Led SEO campaigns, increasing organic traffic by <strong>35%</strong> through targeted keyword research and content optimization strategies</li>
-                            <li>Improved website performance, achieving a <strong>15% reduction in page load times</strong></li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Responsive Design</span>
-                            <span class="tag">SEO</span>
-                            <span class="tag">Performance</span>
-                        </div>
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="exp-icon-container">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
+                    <div class="exp-content">
+                        <h3 class="exp-title" data-i18n="exp-4-title">Web Developer</h3>
+                        <p class="exp-desc">
+                            Built responsive WordPress websites with custom functionality. Led SEO campaigns increasing organic traffic by 35%.
+                        </p>
+                        <a href="#" class="exp-btn">LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-Functional Team Section -->
+    <section class="section" style="text-align: center; padding: 4rem 0;">
+        <div class="container">
+            <h3 style="color: var(--text-primary); font-size: 1.5rem; margin-bottom: 1rem;">
+                I'm currently looking to join a <span style="color: var(--primary-color);">cross-functional</span> team
+            </h3>
+            <p style="color: var(--text-secondary); margin-bottom: 3rem;">
+                that values improving people's lives through accessible design
+            </p>
+            
+            <div style="position: relative; height: 300px; display: flex; align-items: center; justify-content: center;">
+                <!-- Central Logo -->
+                <div style="width: 80px; height: 80px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px var(--primary-color); z-index: 2;">
+                    <span style="font-size: 2rem; color: white; font-weight: bold;">&lt;/&gt;</span>
+                </div>
+                
+                <!-- Radiating Icons (Simplified representation) -->
+                <div style="position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                    <div style="position: absolute; transform: translate(0, -100px);"><i class="fab fa-python" style="font-size: 2rem; color: var(--text-secondary);"></i></div>
+                    <div style="position: absolute; transform: translate(80px, -60px);"><i class="fab fa-docker" style="font-size: 2rem; color: var(--text-secondary);"></i></div>
+                    <div style="position: absolute; transform: translate(100px, 20px);"><i class="fas fa-database" style="font-size: 2rem; color: var(--text-secondary);"></i></div>
+                    <div style="position: absolute; transform: translate(60px, 90px);"><i class="fas fa-robot" style="font-size: 2rem; color: var(--text-secondary);"></i></div>
+                    <div style="position: absolute; transform: translate(-60px, 90px);"><i class="fas fa-server" style="font-size: 2rem; color: var(--text-secondary);"></i></div>
+                    <div style="position: absolute; transform: translate(-100px, 20px);"><i class="fab fa-git-alt" style="font-size: 2rem; color: var(--text-secondary);"></i></div>
+                    <div style="position: absolute; transform: translate(-80px, -60px);"><i class="fas fa-terminal" style="font-size: 2rem; color: var(--text-secondary);"></i></div>
+                    
+                    <!-- Connecting lines could be added with SVG or pseudo-elements if needed -->
                 </div>
             </div>
         </div>
@@ -432,200 +441,92 @@
     <section id="projects" class="projects section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">04.</span> Featured Projects
+                <span class="title-number">04.</span> <span data-i18n="section-projects">Featured Projects</span>
             </h2>
             
-            <div class="projects-grid">
+            <div class="projects-container">
                 <!-- Project 1 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <img src="assets/project-1.svg" alt="AI-Powered API System">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com" target="_blank" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank" aria-label="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                <div class="project-item" data-aos="fade-up">
+                    <div class="project-info">
+                        <span class="project-label">Featured Project</span>
+                        <h3 class="project-title" data-i18n="proj-1-title">AI-Powered API System</h3>
+                        <div class="project-description">
+                            <p data-i18n="proj-1-desc">
+                                A comprehensive RESTful API built with FastAPI integrating machine learning models 
+                                for intelligent data processing. Features JWT authentication, PostgreSQL database, 
+                                and Docker containerization for seamless deployment.
+                            </p>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI-Powered API System</h3>
-                        <p>
-                            A comprehensive RESTful API built with FastAPI integrating machine learning models 
-                            for intelligent data processing. Features JWT authentication, PostgreSQL database, 
-                            and Docker containerization for seamless deployment.
-                        </p>
-                        <div class="project-tags">
+                        <div class="project-tech-stack">
                             <span>FastAPI</span>
                             <span>Python</span>
                             <span>PostgreSQL</span>
                             <span>Docker</span>
                             <span>AI/ML</span>
-                            <span>JWT</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <img src="assets/project-1.svg" alt="AI-Powered API System">
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-image">
-                        <img src="assets/project-2.svg" alt="n8n Automation Platform">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com" target="_blank" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank" aria-label="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                <div class="project-item reverse" data-aos="fade-up">
+                    <div class="project-info">
+                        <span class="project-label">Featured Project</span>
+                        <h3 class="project-title" data-i18n="proj-2-title">Business Workflow Automation</h3>
+                        <div class="project-description">
+                            <p data-i18n="proj-2-desc">
+                                Custom n8n workflows automating business processes including data synchronization, 
+                                email notifications, and CRM integration. Reduced manual tasks by 60% and improved 
+                                operational efficiency across departments.
+                            </p>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Business Workflow Automation</h3>
-                        <p>
-                            Custom n8n workflows automating business processes including data synchronization, 
-                            email notifications, and CRM integration. Reduced manual tasks by 60% and improved 
-                            operational efficiency across departments.
-                        </p>
-                        <div class="project-tags">
+                        <div class="project-tech-stack">
                             <span>n8n</span>
                             <span>Automation</span>
                             <span>API Integration</span>
                             <span>Webhooks</span>
-                            <span>PostgreSQL</span>
                         </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <img src="assets/project-2.svg" alt="n8n Automation Platform">
                     </div>
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-image">
-                        <img src="assets/project-3.svg" alt="Flask Backend System">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com" target="_blank" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank" aria-label="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
+                <div class="project-item" data-aos="fade-up">
+                    <div class="project-info">
+                        <span class="project-label">Featured Project</span>
+                        <h3 class="project-title" data-i18n="proj-3-title">E-Commerce Backend Platform</h3>
+                        <div class="project-description">
+                            <p data-i18n="proj-3-desc">
+                                Scalable e-commerce backend built with Flask and SQLAlchemy. Features include user 
+                                authentication, order management, payment processing integration, and real-time 
+                                inventory tracking.
+                            </p>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Backend Platform</h3>
-                        <p>
-                            Scalable e-commerce backend built with Flask and SQLAlchemy. Features include user 
-                            authentication, order management, payment processing integration, and real-time 
-                            inventory tracking with comprehensive API documentation.
-                        </p>
-                        <div class="project-tags">
+                        <div class="project-tech-stack">
                             <span>Flask</span>
                             <span>SQLAlchemy</span>
                             <span>REST API</span>
                             <span>JWT</span>
-                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-image">
-                        <img src="assets/project-4.svg" alt="Data Analytics Dashboard">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com" target="_blank" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank" aria-label="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>
-                            Python-based analytics platform processing large datasets with machine learning 
-                            insights. Features real-time data visualization, predictive analytics, and 
-                            automated reporting with export capabilities.
-                        </p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Machine Learning</span>
-                            <span>Data Analysis</span>
-                            <span>FastAPI</span>
-                            <span>Charts</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-image">
-                        <img src="assets/project-5.svg" alt="Microservices Architecture">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com" target="_blank" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank" aria-label="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Microservices Architecture</h3>
-                        <p>
-                            Distributed microservices system using Docker and Docker Compose. Implements 
-                            service discovery, API gateway, message queues, and centralized logging for 
-                            a scalable, maintainable architecture.
-                        </p>
-                        <div class="project-tags">
-                            <span>Docker</span>
-                            <span>Microservices</span>
-                            <span>FastAPI</span>
-                            <span>PostgreSQL</span>
-                            <span>Redis</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-image">
-                        <img src="assets/project-6.svg" alt="AI Chatbot Integration">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com" target="_blank" aria-label="GitHub">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="#" target="_blank" aria-label="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI Chatbot Integration</h3>
-                        <p>
-                            Intelligent chatbot system using natural language processing and machine learning. 
-                            Features context-aware responses, multi-language support, and seamless integration 
-                            with existing business systems via REST API.
-                        </p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>AI/ML</span>
-                            <span>FastAPI</span>
-                            <span>WebSocket</span>
-                        </div>
+                    <div class="project-visual">
+                        <img src="assets/project-3.svg" alt="Flask Backend System">
                     </div>
                 </div>
             </div>
@@ -636,7 +537,7 @@
     <section id="certifications" class="certifications section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">05.</span> Certifications
+                <span class="title-number">05.</span> <span data-i18n="section-certifications">Certifications</span>
             </h2>
             
             <div class="certifications-grid">
@@ -644,9 +545,9 @@
                     <div class="cert-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
-                    <h3>Software Engineering</h3>
-                    <p class="cert-issuer">Masterschool</p>
-                    <p class="cert-focus">Back-end Development</p>
+                    <h3 data-i18n="cert-1-title">Software Engineering</h3>
+                    <p class="cert-issuer" data-i18n="cert-1-issuer">Masterschool</p>
+                    <p class="cert-focus" data-i18n="cert-1-focus">Back-end Development</p>
                     <div class="cert-badge">
                         <i class="fas fa-check-circle"></i> Verified
                     </div>
@@ -656,9 +557,9 @@
                     <div class="cert-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Machine Learning with Python</h3>
-                    <p class="cert-issuer">Professional Certificate</p>
-                    <p class="cert-focus">Foundations</p>
+                    <h3 data-i18n="cert-2-title">Machine Learning with Python</h3>
+                    <p class="cert-issuer" data-i18n="cert-2-issuer">Professional Certificate</p>
+                    <p class="cert-focus" data-i18n="cert-2-focus">Foundations</p>
                     <div class="cert-badge">
                         <i class="fas fa-check-circle"></i> Verified
                     </div>
@@ -668,9 +569,9 @@
                     <div class="cert-icon">
                         <i class="fab fa-docker"></i>
                     </div>
-                    <h3>Docker Foundations</h3>
-                    <p class="cert-issuer">Professional Certificate</p>
-                    <p class="cert-focus">Container Technology</p>
+                    <h3 data-i18n="cert-3-title">Docker Foundations</h3>
+                    <p class="cert-issuer" data-i18n="cert-3-issuer">Professional Certificate</p>
+                    <p class="cert-focus" data-i18n="cert-3-focus">Container Technology</p>
                     <div class="cert-badge">
                         <i class="fas fa-check-circle"></i> Verified
                     </div>
@@ -680,9 +581,9 @@
                     <div class="cert-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Webflow Layouts</h3>
-                    <p class="cert-issuer">Professional Certificate</p>
-                    <p class="cert-focus">Web Design</p>
+                    <h3 data-i18n="cert-4-title">Webflow Layouts</h3>
+                    <p class="cert-issuer" data-i18n="cert-4-issuer">Professional Certificate</p>
+                    <p class="cert-focus" data-i18n="cert-4-focus">Web Design</p>
                     <div class="cert-badge">
                         <i class="fas fa-check-circle"></i> Verified
                     </div>
@@ -695,7 +596,7 @@
     <section id="education" class="education section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">06.</span> Education
+                <span class="title-number">06.</span> <span data-i18n="section-education">Education</span>
             </h2>
             
             <div class="education-grid">
@@ -704,10 +605,10 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div class="education-content">
-                        <h3>Computer Software Engineering</h3>
-                        <h4>Masterschool</h4>
+                        <h3 data-i18n="edu-1-title">Computer Software Engineering</h3>
+                        <h4 data-i18n="edu-1-school">Masterschool</h4>
                         <p class="education-date"><i class="far fa-calendar-alt"></i> September 2024 - May 2025</p>
-                        <p class="education-description">
+                        <p class="education-description" data-i18n="edu-1-desc">
                             Comprehensive software engineering program focused on backend development, 
                             API design, database management, and modern development practices.
                         </p>
@@ -725,10 +626,10 @@
                         <i class="fas fa-university"></i>
                     </div>
                     <div class="education-content">
-                        <h3>Bachelor's Degree in Avionics Engineering</h3>
-                        <h4>Civil Aviation Technology College</h4>
+                        <h3 data-i18n="edu-2-title">Bachelor's Degree in Avionics Engineering</h3>
+                        <h4 data-i18n="edu-2-school">Civil Aviation Technology College</h4>
                         <p class="education-date"><i class="far fa-calendar-alt"></i> Graduated 2016</p>
-                        <p class="education-description">
+                        <p class="education-description" data-i18n="edu-2-desc">
                             Specialized in aviation electronics, systems integration, and technical problem-solving. 
                             Developed strong analytical and engineering fundamentals.
                         </p>
@@ -744,16 +645,17 @@
     </section>
 
     <!-- Contact Section -->
+        <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">08.</span> Get In Touch
+                <span class="title-number">08.</span> <span data-i18n="section-contact">Get In Touch</span>
             </h2>
             
             <div class="contact-content">
                 <div class="contact-info" data-aos="fade-right">
-                    <h3>Let's Connect and Build the Future Together!</h3>
-                    <p>
+                    <h3 data-i18n="contact-title">Let's Connect and Build the Future Together!</h3>
+                    <p data-i18n="contact-desc">
                         I'm always interested in hearing about new projects, opportunities, and collaborations. 
                         Whether you have a question or just want to say hi, feel free to reach out!
                     </p>
@@ -764,7 +666,7 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <h4>Email</h4>
+                                <h4 data-i18n="contact-email">Email</h4>
                                 <a href="mailto:info@amirdhs.com">info@amirdhs.com</a>
                             </div>
                         </div>
@@ -774,7 +676,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h4>Location</h4>
+                                <h4 data-i18n="contact-loc">Location</h4>
                                 <p>Germany 🇩🇪</p>
                             </div>
                         </div>
@@ -784,7 +686,7 @@
                                 <i class="fab fa-linkedin"></i>
                             </div>
                             <div>
-                                <h4>LinkedIn</h4>
+                                <h4 data-i18n="contact-linkedin">LinkedIn</h4>
                                 <a href="https://linkedin.com/in/amir-dehestani" target="_blank">linkedin.com/in/amir-dehestani</a>
                             </div>
                         </div>
@@ -812,31 +714,31 @@
                         <input type="text" name="_honey" style="display:none">
                         
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                            <label for="name" data-i18n="form-name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name" data-i18n-placeholder="form-name-ph">
                             <span class="error-message"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            <label for="email" data-i18n="form-email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com" data-i18n-placeholder="form-email-ph">
                             <span class="error-message"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required placeholder="What's this about?">
+                            <label for="subject" data-i18n="form-subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="What's this about?" data-i18n-placeholder="form-subject-ph">
                             <span class="error-message"></span>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+                            <label for="message" data-i18n="form-message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message here..." data-i18n-placeholder="form-message-ph"></textarea>
                             <span class="error-message"></span>
                         </div>
 
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="btn-send">Send Message</span>
                         </button>
                         <div class="form-status"></div>
                     </form>
@@ -849,13 +751,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Amir Dehestani. All rights reserved.</p>
-                <p>Designed & Built with <i class="fas fa-heart"></i> by Amir Dehestani</p>
+                <p data-i18n="footer-rights">&copy; 2025 Amir Dehestani. All rights reserved.</p>
+                <p data-i18n="footer-design">Designed & Built with <i class="fas fa-heart"></i> by Amir Dehestani</p>
                 <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#home" data-i18n="nav-home">Home</a>
+                    <a href="#about" data-i18n="nav-about">About</a>
+                    <a href="#projects" data-i18n="nav-projects">Projects</a>
+                    <a href="#contact" data-i18n="nav-contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -872,8 +774,8 @@
                 <div class="chat-header-info">
                     <i class="fas fa-robot"></i>
                     <div>
-                        <h3>Amir's AI Assistant</h3>
-                        <span class="status-dot"></span> <span class="status-text">Online</span>
+                        <h3 data-i18n="chat-title">Amir's AI Assistant</h3>
+                        <span class="status-dot"></span> <span class="status-text" data-i18n="chat-status">Online</span>
                     </div>
                 </div>
                 <button id="chat-close-btn" class="chat-close-btn" aria-label="Close Chat">
@@ -883,7 +785,7 @@
             
             <div class="chat-messages" id="chat-messages">
                 <div class="message bot-message">
-                    <div class="message-content">
+                    <div class="message-content" data-i18n="chat-welcome">
                         Hello! I'm Amir's AI assistant. Ask me anything about his skills, experience, or projects!
                     </div>
                     <div class="message-time">Just now</div>
@@ -892,12 +794,12 @@
             
             <div class="chat-input-area">
                 <form id="chat-form">
-                    <input type="text" id="chat-input" placeholder="Ask a question..." autocomplete="off">
+                    <input type="text" id="chat-input" placeholder="Ask a question..." autocomplete="off" data-i18n-placeholder="chat-input-ph">
                     <button type="submit" id="chat-send-btn" aria-label="Send Message">
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
-                <div class="chat-footer-text">Powered by Groq AI</div>
+                <div class="chat-footer-text" data-i18n="chat-footer">Powered by Groq AI</div>
             </div>
         </div>
     </div>
@@ -906,6 +808,7 @@
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="js/config.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
