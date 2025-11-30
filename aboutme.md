@@ -1,68 +1,128 @@
-# About Amir Dehestani
+# Amir Dehestani
 
-## Profile
-**Name:** Amir Dehestani
-**Role:** Backend Developer | AI Specialist | Automation Expert
-**Location:** Germany
-**Languages:** English (Fluent), German (Professional), Persian (Native)
-**Contact:** info@amirdhs.com
-**LinkedIn:** linkedin.com/in/amir-dehestani
-**GitHub:** github.com/amirdhs
+**Back-End Developer \| AI Specialist \| Automation Expert**
 
-## Professional Summary
-I am a passionate backend developer and AI specialist based in Germany, dedicated to crafting robust, scalable solutions that solve real-world problems. With expertise in **Python, FastAPI, Flask, and PostgreSQL**, I transform complex business requirements into elegant, efficient code. My work focuses on automating workflows, enhancing decision-making through AI, and creating seamless user experiences.
+**Location:** Coswig, Germany\
+**Email:** info@amirdhs.com\
+**Website:** https://amirdhs.com\
+**LinkedIn:** https://www.linkedin.com/in/amir-dehestani/
+**GitHub:** https://github.com/amirdhs
 
-## Technical Skills
-- **Backend Development:** Python, FastAPI, Flask, REST APIs, JWT Authentication
-- **Databases:** PostgreSQL, SQLite, SQLAlchemy, SQL
-- **AI & Machine Learning:** Machine Learning, AI Integration, NLP, Chatbots, OpenAI API
-- **Automation:** n8n, Workflow Automation, Process Optimization, Webhooks
-- **DevOps & Tools:** Docker, Git, GitHub, CLI Tools
-- **Frontend & CMS:** HTML5, CSS3, JavaScript, WordPress
+------------------------------------------------------------------------
 
-## Work Experience
+## 🧑‍💻 Profile
 
-### AI Agent & Chatbot Developer | Freelance / Self-Employed
-*January 2024 - Present | Germany*
-- Developed intelligent AI agents and chatbot solutions using Python, NLP, and ML frameworks.
-- Built custom conversational AI systems integrated with FastAPI backends.
-- Implemented AI-powered automation workflows combining chatbots with n8n.
-- Integrated AI agents with Telegram, WhatsApp, and web apps.
-- Improved customer service response times by 70%.
+As a passionate backend developer and AI specialist residing in Germany,
+I design robust, scalable solutions that solve real-world challenges.
+With strong expertise in Python, FastAPI, Flask, and PostgreSQL, I
+transform business needs into efficient backend systems and intelligent
+automation.\
+I work at the intersection of backend development, AI, and workflow
+automation using tools like LLMs, RAG systems, and n8n.
 
-### Freelance n8n Automation Specialist | Self-Employed
-*May 2023 - April 2024 | Germany*
-- Designed and implemented custom n8n workflows, reducing manual workload by 50%.
-- Built integrations connecting CRM systems, email services, databases, and APIs.
-- Developed automated notification systems and data synchronization workflows.
+------------------------------------------------------------------------
 
-### Web Developer | Nature's Gold Kohrang
-*April 2021 - December 2023 | Mashhad, Iran*
-- Designed and managed custom WordPress websites.
-- Boosted SEO, resulting in a 20% increase in organic traffic.
-- Optimized website performance, reducing load time by 30%.
+## 💼 Experience
 
-### Web Developer | Agroloader
-*February 2020 - March 2021 | Mashhad, Iran*
-- Built responsive WordPress websites.
-- Led SEO campaigns, increasing organic traffic by 35%.
-- Improved website performance with a 15% reduction in load times.
+### **EGroupware GmbH --- AI Developer**
 
-## Projects
-- **AI-Powered API System:** RESTful API with FastAPI, ML integration, JWT, PostgreSQL, Docker.
-- **Business Workflow Automation:** Custom n8n workflows for data sync and CRM integration.
-- **E-Commerce Backend Platform:** Scalable backend with Flask and SQLAlchemy.
-- **Data Analytics Dashboard:** Python-based analytics with ML insights and FastAPI.
-- **Microservices Architecture:** Distributed system using Docker, FastAPI, Redis.
-- **AI Chatbot Integration:** Intelligent chatbot using NLP and FastAPI.
+*June 2025 -- now  \| Kaiserslautern, Germany*\
+- Built and maintained AI‑enhanced chatbots using NLP models.\
+- Engineered n8n automation workflows to reduce manual processes.\
+- Designed RAG systems and custom AI agents for information retrieval.\
+- Deployed backend services with a focus on scalability and
+reliability.\
+- Integrated multiple REST APIs for inter‑service communication.\
+- Improved system performance and data management.
 
-## Education
-- **Computer Software Engineering** | Masterschool (Sep 2024 - May 2025)
-  - Focus: Backend Development, API Design, Databases.
-- **Bachelor's Degree in Avionics Engineering** | Civil Aviation Technology College (Graduated 2016)
+------------------------------------------------------------------------
 
-## Certifications
-- Software Engineering (Masterschool)
-- Machine Learning with Python
-- Docker Foundations
-- Webflow Layouts
+### **AI Agent & Chatbot Developer --- Freelance**
+
+-   Developed conversational AI agents using Python, NLP, and ML
+    frameworks.\
+-   Integrated chatbots with FastAPI backends, powered by real‑time
+    context handling.\
+-   Connected AI agents to Telegram, WhatsApp, and web apps using REST
+    APIs and WebSockets.
+
+------------------------------------------------------------------------
+
+### **Agroloader --- Web Developer**
+
+*Feb 2020 -- Mar 2021 \| Mashhad, Iran*\
+- Built and optimized WordPress websites.\
+- Delivered SEO improvements that increased traffic by **35%**.\
+- Enhanced multi‑device accessibility and performance.
+
+------------------------------------------------------------------------
+
+## 🧠 Technical Skills
+
+### **Languages**
+
+Python, JavaScript, SQL
+
+### **Backend**
+
+FastAPI, Flask, REST APIs, SQLAlchemy, JWT Auth, pytest
+
+### **Frontend / Web**
+
+HTML, CSS, WordPress
+
+### **Databases**
+
+PostgreSQL, SQLite, DB Design & Optimization
+
+### **Tools & DevOps**
+
+Git, GitHub, GitLab CI, Docker (basics), Linux (Ubuntu/Debian)
+
+### **Automation**
+
+n8n workflow automation
+
+### **AI Stack**
+
+LLMs (OpenAI, Mistral), LangChain, RAG, Vector Databases, Prompt
+Engineering
+
+------------------------------------------------------------------------
+
+## 🌐 Languages
+
+-   **Persian:** Native\
+-   **English:** Full Professional\
+-   **German:** B2
+
+------------------------------------------------------------------------
+
+## 🎓 Education
+
+### **Masterschool --- Software Engineering**
+
+*Sep 2024 -- May 2025*\
+- Focus: Python, Flask, SQL, Git, OOP, TDD\
+- Experience with Docker, REST APIs, CI/CD
+
+### **University of Mashhad Aviation Industry --- B.Sc. Aircraft Avionics**
+
+*Oct 2015 -- Jun 2019*
+
+------------------------------------------------------------------------
+
+## 🚀 Projects
+
+### **AI Resume Analyzer**
+
+-   GitHub: https://github.com/amirdhs/AI-Powered-Resume-Analyzer\
+-   AI-driven resume evaluation tool\
+-   Built secure auth system, efficient DB structure, and REST API
+
+### **AI Chatbot Integration**
+
+-   Developed multilingual, context-aware chatbot\
+-   Integrated with existing business systems via REST API
+
+------------------------------------------------------------------------
