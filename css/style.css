@@ -419,6 +419,18 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .hero-image-wrapper {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .hero-img {
+        width: 240px;
+        height: 240px;
+    }
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
@@ -857,7 +869,7 @@ body {
    ============================================ */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -1148,7 +1160,7 @@ body {
    ============================================ */
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -1585,6 +1597,16 @@ body {
     .section {
         padding: 60px 0;
     }
+    
+    .hero-image-wrapper {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .hero-img {
+        width: 240px;
+        height: 240px;
+    }
 }
 
 /* ============================================
@@ -1894,10 +1916,13 @@ body {
 
 @media (max-width: 480px) {
     .chat-container {
-        width: calc(100% - 40px);
+        position: fixed;
+        bottom: 90px;
         right: 20px;
-        bottom: 20px;
+        left: 20px;
+        width: auto;
         height: 60vh;
+        z-index: 1001;
     }
     
     .chat-widget {
@@ -1946,3 +1971,105 @@ body {
         margin-top: 1rem;
     }
 }
+
+/* ============================================
+   Cross-Functional Team Section
+   ============================================ */
+.cross-functional-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.cross-func-title {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cross-func-title .highlight {
+    color: var(--primary-color);
+}
+
+.cross-func-desc {
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+.cross-func-visual {
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cross-func-center {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px var(--primary-color);
+    z-index: 2;
+}
+
+.cross-func-center span {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.cross-func-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cf-icon {
+    position: absolute;
+    font-size: 2rem;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.cf-icon:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Positioning icons in a circle */
+.cf-icon.icon-1 { transform: translate(0, -100px); }
+.cf-icon.icon-2 { transform: translate(80px, -60px); }
+.cf-icon.icon-3 { transform: translate(100px, 20px); }
+.cf-icon.icon-4 { transform: translate(60px, 90px); }
+.cf-icon.icon-5 { transform: translate(-60px, 90px); }
+.cf-icon.icon-6 { transform: translate(-100px, 20px); }
+.cf-icon.icon-7 { transform: translate(-80px, -60px); }
+
+@media (max-width: 480px) {
+    .cross-func-visual {
+        height: 250px;
+    }
+    
+    .cf-icon {
+        font-size: 1.5rem;
+    }
+    
+    /* Scale down the circle radius for mobile */
+    .cf-icon.icon-1 { transform: translate(0, -70px); }
+    .cf-icon.icon-2 { transform: translate(56px, -42px); }
+    .cf-icon.icon-3 { transform: translate(70px, 14px); }
+    .cf-icon.icon-4 { transform: translate(42px, 63px); }
+    .cf-icon.icon-5 { transform: translate(-42px, 63px); }
+    .cf-icon.icon-6 { transform: translate(-70px, 14px); }
+    .cf-icon.icon-7 { transform: translate(-56px, -42px); }
+}
+
+/* ============================================
+   Projects Section
+   ============================================ */
