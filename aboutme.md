@@ -1,128 +1,123 @@
 # Amir Dehestani
+**Back-End-Entwickler | KI-Spezialist | Automatisierungsexperte**
 
-**Back-End Developer \| AI Specialist \| Automation Expert**
+📧 info@amirdhs.com  
+🌐 [Portfolio](Portfolio)  
+💼 [LinkedIn: amir-dehestani](profile)  
+💻 [GitHub: amirdhs](Github)
 
-**Location:** Dresden, Germany\
-**Email:** info@amirdhs.com\
-**Website:** https://amirdhs.com\
-**LinkedIn:** https://www.linkedin.com/in/amir-dehestani/
-**GitHub:** https://github.com/amirdhs
+---
 
-------------------------------------------------------------------------
+## Profile
 
-## 🧑‍💻 Profile
+Als passionierter Back-End-Entwickler und KI-Experte mit Sitz in Deutschland konzipiere und implementiere ich skalierbare, robuste Lösungen, die Geschäftsprobleme effektiv adressieren. Meine fundierte Expertise in Python, FastAPI, Flask, PostgreSQL und modernen KI-Technologien wie LLMs, RAG und LangChain ermöglicht es mir, traditionelle Softwareentwicklung mit innovativen KI-Strategien zu verknüpfen. Ich erstelle leistungsfähige REST-APIs, kontextsensitive Chatbots und intelligente Automatisierungssysteme, die Arbeitsabläufe optimieren, Entscheidungsprozesse beschleunigen und das Nutzererlebnis steigern. Meine Arbeitsweise ist strukturiert und lösungsorientiert, und ich schätze die Zusammenarbeit im Team. Dabei lege ich stets Wert auf Qualität, Performance und Skalierbarkeit.
 
-As a passionate backend developer and AI specialist residing in Germany,
-I design robust, scalable solutions that solve real-world challenges.
-With strong expertise in Python, FastAPI, Flask, and PostgreSQL, I
-transform business needs into efficient backend systems and intelligent
-automation.\
-I work at the intersection of backend development, AI, and workflow
-automation using tools like LLMs, RAG systems, and n8n.
+---
 
-------------------------------------------------------------------------
+## Technical Skills
 
-## 💼 Experience
-
-### **EGroupware GmbH --- AI Developer**
-
-*June 2025 -- now  \| Kaiserslautern, Germany*\
-- Built and maintained AI‑enhanced chatbots using NLP models.\
-- Engineered n8n automation workflows to reduce manual processes.\
-- Designed RAG systems and custom AI agents for information retrieval.\
-- Deployed backend services with a focus on scalability and
-reliability.\
-- Integrated multiple REST APIs for inter‑service communication.\
-- Improved system performance and data management.
-
-------------------------------------------------------------------------
-
-### **AI Agent & Chatbot Developer --- Freelance**
-
--   Developed conversational AI agents using Python, NLP, and ML
-    frameworks.\
--   Integrated chatbots with FastAPI backends, powered by real‑time
-    context handling.\
--   Connected AI agents to Telegram, WhatsApp, and web apps using REST
-    APIs and WebSockets.
-
-------------------------------------------------------------------------
-
-### **Agroloader --- Web Developer**
-
-*Feb 2020 -- Mar 2021 \| Mashhad, Iran*\
-- Built and optimized WordPress websites.\
-- Delivered SEO improvements that increased traffic by **35%**.\
-- Enhanced multi‑device accessibility and performance.
-
-------------------------------------------------------------------------
-
-## 🧠 Technical Skills
-
-### **Languages**
-
+### Languages
 Python, JavaScript, SQL
 
-### **Backend**
+### Backend Development
+Flask, FastAPI, REST APIs, SQLAlchemy, JWT Auth, Unit Testing (pytest)
 
-FastAPI, Flask, REST APIs, SQLAlchemy, JWT Auth, pytest
+### Frontend/Web Development
+HTML, CSS, WordPress theme/plugin development
 
-### **Frontend / Web**
+### Database Technologies
+PostgreSQL, SQLite, DB Design & Optimization, SQL
 
-HTML, CSS, WordPress
+### Tools & Practices
+Git, GitHub, GitLab CI, Docker basics
 
-### **Databases**
+### Other
+JSON, YAML, XML, Linux (Ubuntu, Debian), API Integration
 
-PostgreSQL, SQLite, DB Design & Optimization
+### Automation & Workflow
+n8n, Workflow Automation
 
-### **Tools & DevOps**
+### AI Tech Stack
+LLMs (OpenAI, Mistral), RAG, LangChain, vector DBs, prompt engineering
 
-Git, GitHub, GitLab CI, Docker (basics), Linux (Ubuntu/Debian)
+---
 
-### **Automation**
+## Soft Skills
 
-n8n workflow automation
+- Starke Problemlösungskompetenz
+- Klare Kommunikation
+- Teamarbeit
+- Zeitmanagement
+- Kontinuierliches Lernen
 
-### **AI Stack**
+---
 
-LLMs (OpenAI, Mistral), LangChain, RAG, Vector Databases, Prompt
-Engineering
+## Sprachen
 
-------------------------------------------------------------------------
+- **Persian** - Muttersprache
+- **English** - Verhandlungssicher
+- **German** - Verhandlungssicher
 
-## 🌐 Languages
+---
 
--   **Persian:** Native\
--   **English:** Full Professional\
--   **German:** B2
+## Erfahrung
 
-------------------------------------------------------------------------
+### EGroupware GmbH
+**Back-End & AI Entwickler**  
+*Juni 2025 – aktuell*  
+*Kaiserslautern, Deutschland*  
+https://www.egroupware.org/
 
-## 🎓 Education
+- Entwicklung und Pflege von Backend-Services mit Fokus auf Skalierbarkeit und Zuverlässigkeit
+- Umsetzung komplexer n8n-Automatisierungen zur Reduzierung manueller Prozesse
+- Entwicklung von KI-gesteuerten Chatbots mittels moderner NLP-Modelle
+- Erstellung von RAG-Systemen und individuell angepassten KI-Agenten für effektive Informationsverarbeitung
+- Integration verschiedener REST-APIs und Optimierung des internen Datenaustauschs
+- Enge Zusammenarbeit mit interdisziplinären Teams zur Entwicklung von KI-basierten Funktionen
+- Verbesserung der Systemleistung und Datenverwaltung durch optimierten Backend-Code
 
-### **Masterschool --- Software Engineering**
+### AI Agent & Chatbot Developer
+**Freiberuflich**  
+*Jan 2024 – Mai 2025*
 
-*Sep 2024 -- May 2025*\
-- Focus: Python, Flask, SQL, Git, OOP, TDD\
-- Experience with Docker, REST APIs, CI/CD
+- Entwicklung hochentwickelter Chatbots und KI-Agenten mithilfe von Python und NLP
+- Umsetzung von FastAPI-basierten Backends für Echtzeit-Interaktionen
+- Integration von Chatbots in diverse Plattformen wie Telegram, WhatsApp und Web-Anwendungen durch REST & WebSocket
+- Entwicklung von kontextsensitiven, mehrsprachigen Conversational-AI-Systemen
 
-### **University of Mashhad Aviation Industry --- B.Sc. Aircraft Avionics**
+### Agroloader
+**Web Developer**  
+*Feb 2020 — Mär 2021*  
+*Mashhad - Iran*
 
-*Oct 2015 -- Jun 2019*
+- Entwicklung hochwertiger WordPress-Webseiten mit umfassenden SEO-Optimierungen, was zu einem Anstieg des organischen Traffics um 35% führte
+- Optimierung der Performance und Gerätekompatibilität für eine verbesserte Benutzererfahrung
 
-------------------------------------------------------------------------
+---
 
-## 🚀 Projects
+## Bildung
 
-### **AI Resume Analyzer**
+### Masterschool - Berlin
+**Software Engineering**  
+*Sep 2024 – Mai 2025*  
+*Back-end Development*  
+https://de.masterschool.com/
 
--   GitHub: https://github.com/amirdhs/AI-Powered-Resume-Analyzer\
--   AI-driven resume evaluation tool\
--   Built secure auth system, efficient DB structure, and REST API
+**Core Competencies:** Proficient in Python, Flask, SQL, Git, and Object-Oriented Programming (OOP). Experienced in Test-Driven Development (TDD), Docker, REST APIs, and Continuous Integration/Continuous Deployment (CI/CD). Skilled in utilizing GitLab.
 
-### **AI Chatbot Integration**
+---
 
--   Developed multilingual, context-aware chatbot\
--   Integrated with existing business systems via REST API
+## Projekte
 
-------------------------------------------------------------------------
+### AI Resume Analyzer
+*Mär 2025*  
+[GitHub Link](#)
+
+- Entwicklung eines KI-Tools zur automatischen Analyse und Optimierung von Lebensläufen
+- Aufbau sicherer User-Authentifizierung, effizienter Datenbankabfragen und REST-Endpoints
+
+### AI Chatbot Integration
+
+- Entwicklung und Implementierung eines hochmodernen Chatbots unter Einsatz von NLP & ML
+- Bereitstellung von kontextbezogenen Antworten in mehreren Sprachen
+- Fließende Integration in bestehende Geschäftssysteme durch Verwendung von REST API
