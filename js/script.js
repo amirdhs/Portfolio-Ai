@@ -1086,6 +1086,30 @@ const projectData = {
         description: 'An intelligent n8n workflow that automates ad creative testing by generating optimized headlines and image prompts. The system reads input data from Google Sheets, creates all possible combinations of headlines and image prompts, uses AI models to generate and optimize creative content, then writes structured results back to spreadsheets for marketing team review.',
         tech: ['n8n', 'Google Sheets API', 'AI Message Models', 'JavaScript', 'Webhooks', 'Data Transformation'],
         github: 'https://github.com/amirdhs'
+    },
+    4: {
+        tag: 'AI AGENT',
+        title: 'PERSONAL LIFE MANAGER',
+        image: 'assets/project-bg-4.png',
+        description: 'A comprehensive n8n workflow designed to act as a personal life manager. It integrates seamlessly with Telegram for interaction, manages Google Calendar and Tasks, and features voice-enabled AI for hands-free control. The system uses advanced LLMs to understand intent and execute complex personal automation tasks.',
+        tech: ['n8n', 'Telegram API', 'Google Workspace API', 'OpenAI Whisper', 'Vector DB'],
+        github: 'https://github.com/amirdhs'
+    },
+    5: {
+        tag: 'CHROME EXTENSION',
+        title: 'N8N AI WORKFLOW GENERATOR',
+        image: 'assets/project-bg-5.png',
+        description: 'A powerful Chrome Extension that allows users to generate complete, executable n8n workflows from natural language prompts. It supports OpenAI, Anthropic Claude, and Google Gemini models. Users can review the generated JSON, refine prompts, and directly insert the workflow into the n8n canvas.',
+        tech: ['JavaScript', 'Chrome Extension API', 'OpenAI API', 'Anthropic API', 'Google Gemini API'],
+        github: 'https://github.com/amirdhs/n8n-ai-extension'
+    },
+    6: {
+        tag: 'WEB APP',
+        title: 'MASTER YOUR JOB SEARCH',
+        image: 'assets/project-bg-6.png',
+        description: 'The all-in-one workspace to manage applications, optimize resumes with AI, and prep for interviews. (Currently under development).',
+        tech: ['React', 'Node.js', 'AI Integration', 'TBD'],
+        github: '#'
     }
 };
 
