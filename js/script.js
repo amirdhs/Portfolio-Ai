@@ -8,13 +8,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -23,16 +23,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const navHeight = navbar.offsetHeight;
             const targetPosition = target.offsetTop - navHeight;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
             });
-            
+
             // Close mobile menu if open
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
@@ -46,16 +46,16 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
+
         if (pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -105,7 +105,7 @@ let typeSpeed = 100;
 
 function type() {
     const currentPhrase = phrases[phraseIndex];
-    
+
     if (isDeleting) {
         typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
         charIndex--;
@@ -115,7 +115,7 @@ function type() {
         charIndex++;
         typeSpeed = 100;
     }
-    
+
     if (!isDeleting && charIndex === currentPhrase.length) {
         typeSpeed = 2000;
         isDeleting = true;
@@ -124,7 +124,7 @@ function type() {
         phraseIndex = (phraseIndex + 1) % phrases.length;
         typeSpeed = 500;
     }
-    
+
     setTimeout(type, typeSpeed);
 }
 
@@ -137,6 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Particles.js Background
 // ============================================
 
+// Disabled as per user request for static background
+/*
 if (typeof particlesJS !== 'undefined') {
     particlesJS('particles-js', {
         particles: {
@@ -241,6 +243,7 @@ if (typeof particlesJS !== 'undefined') {
         retina_detect: true
     });
 }
+*/
 
 // ============================================
 // Scroll Animations (AOS Alternative)
@@ -283,7 +286,7 @@ function validateField(field) {
     const formGroup = field.closest('.form-group');
     const errorMessage = formGroup.querySelector('.error-message');
     let isValid = true;
-    
+
     if (field.value.trim() === '') {
         isValid = false;
         errorMessage.textContent = 'This field is required';
@@ -297,33 +300,33 @@ function validateField(field) {
         isValid = false;
         errorMessage.textContent = 'Message must be at least 10 characters';
     }
-    
+
     if (isValid) {
         formGroup.classList.remove('error');
         errorMessage.textContent = '';
     } else {
         formGroup.classList.add('error');
     }
-    
+
     return isValid;
 }
 
 // Real-time validation
 if (contactForm) {
     const formInputs = contactForm.querySelectorAll('input, textarea');
-    
+
     formInputs.forEach(input => {
         input.addEventListener('blur', () => {
             validateField(input);
         });
-        
+
         input.addEventListener('input', () => {
             if (input.closest('.form-group').classList.contains('error')) {
                 validateField(input);
             }
         });
     });
-    
+
     // Form submission
     contactForm.addEventListener('submit', (e) => {
         // Validate all fields before submitting
@@ -336,17 +339,17 @@ if (contactForm) {
                 }
             }
         });
-        
+
         if (!isFormValid) {
             e.preventDefault();
             return;
         }
-        
+
         // If validation passes, disable submit button and let form submit naturally
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
-        
+
         // Form will submit normally to FormSubmit
     });
 }
@@ -358,11 +361,11 @@ if (contactForm) {
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.zIndex = '10';
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.zIndex = '1';
     });
 });
@@ -377,7 +380,7 @@ let lineDelay = 0;
 terminalLines.forEach((line, index) => {
     line.style.opacity = '0';
     line.style.transform = 'translateX(-20px)';
-    
+
     setTimeout(() => {
         line.style.transition = 'all 0.5s ease';
         line.style.opacity = '1';
@@ -392,7 +395,7 @@ terminalLines.forEach((line, index) => {
 const skillItems = document.querySelectorAll('.skill-item');
 
 skillItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
+    item.addEventListener('mouseenter', function () {
         // Add subtle animation or effect
         this.style.transition = 'transform 0.3s ease';
     });
@@ -413,11 +416,11 @@ timelineItems.forEach(item => {
             }
         });
     }, { threshold: 0.2 });
-    
+
     item.style.opacity = '0';
     item.style.transform = 'translateX(-30px)';
     item.style.transition = 'all 0.8s ease';
-    
+
     observer.observe(item);
 });
 
@@ -478,12 +481,12 @@ scrollTopBtn.addEventListener('click', () => {
     });
 });
 
-scrollTopBtn.addEventListener('mouseenter', function() {
+scrollTopBtn.addEventListener('mouseenter', function () {
     this.style.transform = 'translateY(-5px) scale(1.1)';
     this.style.boxShadow = '0 10px 25px rgba(255, 107, 0, 0.6)';
 });
 
-scrollTopBtn.addEventListener('mouseleave', function() {
+scrollTopBtn.addEventListener('mouseleave', function () {
     this.style.transform = 'translateY(0) scale(1)';
     this.style.boxShadow = '0 5px 15px rgba(255, 107, 0, 0.4)';
 });
@@ -494,13 +497,13 @@ scrollTopBtn.addEventListener('mouseleave', function() {
 
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-    
+
     // Animate hero section on load
     const heroElements = document.querySelectorAll('.hero-text > *');
     heroElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        
+
         setTimeout(() => {
             el.style.transition = 'all 0.8s ease';
             el.style.opacity = '1';
@@ -591,22 +594,22 @@ if (window.innerWidth > 768) {
         display: none;
     `;
     document.body.appendChild(cursor);
-    
+
     document.addEventListener('mousemove', (e) => {
         cursor.style.display = 'block';
         cursor.style.left = e.clientX - 10 + 'px';
         cursor.style.top = e.clientY - 10 + 'px';
     });
-    
+
     // Enhance cursor on interactive elements
     const interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-item');
-    
+
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursor.style.transform = 'scale(1.5)';
             cursor.style.background = 'rgba(255, 107, 0, 0.2)';
         });
-        
+
         el.addEventListener('mouseleave', () => {
             cursor.style.transform = 'scale(1)';
             cursor.style.background = 'transparent';
@@ -638,7 +641,7 @@ function preloadImages() {
         'assets/project-5.jpg',
         'assets/project-6.jpg'
     ];
-    
+
     images.forEach(src => {
         const img = new Image();
         img.src = src;
@@ -679,7 +682,7 @@ const chatWidget = {
         input: document.getElementById('chat-input'),
         sendBtn: document.getElementById('chat-send-btn')
     },
-    
+
     state: {
         isOpen: false,
         // API Key is loaded from js/config.js (which is gitignored)
@@ -708,7 +711,7 @@ const chatWidget = {
     toggleChat() {
         this.state.isOpen = !this.state.isOpen;
         this.elements.container.classList.toggle('active', this.state.isOpen);
-        
+
         if (this.state.isOpen && this.elements.input) {
             setTimeout(() => this.elements.input.focus(), 300);
         }
@@ -732,31 +735,30 @@ const chatWidget = {
     getFallbackContext() {
         return `
         Name: Amir Dehestani
-        Role: Backend Developer | AI Specialist | Automation Expert
+        Role: Backend & AI Engineer | Python, FastAPI, RAG, AI Chatbots & n8n Automation
         Location: Germany
-        Skills: Python, FastAPI, Flask, PostgreSQL, n8n, AI/ML, Docker
-        Experience: Freelance AI Developer, Web Developer at Nature's Gold Kohrang & Agroloader.
-        Projects: AI-Powered API System, Business Workflow Automation, E-Commerce Backend.
-        Contact: info@amirdhs.com
+        Skills: Python, FastAPI, Flask, PostgreSQL, RAG, AI Chatbots, n8n, OpenAI API, Anthropic Claude, Docker
+        Experience: Backend & AI Engineer at EGroupware GmbH; Web Developer at Nature's Gold Kohrang; Web Developer at Agroloader.
+        Contact: amirmo800@gmail.com
         `;
     },
 
     addMessage(content, type) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${type}-message`;
-        
+
         const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        
+
         // Parse Markdown for bot messages
-        const formattedContent = type === 'bot' && typeof marked !== 'undefined' 
-            ? marked.parse(content) 
+        const formattedContent = type === 'bot' && typeof marked !== 'undefined'
+            ? marked.parse(content)
             : content;
 
         messageDiv.innerHTML = `
             <div class="message-content">${formattedContent}</div>
             <div class="message-time">${time}</div>
         `;
-        
+
         this.elements.messages.appendChild(messageDiv);
         this.scrollToBottom();
     },
@@ -788,7 +790,7 @@ const chatWidget = {
     async handleSubmit(e) {
         e.preventDefault();
         const message = this.elements.input.value.trim();
-        
+
         if (!message) return;
 
         // Add user message
@@ -821,7 +823,7 @@ const chatWidget = {
             this.removeTypingIndicator();
             this.addMessage(`Sorry, I encountered an error: ${error.message}. Please check your API key or try again later.`, 'bot');
             console.error('Groq API Error:', error);
-            
+
             // If 401/403, maybe clear key
             if (error.message.includes('401') || error.message.includes('403')) {
                 this.state.apiKey = '';
@@ -836,7 +838,7 @@ const chatWidget = {
 
     async callGroqAPI(userMessage) {
         const API_URL = 'https://api.groq.com/openai/v1/chat/completions';
-        
+
         const systemPrompt = `
         You are an AI assistant for Amir Dehestani's portfolio website. 
         Your role is to answer questions about Amir based strictly on the provided context.
@@ -882,7 +884,7 @@ const chatWidget = {
         }
 
         const data = await response.json();
-        
+
         if (data.choices && data.choices.length > 0 && data.choices[0].message) {
             return data.choices[0].message.content;
         } else {
@@ -963,3 +965,160 @@ langButtons.forEach(btn => {
 document.addEventListener('DOMContentLoaded', () => {
     updateContent(currentLang);
 });
+
+// ============================================
+// Experience Modal Functions
+// ============================================
+const experienceData = {
+    1: {
+        icon: 'fas fa-brain',
+        title: 'Backend & AI Engineer',
+        company: 'EGroupware GmbH',
+        date: 'June 2025 - Present | Kaiserslautern, Rhineland-Palatinate, Germany',
+        responsibilities: [
+            'Engineered and executed n8n automation workflows to minimize manual tasks',
+            'Constructed AI-enhanced chatbots using modern NLP models',
+            'Devised RAG systems and bespoke AI agents for information retrieval and automation',
+            'Deployed and sustained backend services with a focus on scalability and reliability',
+            'Integrated multiple REST APIs for efficient inter-service communication',
+            'Partnered with cross-functional teams to deliver AI-centric features and automation solutions',
+            'Boosted system performance, usability, and data management through refined backend logic'
+        ],
+        technologies: ['Python', 'FastAPI', 'Flask', 'PostgreSQL', 'RAG', 'LLMs', 'n8n', 'REST APIs']
+    },
+    2: {
+        icon: 'fas fa-code',
+        title: 'Web Developer',
+        company: 'Nature\'s Gold Kohrang',
+        date: 'April 2021 - December 2023 | Mashhad, Razavi Khorasan, Iran',
+        responsibilities: [
+            'Designed and managed custom WordPress websites tailored to client needs',
+            'Improved SEO results, increasing organic traffic by 20% and boosting Google rankings',
+            'Optimized performance and reduced load time by 30% using compression, caching, and code minification',
+            'Maintained websites, resolved issues quickly, and ensured 99% uptime'
+        ],
+        technologies: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'SEO', 'Performance Optimization', 'Caching']
+    },
+    3: {
+        icon: 'fas fa-code',
+        title: 'Web Developer',
+        company: 'Agroloader',
+        date: 'February 2020 - March 2021 | Mashhad, Razavi Khorasan, Iran',
+        responsibilities: [
+            'Built responsive WordPress websites with custom functionality to improve mobile experience and accessibility',
+            'Led SEO campaigns, increasing organic traffic by 35% via keyword research and content optimization',
+            'Improved performance, achieving a 15% reduction in page load time'
+        ],
+        technologies: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'SEO', 'Responsive Design']
+    }
+};
+
+function openExperienceModal(id) {
+    const modal = document.getElementById('experienceModal');
+    const data = experienceData[id];
+
+    // Update modal content
+    document.getElementById('modalIcon').className = data.icon;
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalCompany').textContent = data.company;
+    document.getElementById('modalDate').innerHTML = `<i class="far fa-calendar"></i> ${data.date}`;
+
+    // Build responsibilities list
+    let responsibilitiesHTML = '<h5>Key Responsibilities & Achievements:</h5><ul>';
+    data.responsibilities.forEach(item => {
+        responsibilitiesHTML += `<li>${item}</li>`;
+    });
+    responsibilitiesHTML += '</ul>';
+
+    // Build technologies tags
+    let techHTML = '<h5>Technologies Used:</h5><div class="modal-tech-tags">';
+    data.technologies.forEach(tech => {
+        techHTML += `<span>${tech}</span>`;
+    });
+    techHTML += '</div>';
+
+    document.getElementById('modalBody').innerHTML = responsibilitiesHTML + techHTML;
+
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeExperienceModal() {
+    const modal = document.getElementById('experienceModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close modal on ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeExperienceModal();
+        closeProjectModal();
+    }
+});
+
+// ============================================
+// Project Modal Functions
+// ============================================
+
+const projectData = {
+    1: {
+        tag: 'AI TOOL',
+        title: 'AI RESUME ANALYZER',
+        image: 'assets/project-bg-1.png',
+        description: 'A sophisticated AI tool designed to parse and optimize resumes. It features secure JWT-based authentication, optimized database queries, and 100% test coverage using pytest. Built with a TDD approach and fully containerized with Docker for seamless deployment.',
+        tech: ['Python', 'FastAPI', 'OpenAI', 'Docker', 'Pytest'],
+        github: 'https://github.com/amirdhs/AI-Powered-Resume-Analyzer'
+    },
+    2: {
+        tag: 'RAG SYSTEM',
+        title: 'RAG KNOWLEDGE BASE',
+        image: 'assets/project-bg-2.png',
+        description: 'An advanced RAG (Retrieval-Augmented Generation) system that serves as an intelligent knowledge base. It processes internal documents to provide context-aware answers via a chatbot interface, leveraging vector databases for semantic search and LLMs for natural language generation.',
+        tech: ['Python', 'LangChain', 'Pinecone', 'OpenAI', 'React'],
+        github: 'https://github.com/amirdhs/Egroupware-RAG'
+    },
+    3: {
+        tag: 'AUTOMATION',
+        title: 'AD CREATIVE TESTING OPTIMIZER',
+        image: 'assets/project-bg-3.png',
+        description: 'An intelligent n8n workflow that automates ad creative testing by generating optimized headlines and image prompts. The system reads input data from Google Sheets, creates all possible combinations of headlines and image prompts, uses AI models to generate and optimize creative content, then writes structured results back to spreadsheets for marketing team review.',
+        tech: ['n8n', 'Google Sheets API', 'AI Message Models', 'JavaScript', 'Webhooks', 'Data Transformation'],
+        github: 'https://github.com/amirdhs'
+    }
+};
+
+function openProjectModal(id) {
+    const modal = document.getElementById('projectModal');
+    const data = projectData[id];
+
+    if (!data) return;
+
+    // specific check for image
+    const imgElement = document.getElementById('modalProjectImage');
+    imgElement.src = data.image;
+
+    document.getElementById('modalProjectTag').textContent = data.tag;
+    document.getElementById('modalProjectTitle').textContent = data.title;
+    document.getElementById('modalProjectDesc').textContent = data.description;
+    document.getElementById('modalProjectGithub').href = data.github;
+
+    // Tech tags
+    const techContainer = document.getElementById('modalProjectTech');
+    techContainer.innerHTML = '';
+    data.tech.forEach(tech => {
+        const span = document.createElement('span');
+        span.textContent = tech;
+        techContainer.appendChild(span);
+    });
+
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
