@@ -11,8 +11,8 @@ const translations = {
 
         // Hero Section
         'hero-badge': '<span class="status-dot"></span> Available for new projects',
-        'hero-title': 'Building Intelligent <br><span class="text-gradient">Backend Solutions</span>',
-        'hero-desc': 'I\'m Amir Dehestani, a Software Engineer specializing in Python, AI integration, and scalable backend architecture. I transform complex problems into elegant, automated solutions.',
+        'hero-title': 'Backend & AI <br><span class="text-gradient">Engineering</span>',
+        'hero-desc': 'I\'m Amir Dehestani, a backend & AI engineer based in Germany. I build scalable backends, AI-driven chatbots, RAG systems, and n8n automations that turn complex problems into reliable, deployed solutions.',
         'hero-btn-projects': 'View Projects <i class="fas fa-arrow-right"></i>',
         'hero-btn-chat': 'Talk to AI Agent <i class="fas fa-robot"></i>',
         'hero-btn-meeting': 'Book a Meeting <i class="fas fa-calendar-check"></i>',
@@ -21,8 +21,8 @@ const translations = {
         'section-about': 'About Me',
         'about-exp-badge': 'Years of<br>Experience',
         'about-title': 'Architecting Digital Solutions with <span class="highlight">Python & AI</span>',
-        'about-p1': 'I\'m a passionate backend developer and AI specialist based in Germany. I don\'t just write code; I build robust ecosystems where <strong>Python, FastAPI, and AI</strong> converge to solve complex real-world problems.',
-        'about-p2': 'My philosophy is simple: automate the boring, optimize the complex, and innovate the future. Whether it\'s designing high-performance APIs or creating intelligent agents, I thrive on turning abstract concepts into deployed reality.',
+        'about-p1': 'I\'m a backend developer and AI specialist based in Germany, passionate about building scalable, high-performance systems that solve real-world problems. With strong expertise in <strong>Python, FastAPI, Flask, and PostgreSQL</strong>, I turn business challenges into clean, maintainable code.',
+        'about-p2': 'My work bridges backend engineering and AI: automating workflows, enhancing decision-making, and building smarter user experiences. Whether it\'s RESTful APIs, AI chatbots, RAG systems, or end-to-end automation, I focus on reliable delivery and impact.',
         'about-bring': 'My Core Focus:',
         
         // Focus Cards
@@ -46,10 +46,9 @@ const translations = {
 
         // Experience Section
         'section-experience': 'Work Experience',
-        'exp-1-title': 'AI Agent & Chatbot Developer',
+        'exp-1-title': 'Backend & AI Engineer',
         'exp-2-title': 'Web Developer',
-        'exp-3-title': 'n8n Automation Specialist',
-        'exp-4-title': 'Web Developer',
+        'exp-3-title': 'Web Developer',
 
         // Cross-Functional Section
         'cross-func-title': 'I\'m currently looking to join a <span style="color: var(--primary-color);">cross-functional</span> team',
@@ -57,12 +56,12 @@ const translations = {
 
         // Projects Section
         'section-projects': 'Featured Projects',
-        'proj-1-title': 'AI-Powered API System',
-        'proj-1-desc': 'A comprehensive RESTful API built with FastAPI integrating machine learning models for intelligent data processing. Features JWT authentication, PostgreSQL database, and Docker containerization for seamless deployment.',
-        'proj-2-title': 'Business Workflow Automation',
-        'proj-2-desc': 'Custom n8n workflows automating business processes including data synchronization, email notifications, and CRM integration. Reduced manual tasks by 60% and improved operational efficiency across departments.',
-        'proj-3-title': 'E-Commerce Backend Platform',
-        'proj-3-desc': 'Scalable e-commerce backend built with Flask and SQLAlchemy. Features include user authentication, order management, payment processing integration, and real-time inventory tracking.',
+        'proj-1-title': 'AI Resume Analyzer',
+        'proj-1-desc': 'AI-powered tool to automatically analyze and improve resumes. Built with Python with secure authentication, efficient database queries, and REST endpoints.',
+        'proj-2-title': 'AI Chatbot Integration',
+        'proj-2-desc': 'Advanced chatbot system using NLP/ML with multilingual, context-aware responses. Integrated into Telegram/WhatsApp and web apps via REST APIs and WebSockets.',
+        'proj-3-title': 'Business Workflow Automation',
+        'proj-3-desc': 'Custom n8n workflows automating critical business processes including data synchronization and CRM integration. Reduced manual tasks by 60% and improved operational efficiency.',
 
         // Certifications Section
         'section-certifications': 'Certifications',
@@ -78,15 +77,18 @@ const translations = {
         'cert-4-title': 'Webflow Layouts',
         'cert-4-issuer': 'Professional Certificate',
         'cert-4-focus': 'Web Design',
+        'cert-5-title': 'n8n: No Code AI Agent Builder',
+        'cert-5-issuer': 'n8n',
+        'cert-5-focus': 'No-Code Automation',
 
         // Education Section
         'section-education': 'Education',
         'edu-1-title': 'Computer Software Engineering',
         'edu-1-school': 'Masterschool',
-        'edu-1-desc': 'Comprehensive software engineering program focused on backend development, API design, database management, and modern development practices.',
-        'edu-2-title': 'Bachelor\'s Degree in Avionics Engineering',
+        'edu-1-desc': 'Software engineering program with a strong focus on backend development and modern engineering practices.',
+        'edu-2-title': 'Bachelor\'s Degree, Avionics Engineering',
         'edu-2-school': 'Civil Aviation Technology College',
-        'edu-2-desc': 'Specialized in aviation electronics, systems integration, and technical problem-solving. Developed strong analytical and engineering fundamentals.',
+        'edu-2-desc': 'Focused on avionics fundamentals, systems integration, and technical problem-solving.',
 
         // Contact Section
         'section-contact': 'Get In Touch',
@@ -108,7 +110,7 @@ const translations = {
         'btn-send': 'Send Message',
 
         // Footer
-        'footer-rights': '&copy; 2025 Amir Dehestani. All rights reserved.',
+        'footer-rights': '&copy; 2026 Amir Dehestani. All rights reserved.',
         'footer-design': 'Designed & Built with <i class="fas fa-heart"></i> by Amir Dehestani',
 
         // Chatbot
@@ -140,8 +142,8 @@ const translations = {
 
         // Hero Section
         'hero-badge': '<span class="status-dot"></span> Verfügbar für neue Projekte',
-        'hero-title': 'Entwicklung intelligenter <br><span class="text-gradient">Backend-Lösungen</span>',
-        'hero-desc': 'Ich bin Amir Dehestani, ein Softwareentwickler, der sich auf Python, KI-Integration und skalierbare Backend-Architektur spezialisiert hat. Ich verwandle komplexe Probleme in elegante, automatisierte Lösungen.',
+        'hero-title': 'Backend & KI <br><span class="text-gradient">Engineering</span>',
+        'hero-desc': 'Ich bin Amir Dehestani, Backend- und KI-Engineer in Deutschland. Ich entwickle skalierbare Backends, KI-Chatbots, RAG-Systeme und n8n-Automatisierungen, die komplexe Probleme in zuverlässige Lösungen verwandeln.',
         'hero-btn-projects': 'Projekte ansehen <i class="fas fa-arrow-right"></i>',
         'hero-btn-chat': 'Mit KI-Agent sprechen <i class="fas fa-robot"></i>',
         'hero-btn-meeting': 'Termin buchen <i class="fas fa-calendar-check"></i>',
@@ -175,10 +177,9 @@ const translations = {
 
         // Experience Section
         'section-experience': 'Berufserfahrung',
-        'exp-1-title': 'KI-Agent & Chatbot-Entwickler',
+        'exp-1-title': 'Backend & KI Engineer',
         'exp-2-title': 'Webentwickler',
-        'exp-3-title': 'n8n Automatisierungsspezialist',
-        'exp-4-title': 'Webentwickler',
+        'exp-3-title': 'Webentwickler',
 
         // Cross-Functional Section
         'cross-func-title': 'Ich suche derzeit nach einem <span style="color: var(--primary-color);">funktionsübergreifenden</span> Team',
@@ -186,12 +187,12 @@ const translations = {
 
         // Projects Section
         'section-projects': 'Ausgewählte Projekte',
-        'proj-1-title': 'KI-gestütztes API-System',
-        'proj-1-desc': 'Eine umfassende RESTful API, entwickelt mit FastAPI, die Machine-Learning-Modelle für intelligente Datenverarbeitung integriert. Verfügt über JWT-Authentifizierung, PostgreSQL-Datenbank und Docker-Containerisierung für nahtlose Bereitstellung.',
-        'proj-2-title': 'Geschäftsprozess-Automatisierung',
-        'proj-2-desc': 'Benutzerdefinierte n8n-Workflows zur Automatisierung von Geschäftsprozessen, einschließlich Datensynchronisation, E-Mail-Benachrichtigungen und CRM-Integration. Reduzierte manuelle Aufgaben um 60% und verbesserte die betriebliche Effizienz abteilungsübergreifend.',
-        'proj-3-title': 'E-Commerce Backend-Plattform',
-        'proj-3-desc': 'Skalierbares E-Commerce-Backend, entwickelt mit Flask und SQLAlchemy. Funktionen umfassen Benutzerauthentifizierung, Bestellverwaltung, Integration von Zahlungsabwicklungen und Bestandsverfolgung in Echtzeit.',
+        'proj-1-title': 'AI Resume Analyzer',
+        'proj-1-desc': 'KI-Tool zur automatischen Analyse und Optimierung von Lebensläufen. Implementiert sichere Authentifizierung, effiziente Datenbankabfragen und REST-Endpoints.',
+        'proj-2-title': 'AI Chatbot Integration',
+        'proj-2-desc': 'Entwicklung eines modernen Chatbots mit NLP/ML für mehrsprachige, kontextsensitive Antworten. Integration in Telegram/WhatsApp und Web-Anwendungen über REST APIs und WebSockets.',
+        'proj-3-title': 'Workflow-Automatisierung (n8n)',
+        'proj-3-desc': 'Komplexe n8n-Workflows zur Automatisierung von Geschäftsprozessen und zur Reduzierung manueller Tätigkeiten. Fokus auf robuste Integrationen und effiziente Abläufe.',
 
         // Certifications Section
         'section-certifications': 'Zertifizierungen',
@@ -207,15 +208,18 @@ const translations = {
         'cert-4-title': 'Webflow Layouts',
         'cert-4-issuer': 'Professionelles Zertifikat',
         'cert-4-focus': 'Webdesign',
+        'cert-5-title': 'n8n: No Code AI Agent Builder',
+        'cert-5-issuer': 'n8n',
+        'cert-5-focus': 'No-Code Automatisierung',
 
         // Education Section
         'section-education': 'Ausbildung',
         'edu-1-title': 'Computer Software Engineering',
         'edu-1-school': 'Masterschool',
-        'edu-1-desc': 'Umfassendes Software-Engineering-Programm mit Schwerpunkt auf Backend-Entwicklung, API-Design, Datenbankmanagement und modernen Entwicklungspraktiken.',
-        'edu-2-title': 'Bachelor-Abschluss in Avionik-Ingenieurwesen',
+        'edu-1-desc': 'Software-Engineering-Programm mit Fokus auf Backend-Entwicklung und modernen Engineering-Praktiken.',
+        'edu-2-title': 'Bachelor\'s Degree, Avionics Engineering',
         'edu-2-school': 'Civil Aviation Technology College',
-        'edu-2-desc': 'Spezialisiert auf Luftfahrtelektronik, Systemintegration und technische Problemlösung. Entwicklung starker analytischer und technischer Grundlagen.',
+        'edu-2-desc': 'Fokus auf Avionik-Grundlagen, Systemintegration und technische Problemlösung.',
 
         // Contact Section
         'section-contact': 'Kontakt aufnehmen',
@@ -237,7 +241,7 @@ const translations = {
         'btn-send': 'Nachricht senden',
 
         // Footer
-        'footer-rights': '&copy; 2025 Amir Dehestani. Alle Rechte vorbehalten.',
+        'footer-rights': '&copy; 2026 Amir Dehestani. Alle Rechte vorbehalten.',
         'footer-design': 'Entworfen & Entwickelt mit <i class="fas fa-heart"></i> von Amir Dehestani',
 
         // Chatbot
