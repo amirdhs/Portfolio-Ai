@@ -21,21 +21,26 @@ window.addEventListener('scroll', () => {
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        
+        // Only prevent default for internal anchor links
+        if (href && href.startsWith('#') && href.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(href);
 
-        if (target) {
-            const navHeight = navbar.offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
+            if (target) {
+                const navHeight = navbar.offsetHeight;
+                const targetPosition = target.offsetTop - navHeight;
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
 
-            // Close mobile menu if open
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
         }
     });
 });
