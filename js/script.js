@@ -855,7 +855,7 @@ const chatWidget = {
         `;
 
         const requestBody = {
-            model: "openai/gpt-oss-20b", // Using a standard high-performance model on Groq
+            model: "openai/gpt-oss-120b", // Using a standard high-performance model on Groq
             messages: [
                 {
                     role: "system",
