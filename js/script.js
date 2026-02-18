@@ -1117,7 +1117,8 @@ const projectData = {
         image: 'assets/project-bg-7.png',
         description: 'A modern and fully responsive landing page website for real estate. It features property listings, advanced search filtering, and an interactive map, providing a seamless user experience for finding properties.',
         tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web Design'],
-        github: '#'
+        github: '#',
+        live: 'https://aura-real-estate-landing-page.netlify.app/'
     }
 };
 
@@ -1134,7 +1135,24 @@ function openProjectModal(id) {
     document.getElementById('modalProjectTag').textContent = data.tag;
     document.getElementById('modalProjectTitle').textContent = data.title;
     document.getElementById('modalProjectDesc').textContent = data.description;
-    document.getElementById('modalProjectGithub').href = data.github;
+    
+    // Github Link
+    const githubBtn = document.getElementById('modalProjectGithub');
+    if (data.github && data.github !== '#') {
+        githubBtn.href = data.github;
+        githubBtn.style.display = 'inline-flex';
+    } else {
+        githubBtn.style.display = 'none';
+    }
+
+    // Live Link
+    const liveBtn = document.getElementById('modalProjectLive');
+    if (data.live) {
+        liveBtn.href = data.live;
+        liveBtn.style.display = 'inline-flex';
+    } else {
+        liveBtn.style.display = 'none';
+    }
 
     // Tech tags
     const techContainer = document.getElementById('modalProjectTech');
