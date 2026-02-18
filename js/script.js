@@ -1110,6 +1110,14 @@ const projectData = {
         description: 'The all-in-one workspace to manage applications, optimize resumes with AI, and prep for interviews. (Currently under development).',
         tech: ['React', 'Node.js', 'AI Integration', 'TBD'],
         github: '#'
+    },
+    7: {
+        tag: 'WEB APP',
+        title: 'REAL ESTATE LANDING PAGE',
+        image: 'assets/project-bg-7.png',
+        description: 'A modern and fully responsive landing page website for real estate. It features property listings, advanced search filtering, and an interactive map, providing a seamless user experience for finding properties.',
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web Design'],
+        github: '#'
     }
 };
 

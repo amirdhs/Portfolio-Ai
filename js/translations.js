@@ -62,6 +62,8 @@ const translations = {
         'proj-2-desc': 'Advanced chatbot system using NLP/ML with multilingual, context-aware responses. Integrated into Telegram/WhatsApp and web apps via REST APIs and WebSockets.',
         'proj-3-title': 'Business Workflow Automation',
         'proj-3-desc': 'Custom n8n workflows automating critical business processes including data synchronization and CRM integration. Reduced manual tasks by 60% and improved operational efficiency.',
+        'proj-7-title': 'Real Estate Landing Page',
+        'proj-7-short': 'A modern, fully responsive real estate landing page with search and filtering features.',
 
         // Certifications Section
         'section-certifications': 'Certifications',
@@ -193,6 +195,8 @@ const translations = {
         'proj-2-desc': 'Entwicklung eines modernen Chatbots mit NLP/ML für mehrsprachige, kontextsensitive Antworten. Integration in Telegram/WhatsApp und Web-Anwendungen über REST APIs und WebSockets.',
         'proj-3-title': 'Workflow-Automatisierung (n8n)',
         'proj-3-desc': 'Komplexe n8n-Workflows zur Automatisierung von Geschäftsprozessen und zur Reduzierung manueller Tätigkeiten. Fokus auf robuste Integrationen und effiziente Abläufe.',
+        'proj-7-title': 'Immobilien-Webseite',
+        'proj-7-short': 'Eine moderne, vollständig responsive Immobilien-Landingpage mit Such- und Filterfunktionen.',
 
         // Certifications Section
         'section-certifications': 'Zertifizierungen',
