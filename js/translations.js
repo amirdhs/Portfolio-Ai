@@ -11,8 +11,8 @@ const translations = {
 
         // Hero Section
         'hero-badge': '<span class="status-dot"></span> Available for new projects',
-        'hero-title': 'Backend & AI <br><span class="text-gradient">Engineering</span>',
-        'hero-desc': 'I\'m Amir Dehestani, a backend & AI engineer based in Germany. I build scalable backends, AI-driven chatbots, RAG systems, and n8n automations that turn complex problems into reliable, deployed solutions.',
+        'hero-title': 'Building <em>software</em><br>that solves real problems',
+        'hero-desc': 'I\'m <strong>Amir Dehestani</strong>, a <strong>Software Developer</strong> based in Germany — building web apps, AI-powered tools, scalable backends, and WordPress solutions.',
         'hero-btn-projects': 'View Projects <i class="fas fa-arrow-right"></i>',
         'hero-btn-chat': 'Talk to AI Agent <i class="fas fa-robot"></i>',
         'hero-btn-meeting': 'Book a Meeting <i class="fas fa-calendar-check"></i>',
@@ -20,9 +20,9 @@ const translations = {
         // About Section
         'section-about': 'About Me',
         'about-exp-badge': 'Years of<br>Experience',
-        'about-title': 'Architecting Digital Solutions with <span class="highlight">Python & AI</span>',
-        'about-p1': 'I\'m a backend developer and AI specialist based in Germany, passionate about building scalable, high-performance systems that solve real-world problems. With strong expertise in <strong>Python, FastAPI, Flask, and PostgreSQL</strong>, I turn business challenges into clean, maintainable code.',
-        'about-p2': 'My work bridges backend engineering and AI: automating workflows, enhancing decision-making, and building smarter user experiences. Whether it\'s RESTful APIs, AI chatbots, RAG systems, or end-to-end automation, I focus on reliable delivery and impact.',
+        'about-title': 'Developer across the full stack',
+        'about-p1': 'I\'m a <strong>software developer</strong> who\'s comfortable across multiple domains — from building robust Python backends and AI-integrated systems, to crafting polished WordPress sites and custom web applications.',
+        'about-p2': 'My background spans <strong>backend engineering</strong>, <strong>AI/ML integration</strong>, <strong>workflow automation</strong>, and <strong>CMS development</strong>. I adapt to what a project needs, whether that means a production-grade API, a smart chatbot, or a fast and clean WordPress build.',
         'about-bring': 'My Core Focus:',
         
         // Focus Cards
@@ -51,19 +51,26 @@ const translations = {
         'exp-3-title': 'Web Developer',
 
         // Cross-Functional Section
-        'cross-func-title': 'I\'m currently looking to join a <span style="color: var(--primary-color);">cross-functional</span> team',
-        'cross-func-desc': 'that values improving people\'s lives through accessible design',
+        'cross-func-title': 'Open to new opportunities with <span class="highlight">innovative</span> teams',
+        'cross-func-desc': 'that value building intelligent solutions and scalable architectures',
 
         // Projects Section
-        'section-projects': 'Featured Projects',
+        'section-projects': 'Things I\'ve Built',
+        'section-projects-subtitle': 'A mix of AI tools, web apps, automation systems, and WordPress solutions.',
         'proj-1-title': 'AI Resume Analyzer',
-        'proj-1-desc': 'AI-powered tool to automatically analyze and improve resumes. Built with Python with secure authentication, efficient database queries, and REST endpoints.',
-        'proj-2-title': 'AI Chatbot Integration',
-        'proj-2-desc': 'Advanced chatbot system using NLP/ML with multilingual, context-aware responses. Integrated into Telegram/WhatsApp and web apps via REST APIs and WebSockets.',
-        'proj-3-title': 'Business Workflow Automation',
-        'proj-3-desc': 'Custom n8n workflows automating critical business processes including data synchronization and CRM integration. Reduced manual tasks by 60% and improved operational efficiency.',
+        'proj-1-short': 'LLM-powered tool that automatically analyses and optimises resumes via strategic prompting. Provides actionable feedback tailored to job descriptions.',
+        'proj-2-title': 'RAG Knowledge Base',
+        'proj-2-short': 'Interactive chatbot that processes internal documents for context-aware responses using semantic search and retrieval-augmented generation.',
+        'proj-3-title': 'n8n Automation Suite',
+        'proj-3-short': 'Automated workflows bridging CRM, email, and database systems for complete business process automation — eliminating manual data handoffs.',
+        'proj-4-title': 'Personal Life Manager',
+        'proj-4-short': 'Voice-enabled AI assistant integrating Telegram and Google Services for complete life management — calendar, tasks, reminders, and more.',
+        'proj-5-title': 'n8n AI Workflow Generator',
+        'proj-5-short': 'Browser extension that generates executable n8n workflows from natural language descriptions using AI — making automation accessible to non-developers.',
+        'proj-6-title': 'Master Your Job Search',
+        'proj-6-short': 'All-in-one workspace to manage job applications, optimise resumes with AI, and prepare for interviews. Built for job seekers who want a systematic approach.',
         'proj-7-title': 'Real Estate Landing Page',
-        'proj-7-short': 'A modern, fully responsive real estate landing page with search and filtering features.',
+        'proj-7-short': 'Modern, fully responsive landing page for real estate listings with advanced search and filtering features. Clean UI with fast performance.',
 
         // Certifications Section
         'section-certifications': 'Certifications',
@@ -94,8 +101,8 @@ const translations = {
 
         // Contact Section
         'section-contact': 'Get In Touch',
-        'contact-title': 'Let\'s Connect and Build the Future Together!',
-        'contact-desc': 'I\'m always interested in hearing about new projects, opportunities, and collaborations. Whether you have a question or just want to say hi, feel free to reach out!',
+        'contact-title': 'Let\'s build something',
+        'contact-desc': 'Open to freelance projects, full-time roles, and interesting collaborations. Don\'t hesitate to reach out.',
         'contact-email': 'Email',
         'contact-loc': 'Location',
         'contact-linkedin': 'LinkedIn',
@@ -144,8 +151,8 @@ const translations = {
 
         // Hero Section
         'hero-badge': '<span class="status-dot"></span> Verfügbar für neue Projekte',
-        'hero-title': 'Backend & KI <br><span class="text-gradient">Engineering</span>',
-        'hero-desc': 'Ich bin Amir Dehestani, Backend- und KI-Engineer in Deutschland. Ich entwickle skalierbare Backends, KI-Chatbots, RAG-Systeme und n8n-Automatisierungen, die komplexe Probleme in zuverlässige Lösungen verwandeln.',
+        'hero-title': 'Ich entwickle <em>Software</em><br>für echte Probleme',
+        'hero-desc': 'Ich bin <strong>Amir Dehestani</strong>, ein <strong>Softwareentwickler</strong> in Deutschland — ich entwickle Web-Apps, KI-gestützte Tools, skalierbare Backends und WordPress-Lösungen.',
         'hero-btn-projects': 'Projekte ansehen <i class="fas fa-arrow-right"></i>',
         'hero-btn-chat': 'Mit KI-Agent sprechen <i class="fas fa-robot"></i>',
         'hero-btn-meeting': 'Termin buchen <i class="fas fa-calendar-check"></i>',
@@ -153,9 +160,9 @@ const translations = {
         // About Section
         'section-about': 'Über mich',
         'about-exp-badge': 'Jahre<br>Erfahrung',
-        'about-title': 'Architektur digitaler Lösungen mit <span class="highlight">Python & KI</span>',
-        'about-p1': 'Ich bin ein leidenschaftlicher Backend-Entwickler und KI-Spezialist mit Sitz in Deutschland. Ich schreibe nicht nur Code; ich baue robuste Ökosysteme, in denen <strong>Python, FastAPI und KI</strong> zusammenkommen, um komplexe reale Probleme zu lösen.',
-        'about-p2': 'Meine Philosophie ist einfach: das Langweilige automatisieren, das Komplexe optimieren und die Zukunft innovieren. Ob es um das Design von Hochleistungs-APIs oder die Erstellung intelligenter Agenten geht, ich liebe es, abstrakte Konzepte in die Realität umzusetzen.',
+        'about-title': 'Entwickler über den gesamten Stack',
+        'about-p1': 'Ich bin ein <strong>Softwareentwickler</strong>, der sich in mehreren Bereichen wohlfühlt — von robusten Python-Backends und KI-integrierten Systemen bis hin zu modernen WordPress-Seiten und individuellen Webanwendungen.',
+        'about-p2': 'Mein Hintergrund umfasst <strong>Backend-Engineering</strong>, <strong>KI/ML-Integration</strong>, <strong>Workflow-Automatisierung</strong> und <strong>CMS-Entwicklung</strong>. Ich passe mich an, was ein Projekt braucht: produktionsreife API, smarter Chatbot oder eine schnelle, saubere WordPress-Umsetzung.',
         'about-bring': 'Mein Kernfokus:',
 
         // Focus Cards
@@ -184,19 +191,26 @@ const translations = {
         'exp-3-title': 'Webentwickler',
 
         // Cross-Functional Section
-        'cross-func-title': 'Ich suche derzeit nach einem <span style="color: var(--primary-color);">funktionsübergreifenden</span> Team',
-        'cross-func-desc': 'das Wert darauf legt, das Leben der Menschen durch barrierefreies Design zu verbessern',
+        'cross-func-title': 'Offen für neue Möglichkeiten mit <span class="highlight">innovativen</span> Teams',
+        'cross-func-desc': 'die intelligente Lösungen und skalierbare Architekturen schätzen',
 
         // Projects Section
-        'section-projects': 'Ausgewählte Projekte',
+        'section-projects': 'Projekte, die ich gebaut habe',
+        'section-projects-subtitle': 'Eine Mischung aus KI-Tools, Web-Apps, Automatisierungssystemen und WordPress-Lösungen.',
         'proj-1-title': 'AI Resume Analyzer',
-        'proj-1-desc': 'KI-Tool zur automatischen Analyse und Optimierung von Lebensläufen. Implementiert sichere Authentifizierung, effiziente Datenbankabfragen und REST-Endpoints.',
-        'proj-2-title': 'AI Chatbot Integration',
-        'proj-2-desc': 'Entwicklung eines modernen Chatbots mit NLP/ML für mehrsprachige, kontextsensitive Antworten. Integration in Telegram/WhatsApp und Web-Anwendungen über REST APIs und WebSockets.',
-        'proj-3-title': 'Workflow-Automatisierung (n8n)',
-        'proj-3-desc': 'Komplexe n8n-Workflows zur Automatisierung von Geschäftsprozessen und zur Reduzierung manueller Tätigkeiten. Fokus auf robuste Integrationen und effiziente Abläufe.',
+        'proj-1-short': 'LLM-gestütztes Tool zur automatischen Analyse und Optimierung von Lebensläufen mit konkretem Feedback je Stellenausschreibung.',
+        'proj-2-title': 'RAG Knowledge Base',
+        'proj-2-short': 'Interaktiver Chatbot, der interne Dokumente für kontextbezogene Antworten via semantischer Suche und RAG verarbeitet.',
+        'proj-3-title': 'n8n Automation Suite',
+        'proj-3-short': 'Automatisierte Workflows zwischen CRM, E-Mail und Datenbanken für durchgängige Geschäftsprozess-Automatisierung.',
+        'proj-4-title': 'Personal Life Manager',
+        'proj-4-short': 'Sprachfähiger KI-Assistent mit Telegram- und Google-Integration für Kalender, Aufgaben, Erinnerungen und mehr.',
+        'proj-5-title': 'n8n AI Workflow Generator',
+        'proj-5-short': 'Browser-Erweiterung, die ausführbare n8n-Workflows aus natürlicher Sprache mit KI generiert.',
+        'proj-6-title': 'Master Your Job Search',
+        'proj-6-short': 'All-in-one-Workspace zur Verwaltung von Bewerbungen, KI-Optimierung von Lebensläufen und Interviewvorbereitung.',
         'proj-7-title': 'Immobilien-Webseite',
-        'proj-7-short': 'Eine moderne, vollständig responsive Immobilien-Landingpage mit Such- und Filterfunktionen.',
+        'proj-7-short': 'Moderne, vollständig responsive Landingpage für Immobilien mit erweiterter Suche und Filterfunktionen.',
 
         // Certifications Section
         'section-certifications': 'Zertifizierungen',
@@ -227,8 +241,8 @@ const translations = {
 
         // Contact Section
         'section-contact': 'Kontakt aufnehmen',
-        'contact-title': 'Lassen Sie uns verbinden und die Zukunft gemeinsam bauen!',
-        'contact-desc': 'Ich bin immer daran interessiert, von neuen Projekten, Möglichkeiten und Kooperationen zu hören. Ob Sie eine Frage haben oder einfach nur Hallo sagen wollen, zögern Sie nicht, mich zu kontaktieren!',
+        'contact-title': 'Lassen Sie uns etwas bauen',
+        'contact-desc': 'Offen für Freelance-Projekte, Vollzeitrollen und spannende Kooperationen. Melden Sie sich gerne.',
         'contact-email': 'E-Mail',
         'contact-loc': 'Standort',
         'contact-linkedin': 'LinkedIn',

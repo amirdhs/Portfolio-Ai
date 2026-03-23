@@ -740,11 +740,11 @@ const chatWidget = {
     getFallbackContext() {
         return `
         Name: Amir Dehestani
-        Role: Backend & AI Engineer | Python, FastAPI, RAG, AI Chatbots & n8n Automation
+        Role: Software Developer | Python, FastAPI, AI Tools, Automation, WordPress
         Location: Germany
-        Skills: Python, FastAPI, Flask, PostgreSQL, RAG, AI Chatbots, n8n, OpenAI API, Anthropic Claude, Docker
+        Skills: Python, FastAPI, Flask, PostgreSQL, RAG, AI Chatbots, n8n, WordPress, Docker
         Experience: Backend & AI Engineer at EGroupware GmbH; Web Developer at Nature's Gold Kohrang; Web Developer at Agroloader.
-        Contact: amirmo800@gmail.com
+        Contact: info@amirdhs.com
         `;
     },
 
@@ -981,15 +981,12 @@ const experienceData = {
         company: 'EGroupware GmbH',
         date: 'June 2025 - Present | Kaiserslautern, Rhineland-Palatinate, Germany',
         responsibilities: [
-            'Engineered and executed n8n automation workflows to minimize manual tasks',
-            'Constructed AI-enhanced chatbots using modern NLP models',
-            'Devised RAG systems and bespoke AI agents for information retrieval and automation',
-            'Deployed and sustained backend services with a focus on scalability and reliability',
-            'Integrated multiple REST APIs for efficient inter-service communication',
-            'Partnered with cross-functional teams to deliver AI-centric features and automation solutions',
-            'Boosted system performance, usability, and data management through refined backend logic'
+            'Built intelligent backend systems and AI integrations for enterprise groupware software',
+            'Developed LLM-powered features and automation workflows across the platform',
+            'Delivered scalable backend services and reliable API integrations',
+            'Collaborated across teams to ship AI-centric product improvements'
         ],
-        technologies: ['Python', 'FastAPI', 'Flask', 'PostgreSQL', 'RAG', 'LLMs', 'n8n', 'REST APIs']
+        technologies: ['Python', 'FastAPI', 'LLMs', 'Docker', 'PostgreSQL']
     },
     2: {
         icon: 'fas fa-code',
@@ -997,12 +994,12 @@ const experienceData = {
         company: 'Nature\'s Gold Kohrang',
         date: 'April 2021 - December 2023 | Mashhad, Razavi Khorasan, Iran',
         responsibilities: [
-            'Designed and managed custom WordPress websites tailored to client needs',
-            'Improved SEO results, increasing organic traffic by 20% and boosting Google rankings',
-            'Optimized performance and reduced load time by 30% using compression, caching, and code minification',
-            'Maintained websites, resolved issues quickly, and ensured 99% uptime'
+            'Developed and maintained the company website using WordPress, custom themes, and plugins',
+            'Handled content management and technical updates',
+            'Improved website performance and reliability',
+            'Supported e-commerce and business-focused web features'
         ],
-        technologies: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'SEO', 'Performance Optimization', 'Caching']
+        technologies: ['WordPress', 'HTML/CSS', 'JavaScript', 'WooCommerce']
     },
     3: {
         icon: 'fas fa-code',
@@ -1010,11 +1007,11 @@ const experienceData = {
         company: 'Agroloader',
         date: 'February 2020 - March 2021 | Mashhad, Razavi Khorasan, Iran',
         responsibilities: [
-            'Built responsive WordPress websites with custom functionality to improve mobile experience and accessibility',
-            'Led SEO campaigns, increasing organic traffic by 35% via keyword research and content optimization',
-            'Improved performance, achieving a 15% reduction in page load time'
+            'Built and maintained web applications for an agricultural platform',
+            'Focused on responsive design and CMS customization',
+            'Implemented backend integrations for data-heavy pages'
         ],
-        technologies: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'SEO', 'Responsive Design']
+        technologies: ['WordPress', 'PHP', 'CSS', 'MySQL']
     }
 };
 
@@ -1072,56 +1069,56 @@ const projectData = {
         tag: 'AI TOOL',
         title: 'AI RESUME ANALYZER',
         image: 'assets/project-bg-1.png',
-        description: 'A sophisticated AI tool designed to parse and optimize resumes. It features secure JWT-based authentication, optimized database queries, and 100% test coverage using pytest. Built with a TDD approach and fully containerized with Docker for seamless deployment.',
-        tech: ['Python', 'FastAPI', 'OpenAI', 'Docker', 'Pytest'],
+        description: 'LLM-powered tool that automatically analyses and optimises resumes via strategic prompting. It provides actionable feedback tailored to job descriptions.',
+        tech: ['Python', 'OpenAI', 'FastAPI'],
         github: 'https://github.com/amirdhs/AI-Powered-Resume-Analyzer'
     },
     2: {
         tag: 'RAG SYSTEM',
         title: 'RAG KNOWLEDGE BASE',
         image: 'assets/project-bg-2.png',
-        description: 'An advanced RAG (Retrieval-Augmented Generation) system that serves as an intelligent knowledge base. It processes internal documents to provide context-aware answers via a chatbot interface, leveraging vector databases for semantic search and LLMs for natural language generation.',
-        tech: ['Python', 'LangChain', 'Pinecone', 'OpenAI', 'React'],
+        description: 'Interactive chatbot that processes internal documents for context-aware responses using semantic search and retrieval-augmented generation.',
+        tech: ['LangChain', 'Vector DB', 'Python'],
         github: 'https://github.com/amirdhs/Egroupware-RAG'
     },
     3: {
         tag: 'AUTOMATION',
-        title: 'AD CREATIVE TESTING OPTIMIZER',
+        title: 'N8N AUTOMATION SUITE',
         image: 'assets/project-bg-3.png',
-        description: 'An intelligent n8n workflow that automates ad creative testing by generating optimized headlines and image prompts. The system reads input data from Google Sheets, creates all possible combinations of headlines and image prompts, uses AI models to generate and optimize creative content, then writes structured results back to spreadsheets for marketing team review.',
-        tech: ['n8n', 'Google Sheets API', 'AI Message Models', 'JavaScript', 'Webhooks', 'Data Transformation'],
+        description: 'Automated workflows bridging CRM, email, and database systems for complete business process automation — eliminating manual data handoffs.',
+        tech: ['n8n', 'REST API', 'PostgreSQL'],
         github: 'https://github.com/amirdhs'
     },
     4: {
         tag: 'AI AGENT',
         title: 'PERSONAL LIFE MANAGER',
         image: 'assets/project-bg-4.png',
-        description: 'A comprehensive n8n workflow designed to act as a personal life manager. It integrates seamlessly with Telegram for interaction, manages Google Calendar and Tasks, and features voice-enabled AI for hands-free control. The system uses advanced LLMs to understand intent and execute complex personal automation tasks.',
-        tech: ['n8n', 'Telegram API', 'Google Workspace API', 'OpenAI Whisper', 'Vector DB'],
+        description: 'Voice-enabled AI assistant integrating Telegram and Google Services for complete life management — calendar, tasks, reminders, and more.',
+        tech: ['Python', 'Telegram API', 'Google APIs'],
         github: 'https://github.com/amirdhs'
     },
     5: {
         tag: 'CHROME EXTENSION',
         title: 'N8N AI WORKFLOW GENERATOR',
         image: 'assets/project-bg-5.png',
-        description: 'A powerful Chrome Extension that allows users to generate complete, executable n8n workflows from natural language prompts. It supports OpenAI, Anthropic Claude, and Google Gemini models. Users can review the generated JSON, refine prompts, and directly insert the workflow into the n8n canvas.',
-        tech: ['JavaScript', 'Chrome Extension API', 'OpenAI API', 'Anthropic API', 'Google Gemini API'],
+        description: 'Browser extension that generates executable n8n workflows from natural language descriptions using AI — making automation accessible to non-developers.',
+        tech: ['JavaScript', 'n8n', 'OpenAI'],
         github: 'https://github.com/amirdhs/n8n-ai-extension'
     },
     6: {
         tag: 'WEB APP',
         title: 'MASTER YOUR JOB SEARCH',
         image: 'assets/project-bg-6.png',
-        description: 'The all-in-one workspace to manage applications, optimize resumes with AI, and prep for interviews. (Currently under development).',
-        tech: ['React', 'Node.js', 'AI Integration', 'TBD'],
+        description: 'All-in-one workspace to manage job applications, optimise resumes with AI, and prepare for interviews. Built for job seekers who want a systematic approach.',
+        tech: ['JavaScript', 'AI', 'FastAPI'],
         github: '#'
     },
     7: {
-        tag: 'WEB APP',
+        tag: 'CMS / WEB',
         title: 'REAL ESTATE LANDING PAGE',
         image: 'assets/project-bg-7.png',
-        description: 'A modern and fully responsive landing page website for real estate. It features property listings, advanced search filtering, and an interactive map, providing a seamless user experience for finding properties.',
-        tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Web Design'],
+        description: 'Modern, fully responsive landing page for real estate listings with advanced search and filtering features. Clean UI with fast performance.',
+        tech: ['WordPress', 'HTML/CSS', 'JavaScript'],
         github: '#',
         live: 'https://aura-real-estate-landing-page.netlify.app/'
     }
