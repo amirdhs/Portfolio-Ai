@@ -53,6 +53,12 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Video Background -->
+        <video class="hero-video-bg" autoplay muted loop playsinline>
+            <source src="assets/13820719_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+        <!-- Video Overlay -->
+        <div class="hero-video-overlay"></div>
         <!-- Animated Background -->
         <div class="particles-background" id="particles-js"></div>
         <div class="hero-glow"></div>
@@ -65,7 +71,7 @@
                 </div>
 
                 <h1 class="hero-title fade-in-delay-1" data-i18n="hero-title">
-                    Building <em>software</em><br>that solves real problems
+                    Building <em><span id="hero-word">software</span><span class="hero-cursor">|</span></em><br>that solves real problems
                 </h1>
 
                 <p class="hero-description fade-in-delay-2" data-i18n="hero-desc">

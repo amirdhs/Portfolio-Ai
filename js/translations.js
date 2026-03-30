@@ -11,7 +11,7 @@ const translations = {
 
         // Hero Section
         'hero-badge': '<span class="status-dot"></span> Available for new projects',
-        'hero-title': 'Building <em>software</em><br>that solves real problems',
+        'hero-title': 'Building <em><span id="hero-word">software</span><span class="hero-cursor">|</span></em><br>that solves real problems',
         'hero-desc': 'I\'m <strong>Amir Dehestani</strong>, a <strong>Software Developer</strong> based in Germany — building web apps, AI-powered tools, scalable backends, and WordPress solutions.',
         'hero-btn-projects': 'View Projects <i class="fas fa-arrow-right"></i>',
         'hero-btn-chat': 'Talk to AI Agent <i class="fas fa-robot"></i>',
@@ -137,6 +137,15 @@ const translations = {
             'Automation Specialist',
             'n8n Expert',
             'REST API Developer'
+        ],
+
+        // Hero Typewriter Words
+        'hero-typewriter-words': [
+            'software', 
+            'Websites', 
+            'ai agent', 
+            'RAG system', 
+            'AI Chatbot'
         ]
     },
     'de': {
@@ -151,7 +160,7 @@ const translations = {
 
         // Hero Section
         'hero-badge': '<span class="status-dot"></span> Verfügbar für neue Projekte',
-        'hero-title': 'Ich entwickle <em>Software</em><br>für echte Probleme',
+        'hero-title': 'Ich entwickle <em><span id="hero-word">Software</span><span class="hero-cursor">|</span></em><br>für echte Probleme',
         'hero-desc': 'Ich bin <strong>Amir Dehestani</strong>, ein <strong>Softwareentwickler</strong> in Deutschland — ich entwickle Web-Apps, KI-gestützte Tools, skalierbare Backends und WordPress-Lösungen.',
         'hero-btn-projects': 'Projekte ansehen <i class="fas fa-arrow-right"></i>',
         'hero-btn-chat': 'Mit KI-Agent sprechen <i class="fas fa-robot"></i>',
@@ -277,6 +286,15 @@ const translations = {
             'Automatisierungsspezialist',
             'n8n Experte',
             'REST API Entwickler'
+        ],
+
+        // Hero Typewriter Words
+        'hero-typewriter-words': [
+            'Software', 
+            'Websites', 
+            'KI Agent', 
+            'RAG System', 
+            'KI Chatbot'
         ]
     }
 };

@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        
+
         // Only prevent default for internal anchor links
         if (href && href.startsWith('#') && href.length > 1) {
             e.preventDefault();
@@ -137,6 +137,78 @@ function type() {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, 1000);
 });
+
+// ============================================
+// Hero Title Typewriter (type + erase cycling)
+// ============================================
+
+(function () {
+    // English defaults
+    const defaultWords = ['software', 'websites', 'ai agents', 'rag systems', 'ai chatbots'];
+
+    let wordIdx = 0;
+    let charIdx = defaultWords[0].length; // start with 'software' fully typed
+    let erasing = true;
+
+    const TYPE_SPEED = 90;   // ms per character typed
+    const ERASE_SPEED = 50;   // ms per character erased
+    const PAUSE_AFTER = 1800; // ms to wait after fully typed
+    const PAUSE_BEFORE = 350;  // ms to wait before typing next word
+
+    function tick() {
+        // Fetch fresh element (handles language switch overwrites)
+        const el = document.getElementById('hero-word');
+        if (!el) {
+            setTimeout(tick, 100);
+            return;
+        }
+
+        // Fetch translations for typewriter words
+        const lang = localStorage.getItem('language') || 'en';
+        let words = defaultWords;
+        if (typeof translations !== 'undefined' && translations[lang] && translations[lang]['hero-typewriter-words']) {
+            words = translations[lang]['hero-typewriter-words'];
+        }
+
+        const word = words[wordIdx];
+
+        if (!erasing) {
+            charIdx++;
+            el.textContent = word.slice(0, charIdx);
+
+            if (charIdx === word.length) {
+                erasing = true;
+                setTimeout(tick, PAUSE_AFTER);
+                return;
+            }
+            setTimeout(tick, TYPE_SPEED);
+        } else {
+            charIdx--;
+            // Ensure charIdx doesn't drop below 0 (can happen if word lengths change across languages)
+            if (charIdx < 0) charIdx = 0;
+            el.textContent = word.slice(0, charIdx);
+
+            if (charIdx === 0) {
+                erasing = false;
+                wordIdx = (wordIdx + 1) % words.length;
+                setTimeout(tick, PAUSE_BEFORE);
+                return;
+            }
+            setTimeout(tick, ERASE_SPEED);
+        }
+    }
+
+    function init() {
+        setTimeout(tick, 1200);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+
 
 // ============================================
 // Particles.js Background
@@ -1137,7 +1209,7 @@ function openProjectModal(id) {
     document.getElementById('modalProjectTag').textContent = data.tag;
     document.getElementById('modalProjectTitle').textContent = data.title;
     document.getElementById('modalProjectDesc').textContent = data.description;
-    
+
     // Github Link
     const githubBtn = document.getElementById('modalProjectGithub');
     if (data.github && data.github !== '#') {
