@@ -1053,10 +1053,13 @@ const experienceData = {
         company: 'EGroupware GmbH',
         date: 'June 2025 - Present | Kaiserslautern, Rhineland-Palatinate, Germany',
         responsibilities: [
-            'Built intelligent backend systems and AI integrations for enterprise groupware software',
-            'Developed LLM-powered features and automation workflows across the platform',
-            'Delivered scalable backend services and reliable API integrations',
-            'Collaborated across teams to ship AI-centric product improvements'
+            'Architected a production RAG system: document ingestion, chunking, Qdrant vector indexing, LangChain retrieval, and LLM response generation with source citations handling enterprise-scale semantic search across hundreds of internal documents with low hallucination rates',
+            'Built an MCP Server (Model Context Protocol) over REST, enabling LLMs to access real-time enterprise data and external tools one of the first production MCP deployments in Germany',
+            'Designed and deployed an end-to-end internal AI assistant: initial architecture through production rollout, automating core business processes and knowledge workflows',
+            'Built autonomous multi-step AI agents using LangChain and n8n: orchestrated data extraction, transformation, decision logic, and API calls across complex workflows reducing manual effort by 60%',
+            'Applied structured prompt engineering (system prompts, few-shot examples, chain-of-thought, context injection) to improve LLM accuracy and align outputs with business requirements across all production pipelines',
+            'Developed scalable FastAPI microservices with JWT authentication, PostgreSQL, Docker containerisation, and GitHub Actions CI/CD; enforced quality via pytest and TDD',
+            'Collaborated with business units to define AI requirements; led internal knowledge-transfer sessions on modern AI architectures and agentic design patterns'
         ],
         technologies: ['Python', 'FastAPI', 'LLMs', 'Docker', 'PostgreSQL']
     },
