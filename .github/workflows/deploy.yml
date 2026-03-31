@@ -22,5 +22,4 @@ jobs:
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
             cd /var/www/portfolio/Portfolio-Ai && \
             sudo git pull origin main && \
-            sudo npm install && \
             sudo systemctl restart nginx"
