@@ -1,28 +1,26 @@
-name: Deploy to Server          
+name: Deploy to Server
 
 on:
   push:
     branches:
-      - main                    
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest     
+    runs-on: ubuntu-latest
 
     steps:
-      # Step 1 — set up SSH so the VM can connect to your server
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa   
-          chmod 600 ~/.ssh/id_rsa                          # locks down permissions (required)
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts  # trusts your server
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
-      # Step 2 — SSH into your server and run the deploy commands
       - name: Deploy
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} \
-            "cd /var/www/portfolio/Portfolio-Ai \
-             sudo git pull origin main && \
-             sudo npm install && \
-             sudo systemctl restart nginx"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
+            cd /var/www/portfolio/Portfolio-Ai && \
+            sudo git pull origin main && \
+            sudo npm install && \
+            sudo systemctl restart nginx"
