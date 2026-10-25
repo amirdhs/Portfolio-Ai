@@ -1,0 +1,385 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-padding-top: calc(var(--header-height) + 1.5rem);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "kern";
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    text-wrap: balance;
+    /* German compounds ("Prozessautomatisierung") must break inside narrow cards. */
+    hyphens: auto;
+    hyphenate-limit-chars: 15 6 6;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-night);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-bronze);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .section {
+    padding-block: var(--space-section);
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .link-underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: var(--color-rule-strong);
+    transition: text-decoration-color var(--duration-fast) ease;
+  }
+
+  .link-underline:hover {
+    text-decoration-color: currentColor;
+  }
+
+  /* Champagne and bronze light bleeding in from the corners, like the hero video. Content sits above it. */
+  .grain {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(45% 60% at 8% 0%, oklch(66% 0.1 58 / 0.2), transparent 70%),
+      radial-gradient(40% 55% at 96% 12%, oklch(56% 0.11 48 / 0.14), transparent 70%);
+  }
+
+  /* Centered glow behind a closing call to action. */
+  .glow-center {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .glow-center::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(38% 55% at 50% 38%, oklch(66% 0.1 58 / 0.24), transparent 72%),
+      radial-gradient(28% 40% at 14% 80%, oklch(56% 0.11 48 / 0.12), transparent 70%),
+      radial-gradient(28% 40% at 88% 70%, oklch(56% 0.11 48 / 0.1), transparent 70%);
+  }
+
+  /* Glass card used for every grouped piece of content. */
+  .panel {
+    border: 1px solid var(--color-rule);
+    border-radius: 1.25rem;
+    background: linear-gradient(180deg, oklch(21% 0.008 70 / 0.7), oklch(16.5% 0.007 70 / 0.7));
+    box-shadow: inset 0 1px 0 oklch(100% 0 0 / 0.05);
+    backdrop-filter: blur(10px);
+    /* "translate" (not "transform") so the hover lift composes with scroll-reveal keyframes. */
+    transition:
+      border-color var(--duration-normal) ease,
+      box-shadow var(--duration-normal) ease,
+      translate var(--duration-normal) var(--ease-out-expo);
+  }
+
+  .panel:hover {
+    border-color: oklch(78% 0.08 66 / 0.55);
+    box-shadow:
+      inset 0 1px 0 oklch(100% 0 0 / 0.07),
+      0 24px 60px -36px oklch(66% 0.1 58 / 0.55);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .panel:hover {
+      translate: 0 -4px;
+    }
+  }
+
+  .panel-featured {
+    border-color: oklch(78% 0.08 66 / 0.5);
+    box-shadow:
+      inset 0 1px 0 oklch(100% 0 0 / 0.06),
+      0 30px 80px -40px oklch(66% 0.1 58 / 0.45);
+  }
+
+  /* Solid backdrop behind the sticky header; faded in by the scroll timeline (see utilities). */
+  .header-scroll::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: oklch(12% 0.006 70 / 0.9);
+    box-shadow: 0 12px 30px -22px oklch(0% 0 0 / 0.9);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* A light sweep across the gold button on hover. */
+  .btn-shine {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, oklch(100% 0 0 / 0.55), transparent);
+    transform: translateX(-120%) skewX(-20deg);
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .btn-shine:hover::after {
+      animation: shine 0.9s var(--ease-out-expo);
+    }
+  }
+
+  .prose-legal h2 {
+    font-size: 1.375rem;
+    margin-top: 2.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose-legal h3 {
+    font-size: 1.0625rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose-legal p,
+  .prose-legal li {
+    color: var(--color-ink-2);
+    line-height: 1.7;
+  }
+
+  .prose-legal p + p {
+    margin-top: 0.75rem;
+  }
+
+  .prose-legal ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    animation: var(--animate-reveal);
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  .rise {
+    animation: var(--animate-rise);
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .rise {
+      animation: none;
+    }
+  }
+
+  /* Content slides in as it scrolls into view. Pure CSS (scroll-driven animations); browsers
+     without support, and visitors who prefer reduced motion, simply see the content. */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .scroll-reveal {
+        animation: scroll-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 55%;
+      }
+    }
+  }
+
+  /* Header gains a solid backdrop once the page is scrolled. */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      .header-scroll::before {
+        animation: fade-in linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 160px;
+      }
+    }
+  }
+
+  /* Metallic sweep across gold text, echoing the logo. Mostly at rest, one pass every few seconds. */
+  .text-shimmer {
+    background-image: linear-gradient(
+      105deg,
+      var(--color-gold) 0%,
+      var(--color-gold) 40%,
+      oklch(96% 0.035 88) 50%,
+      var(--color-gold) 60%,
+      var(--color-gold) 100%
+    );
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .text-shimmer {
+      animation: shimmer 7s ease-in-out 1.2s infinite;
+    }
+  }
+}
+
+@keyframes scroll-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  35%,
+  100% {
+    background-position: 0% 0;
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(6rem, 3rem, 0) scale(1.15);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes typing-life {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+}
+
+@keyframes typing-dot {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  to {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
