@@ -47,9 +47,42 @@ function fail(
   return respond(status, { success: false, error: { code, ...extra } });
 }
 
+/**
+ * Rate-limit key. Visitors can send their own X-Forwarded-For, so its left-most entry is never trusted.
+ * X-Real-IP is set (and overwritten) by the trusted reverse proxy — nginx on the VPS, after resolving the
+ * real visitor address from Cloudflare, or Vercel's edge. Without it, the right-most X-Forwarded-For entry
+ * (the one the nearest proxy appended) is used.
+ */
 function clientKey(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
-  return forwarded || request.headers.get("x-real-ip") || "unknown";
+  const realIp = request.headers.get("x-real-ip")?.trim();
+  if (realIp) return realIp;
+  const forwarded = request.headers.get("x-forwarded-for")?.split(",").at(-1)?.trim();
+  return forwarded || "unknown";
+}
+
+/** Reads the body as a stream and stops as soon as it exceeds `maxBytes`; returns null when it does. */
+async function readBodyCapped(request: Request, maxBytes: number): Promise<string | null> {
+  if (!request.body) return "";
+  const reader = request.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let size = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    size += value.byteLength;
+    if (size > maxBytes) {
+      await reader.cancel();
+      return null;
+    }
+    chunks.push(value);
+  }
+  const bytes = new Uint8Array(size);
+  let offset = 0;
+  for (const chunk of chunks) {
+    bytes.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
+  return new TextDecoder().decode(bytes);
 }
 
 function isCrossSite(request: Request): boolean {
@@ -75,10 +108,21 @@ export async function handleInquiry(request: Request, deps: InquiryHandlerDeps):
     return fail(415, "UNSUPPORTED_MEDIA_TYPE");
   }
 
+  // Rate limit before reading the body, so a flood of requests costs as little as possible.
+  const now = deps.now();
+  const limit = deps.limiter.check(clientKey(request), now);
+  if (!limit.allowed) {
+    return respond(
+      429,
+      { success: false, error: { code: "RATE_LIMITED" } },
+      { "retry-after": String(Math.ceil(limit.retryAfterMs / 1000)) },
+    );
+  }
+
   const declaredLength = Number(request.headers.get("content-length") ?? 0);
   if (declaredLength > MAX_BODY_BYTES) return fail(413, "PAYLOAD_TOO_LARGE");
-  const raw = await request.text();
-  if (new TextEncoder().encode(raw).length > MAX_BODY_BYTES) return fail(413, "PAYLOAD_TOO_LARGE");
+  const raw = await readBodyCapped(request, MAX_BODY_BYTES);
+  if (raw === null) return fail(413, "PAYLOAD_TOO_LARGE");
 
   let payload: Record<string, unknown>;
   try {
@@ -88,16 +132,6 @@ export async function handleInquiry(request: Request, deps: InquiryHandlerDeps):
     payload = parsed as Record<string, unknown>;
   } catch {
     return fail(400, "BAD_REQUEST");
-  }
-
-  const now = deps.now();
-  const limit = deps.limiter.check(clientKey(request), now);
-  if (!limit.allowed) {
-    return respond(
-      429,
-      { success: false, error: { code: "RATE_LIMITED" } },
-      { "retry-after": String(Math.ceil(limit.retryAfterMs / 1000)) },
-    );
   }
 
   // Honeypot filled: only bots see this hidden field. Pretend success so they learn nothing.

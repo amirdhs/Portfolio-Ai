@@ -144,6 +144,23 @@ describe("handleInquiry", () => {
     expect(res.status).toBe(413);
   });
 
+  it("rejects oversized bodies without a content-length while streaming them", async () => {
+    const big = JSON.stringify({ ...body, description: "x".repeat(40_000) });
+    const stream = new ReadableStream<Uint8Array>({
+      start(controller) {
+        controller.enqueue(new TextEncoder().encode(big));
+        controller.close();
+      },
+    });
+    const req = new Request("https://amir.example/api/inquiry", {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-real-ip": "203.0.113.9" },
+      body: stream,
+      duplex: "half",
+    } as RequestInit);
+    expect((await handleInquiry(req, deps)).status).toBe(413);
+  });
+
   it("answers 503 NOT_CONFIGURED when no mail delivery is set up", async () => {
     const res = await handleInquiry(request(body), { ...deps, getDelivery: () => null });
     expect(res.status).toBe(503);
@@ -169,5 +186,19 @@ describe("handleInquiry", () => {
     expect(res.status).toBe(429);
     expect(res.headers.get("retry-after")).toBe("600");
     expect(await res.json()).toEqual({ success: false, error: { code: "RATE_LIMITED" } });
+  });
+
+  it("keys the rate limit on the proxy-set address, not a spoofed X-Forwarded-For", async () => {
+    const limited = { ...deps, limiter: createRateLimiter({ limit: 1, windowMs: 600_000 }) };
+    const proxied = (spoofed: string) =>
+      request(body, { "x-forwarded-for": `${spoofed}, 198.51.100.1`, "x-real-ip": "198.51.100.1" });
+    expect((await handleInquiry(proxied("1.1.1.1"), limited)).status).toBe(200);
+    expect((await handleInquiry(proxied("2.2.2.2"), limited)).status).toBe(429);
+  });
+
+  it("checks the rate limit before reading the body", async () => {
+    const limited = { ...deps, limiter: createRateLimiter({ limit: 1, windowMs: 600_000 }) };
+    expect((await handleInquiry(request(body), limited)).status).toBe(200);
+    expect((await handleInquiry(request("{oops"), limited)).status).toBe(429);
   });
 });
