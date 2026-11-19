@@ -2,9 +2,11 @@ import type { ServiceCategory } from "../de/home";
 import type { TitledText } from "../types";
 
 export const hero = {
-  eyebrow: "Digital · AI · Automation",
-  headline: ["Digital solutions.", "Intelligent automation.", "Measurable results."],
-  lead: "We build modern websites, improve your visibility on Google and automate recurring business processes with AI.",
+  eyebrow: "Amir Dehestani · Developer & AI engineer",
+  headline: ["I build websites,", "AI agents & automations", "that actually work."],
+  /** Words from the headline set on the lime highlight. */
+  highlight: "AI agents",
+  lead: "I build modern websites, improve your visibility on Google and automate recurring business processes with AI.",
   audience:
     "For small and medium-sized businesses, service providers and organizations in Germany that want to achieve more online and save time in their daily work.",
   points: [
@@ -29,7 +31,7 @@ export const heroVisual = {
 };
 
 export const tools = {
-  title: "Tools and technologies we work with",
+  title: "Tools and technologies I work with",
   items: [
     "Next.js",
     "React",
@@ -51,7 +53,7 @@ export const tools = {
 
 export const servicesSection = {
   title: "Services",
-  heading: "Everything that moves your business forward digitally – from a single source.",
+  heading: "What I build – from website to AI agent.",
   lead: "From your website and visibility on Google to AI-powered automation: the services work together, but can also be commissioned individually.",
 };
 
@@ -138,18 +140,18 @@ export const benefits: TitledText[] = [
 ];
 
 export const projectsSection = {
-  title: "Projects",
-  heading: "Examples of how we approach tasks.",
-  lead: "The following entries are example concepts. They show our approach to typical tasks – they are not client projects and no results are claimed.",
+  title: "Selected work",
+  heading: "Example concepts – how I approach typical tasks.",
+  lead: "The following entries are example concepts. They show my approach to typical tasks – they are not client projects and no results are claimed.",
 };
 
 export const processSection = {
-  title: "Collaboration",
+  title: "How I work",
   heading: "Four phases. Clear steps. No black box.",
 };
 
 export const whySection = {
-  title: "Why AMIR",
+  title: "Why work with me",
   heading: "An approach built on clarity and reliability.",
 };
 
@@ -220,6 +222,6 @@ export const faqSection = {
 };
 
 export const finalCta = {
-  heading: "Tell us about your challenge.",
-  text: "Briefly describe what you want to achieve or where things get stuck today. We'll get back to you with an honest assessment – even if it's that you don't need us.",
+  heading: "Tell me about your challenge.",
+  text: "Briefly describe what you want to achieve or where things get stuck today. I'll get back to you with an honest assessment – even if it's that you don't need me.",
 };

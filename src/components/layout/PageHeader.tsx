@@ -26,7 +26,8 @@ export function PageHeader({
   children,
 }: PageHeaderProps) {
   return (
-    <section className="grain border-b border-rule bg-paper">
+    <section className="grain relative overflow-hidden border-b border-rule bg-paper">
+      <div aria-hidden="true" className="grid-floor !h-[70%] opacity-70" />
       <div className="container-page pb-[var(--space-block)] pt-10 md:pt-14">
         <Breadcrumbs items={breadcrumbs} label={breadcrumbsLabel} />
         <div className="mx-auto mt-12 flex max-w-3xl flex-col items-center text-center md:mt-16">

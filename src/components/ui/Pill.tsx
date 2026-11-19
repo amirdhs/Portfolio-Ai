@@ -1,19 +1,12 @@
 import type { ReactNode } from "react";
 
-/** Small rounded label with a champagne spark, used above section headings. */
+/** Terminal-style label above section headings; transparent, so it works on dark and lime surfaces. */
 export function Pill({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <p
-      className={`inline-flex items-center gap-2 rounded-full border border-rule-strong bg-paper-2/80 px-3.5 py-1.5 text-[0.7rem] font-medium uppercase tracking-[0.12em] text-ink-2 backdrop-blur ${className}`}
+      className={`inline-flex items-center gap-2.5 rounded-full border border-rule-strong px-3.5 py-1.5 font-mono text-[0.7rem] font-medium uppercase tracking-[0.14em] text-ink-2 ${className}`}
     >
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 24 24"
-        className="size-3.5 text-bronze"
-        fill="currentColor"
-      >
-        <path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z" />
-      </svg>
+      <span aria-hidden="true" className="size-1.5 rounded-[1px] bg-bronze" />
       {children}
     </p>
   );

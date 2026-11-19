@@ -85,7 +85,7 @@ export function ServiceDetailView({ locale, urlSlug }: { locale: Locale; urlSlug
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <p className="mt-10 rounded-[1.25rem] border border-gold/25 bg-night p-6 text-on-night shadow-[0_0_80px_-30px_oklch(80%_0.095_80/0.35)] md:p-8">
+        <p className="mt-10 rounded-[1.25rem] border border-gold/25 bg-night p-6 text-on-night shadow-[0_0_80px_-30px_oklch(85%_0.22_128/0.3)] md:p-8">
           <span className="eyebrow block text-gold">{t.labels.yourBenefit}</span>
           <span className="mt-3 block text-title">{service.primaryBenefit}</span>
         </p>

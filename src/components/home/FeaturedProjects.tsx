@@ -8,7 +8,7 @@ export function FeaturedProjects({ locale }: { locale: Locale }) {
   const { t, content, link } = getI18n(locale);
   const section = content.home.projectsSection;
   return (
-    <section aria-labelledby="projects-heading" className="section grain">
+    <section id="work" aria-labelledby="projects-heading" className="section grain">
       <div className="container-page">
         <SectionHeading
           id="projects-heading"

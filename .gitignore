@@ -53,3 +53,4 @@ next-env.d.ts
 # Large original of the hero video (see README → Hero video)
 /assets/hero/*.mp4
 /.next-deploy/
+.superpowers/

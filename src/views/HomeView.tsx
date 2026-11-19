@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { CtaBand } from "@/components/cta/CtaBand";
-import { Audiences } from "@/components/home/Audiences";
-import { Benefits } from "@/components/home/Benefits";
 import { FounderStrip } from "@/components/home/FounderStrip";
 import { FaqPreview } from "@/components/home/FaqPreview";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
@@ -34,13 +32,11 @@ export function HomeView({ locale }: { locale: Locale }) {
     <>
       <Hero locale={locale} />
       <HeroIntro locale={locale} />
-      <TechMarquee locale={locale} />
-      <ServicesOverview locale={locale} />
-      <Benefits locale={locale} />
       <FeaturedProjects locale={locale} />
+      <ServicesOverview locale={locale} />
+      <TechMarquee locale={locale} />
       <ProcessPreview locale={locale} />
       <WhyAmir locale={locale} />
-      <Audiences locale={locale} />
       <FounderStrip locale={locale} />
       <FaqPreview locale={locale} />
       <CtaBand

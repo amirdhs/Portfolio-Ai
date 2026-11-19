@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { ProjectFilter, type FilterableItem } from "@/components/projects/ProjectFilter";
+import { ProjectArt } from "@/components/projects/ProjectArt";
 import { ProjectTypeBadge } from "@/components/projects/ProjectTypeBadge";
 import { getContent } from "@/content";
 
@@ -79,6 +80,29 @@ describe("ProjectCard and badge", () => {
       "/en/projects/ai-faq-assistant",
     );
     expect(screen.getByText("Example concept")).toBeInTheDocument();
+  });
+
+  it("shows decorative wireframe art and still exposes exactly one project link", () => {
+    const { container } = render(<ProjectCard project={projects[0]} locale="de" />);
+    expect(container.querySelector('svg[aria-hidden="true"][data-art]')).not.toBeNull();
+    expect(screen.getAllByRole("link")).toHaveLength(1);
+  });
+
+  it("draws the same art for the same project every time", () => {
+    const first = render(<ProjectArt category="ai" seed="ai-faq-assistant" />).container.innerHTML;
+    const second = render(<ProjectArt category="ai" seed="ai-faq-assistant" />).container.innerHTML;
+    const other = render(<ProjectArt category="ai" seed="something-else" />).container.innerHTML;
+    expect(first).toBe(second);
+    expect(other).not.toBe(first);
+  });
+
+  it("draws a different motif for each category", () => {
+    const motifs = (["web", "ai", "automation", "integrations"] as const).map(
+      (category) =>
+        render(<ProjectArt category={category} seed="x" />).container.querySelector("svg")?.dataset
+          .art,
+    );
+    expect(new Set(motifs).size).toBe(4);
   });
 
   it("renders client and demo labels", () => {

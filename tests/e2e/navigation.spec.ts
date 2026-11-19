@@ -21,14 +21,16 @@ test("main navigation reaches every section", async ({ page, isMobile }) => {
   }
 });
 
-test("hero CTAs lead to the inquiry form and services", async ({ page }) => {
+test("hero CTAs lead to the selected work and the inquiry form", async ({ page }) => {
+  const hero = page.locator("section[aria-labelledby='hero-heading']");
   await page.goto("/");
-  await page.getByRole("main").getByRole("link", { name: "Projekt anfragen" }).first().click();
+  await hero.getByRole("link", { name: "Kontakt aufnehmen" }).click();
   await expect(page).toHaveURL(/\/kontakt#anfrage$/);
   await expect(page.getByRole("heading", { name: "Projektanfrage", exact: true })).toBeVisible();
   await page.goto("/");
-  await page.getByRole("link", { name: "Leistungen ansehen" }).click();
-  await expect(page).toHaveURL("/leistungen");
+  await hero.getByRole("link", { name: "Arbeiten ansehen" }).click();
+  await expect(page).toHaveURL(/\/#work$/);
+  await expect(page.locator("#projects-heading")).toBeInViewport();
 });
 
 test("language switcher opens the same page in the other language", async ({ page, isMobile }) => {

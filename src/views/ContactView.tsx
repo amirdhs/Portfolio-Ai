@@ -69,7 +69,7 @@ export function ContactView({ locale }: { locale: Locale }) {
           </section>
           <section
             aria-labelledby="direct-heading"
-            className="rounded-[1.25rem] border border-gold/25 bg-night p-6 text-on-night shadow-[0_0_80px_-30px_oklch(80%_0.095_80/0.35)] md:p-8"
+            className="rounded-[1.25rem] border border-gold/25 bg-night p-6 text-on-night shadow-[0_0_80px_-30px_oklch(85%_0.22_128/0.3)] md:p-8"
           >
             <h2 id="direct-heading" className="eyebrow text-gold">
               {page.directTitle}

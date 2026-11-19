@@ -1,47 +1,53 @@
 /*
- * AMIR design tokens — dark product look in the champagne-gold of the AMIR logo.
+ * AMIR design tokens — portfolio look: near-black with a faint green cast and one neon-lime accent.
+ * Legacy names (bronze, gold, amber) are kept so every component re-themes through the tokens.
  */
 @theme {
-  /* Warm near-black surfaces and one champagne-gold accent sampled from the logo; bronze only appears as light (glows, the hero video). */
-  --color-paper: oklch(14% 0.006 70);
-  --color-paper-2: oklch(18% 0.006 70);
-  --color-paper-3: oklch(23% 0.006 70);
-  --color-ink: oklch(97% 0.004 80);
-  --color-ink-2: oklch(80% 0.004 80);
-  --color-ink-3: oklch(66% 0.004 80);
-  --color-rule: oklch(27% 0.006 70);
-  --color-rule-strong: oklch(37% 0.006 70);
+  /* Surfaces: near-black with a green cast, like a terminal screen. */
+  --color-paper: oklch(13% 0.012 150);
+  --color-paper-2: oklch(17% 0.014 150);
+  --color-paper-3: oklch(22% 0.016 150);
+  --color-ink: oklch(97% 0.008 125);
+  --color-ink-2: oklch(82% 0.012 130);
+  --color-ink-3: oklch(68% 0.012 135);
+  --color-rule: oklch(26% 0.016 150);
+  --color-rule-strong: oklch(36% 0.02 150);
 
-  /* Accent as text on dark surfaces (≥ 7:1) — "bronze" and "gold" are legacy names for the same champagne. */
-  --color-bronze: oklch(82% 0.075 75);
-  --color-bronze-strong: oklch(89% 0.06 80);
-  --color-gold: oklch(80% 0.075 75);
-  --color-gold-soft: oklch(92% 0.04 85);
-  /* Accent as a fill (buttons, icon tiles): dark text on it passes AA. */
-  --color-accent: oklch(78% 0.085 72);
-  --color-on-accent: oklch(17% 0.012 60);
-  --color-accent-hover: oklch(85% 0.08 78);
-  --color-amber: oklch(56% 0.11 48);
+  /* Neon lime. "lime" is the fill, "lime-ink" the same hue as text on dark, "grid" the line light. */
+  --color-lime: oklch(91% 0.21 125);
+  --color-lime-ink: oklch(90% 0.2 125);
+  --color-grid: oklch(85% 0.22 128);
+
+  /* Accent as text on dark surfaces — "bronze" and "gold" are legacy names for the lime. */
+  --color-bronze: oklch(90% 0.2 125);
+  --color-bronze-strong: oklch(94% 0.17 122);
+  --color-gold: oklch(90% 0.2 125);
+  --color-gold-soft: oklch(95% 0.1 122);
+  /* Accent as a fill (buttons, slabs): dark text on it passes AA. */
+  --color-accent: oklch(91% 0.21 125);
+  --color-on-accent: oklch(16% 0.02 140);
+  --color-accent-hover: oklch(95% 0.18 122);
+  --color-amber: oklch(72% 0.19 135);
 
   /* Deeper surfaces: footer, call-to-action bands, highlight panels. */
-  --color-night: oklch(10.5% 0.006 70);
-  --color-night-2: oklch(16% 0.006 70);
-  --color-night-rule: oklch(27% 0.006 70);
-  --color-on-night: oklch(97% 0.004 80);
-  --color-on-night-2: oklch(78% 0.004 80);
+  --color-night: oklch(10% 0.01 150);
+  --color-night-2: oklch(15% 0.012 150);
+  --color-night-rule: oklch(26% 0.016 150);
+  --color-on-night: oklch(97% 0.008 125);
+  --color-on-night-2: oklch(80% 0.012 130);
 
-  --color-success: oklch(80% 0.14 150);
-  --color-success-soft: oklch(24% 0.05 150);
+  --color-success: oklch(85% 0.18 140);
+  --color-success-soft: oklch(24% 0.05 145);
   --color-danger: oklch(76% 0.15 25);
   --color-danger-soft: oklch(24% 0.06 25);
 
   --font-sans: var(--font-schibsted), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", monospace;
 
-  --text-hero: clamp(2.6rem, 1rem + 6.4vw, 7.25rem);
-  --text-hero--line-height: 0.98;
-  --text-display: clamp(2rem, 1.2rem + 2.5vw, 3.35rem);
-  --text-display--line-height: 1.08;
+  --text-hero: clamp(2.7rem, 0.9rem + 7.2vw, 8.5rem);
+  --text-hero--line-height: 0.92;
+  --text-display: clamp(2.1rem, 1.1rem + 3.2vw, 4rem);
+  --text-display--line-height: 1.02;
   --text-title: clamp(1.5rem, 1.1rem + 1.4vw, 2.25rem);
   --text-title--line-height: 1.12;
   --text-lead: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
@@ -79,6 +85,9 @@
   --gutter: clamp(1rem, 0.5rem + 2.5vw, 3rem);
   --container: 82rem;
   --header-height: 4.5rem;
+  /* Grid-floor line and glow colours; lime slabs override them with dark lines. */
+  --grid-line: oklch(85% 0.22 128 / 0.32);
+  --grid-glow: oklch(85% 0.22 128 / 0.22);
   --duration-fast: 150ms;
   --duration-normal: 300ms;
 }

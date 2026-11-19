@@ -8,6 +8,8 @@ export const en: Dictionary = {
   },
   a11y: {
     skipToContent: "Skip to content",
+    robot:
+      "A friendly 3D robot with glowing lime eyes, hovering over a neon grid and looking towards your cursor.",
     mainNav: "Main navigation",
     footerNav: "Footer navigation",
     breadcrumbs: "Breadcrumbs",
@@ -41,6 +43,8 @@ export const en: Dictionary = {
     processDetails: "The process in detail",
     toContact: "Get in touch",
     backHome: "Back to home",
+    seeWork: "See my work",
+    getInTouch: "Get in touch",
   },
   labels: {
     glossary: "Glossary",

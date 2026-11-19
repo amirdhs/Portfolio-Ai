@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { GlitchReveal } from "@/components/fx/GlitchReveal";
 import { Pill } from "./Pill";
 
 interface SectionHeadingProps {
@@ -34,17 +35,21 @@ export function SectionHeading({
       className={`scroll-reveal mx-auto flex max-w-3xl flex-col items-center text-center ${className}`}
     >
       <Pill>{label}</Pill>
-      <Heading id={id} className="mt-6 text-display text-ink">
-        {parts ? (
-          <>
-            {parts.lead}
-            <span className="sr-only">{parts.sep.trim() === "." ? "." : parts.sep}</span>{" "}
-            <span className="block text-bronze">{parts.accent}</span>
-          </>
-        ) : (
-          heading
-        )}
-      </Heading>
+      <GlitchReveal>
+        <Heading id={id} className="mt-6 text-display text-ink">
+          {parts ? (
+            <>
+              {parts.lead}
+              <span className="sr-only">{parts.sep.trim() === "." ? "." : parts.sep}</span>{" "}
+              <span className="mt-2 block">
+                <span className="highlight">{parts.accent}</span>
+              </span>
+            </>
+          ) : (
+            heading
+          )}
+        </Heading>
+      </GlitchReveal>
       {lead ? <p className="mt-5 max-w-[60ch] text-lead text-ink-2">{lead}</p> : null}
     </header>
   );

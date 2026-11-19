@@ -7,6 +7,8 @@ export const de = {
     defaultTitle: "AMIR — Websites, SEO, KI-Lösungen & Automatisierung",
   },
   a11y: {
+    robot:
+      "Ein freundlicher 3D-Roboter mit leuchtend grünen Augen, der über einem Neon-Gitter schwebt und Ihrem Mauszeiger folgt.",
     skipToContent: "Zum Inhalt springen",
     mainNav: "Hauptnavigation",
     footerNav: "Fußzeilennavigation",
@@ -41,6 +43,8 @@ export const de = {
     processDetails: "Ablauf im Detail",
     toContact: "Zum Kontakt",
     backHome: "Zur Startseite",
+    seeWork: "Arbeiten ansehen",
+    getInTouch: "Kontakt aufnehmen",
   },
   labels: {
     glossary: "Glossar",

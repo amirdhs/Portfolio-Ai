@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import type { Locale } from "@/i18n/config";
 import { getI18n } from "@/i18n/get-i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import logo from "../../../public/brand/amir-logo.webp";
+import logo from "../../../public/brand/amir-logo-light.webp";
 
 /** Cached so the static prerender stays deterministic; refreshed on revalidation. */
 async function CopyrightYear() {

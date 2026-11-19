@@ -2,45 +2,41 @@ import { expect, test, type Page } from "@playwright/test";
 
 const hero = (page: Page) => page.locator("section[aria-labelledby='hero-heading']");
 
-test("hero shows the headline, call to action and three points", async ({ page }) => {
+test("hero introduces Amir in first person with two calls to action", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("Digitale Lösungen.");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "Intelligente Automatisierung.",
-  );
-  await expect(hero(page).getByRole("link", { name: "Projekt anfragen" })).toBeVisible();
-  await expect(hero(page).getByRole("link", { name: "Leistungen ansehen" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Ich baue");
+  await expect(hero(page).getByRole("link", { name: "Arbeiten ansehen" })).toBeVisible();
+  await expect(hero(page).getByRole("link", { name: "Kontakt aufnehmen" })).toBeVisible();
   await expect(hero(page).locator("ul li")).toHaveCount(3);
 });
 
-test("the background video loops on its own, silently, once the page has loaded", async ({
-  page,
-  browserName,
-}) => {
-  test.skip(browserName === "webkit", "headless WebKit does not autoplay media reliably");
+test("the old background video is gone", async ({ page }) => {
   await page.goto("/");
-  const video = hero(page).locator("video");
-  await expect(video).toHaveAttribute("src", /hero-(desktop|mobile)\.mp4$/);
-  expect(await video.evaluate((el: HTMLVideoElement) => [el.muted, el.loop, el.controls])).toEqual([
-    true,
-    true,
-    false,
-  ]);
-  await expect
-    .poll(() => video.evaluate((el: HTMLVideoElement) => el.currentTime), { timeout: 15_000 })
-    .toBeGreaterThan(0.3);
+  await expect(hero(page).locator("video")).toHaveCount(0);
 });
 
-test("the hero ignores mouse movement", async ({ page, isMobile }) => {
-  test.skip(isMobile, "no pointer on touch devices");
+test("the robot has an accessible description", async ({ page }) => {
   await page.goto("/");
-  const box = (await hero(page).boundingBox())!;
-  await page.mouse.move(box.x + box.width * 0.1, box.y + box.height * 0.3, { steps: 8 });
-  await page.mouse.move(box.x + box.width * 0.9, box.y + box.height * 0.6, { steps: 8 });
-  const transform = await hero(page)
-    .locator("video")
-    .evaluate((el) => getComputedStyle(el.parentElement as HTMLElement).transform);
-  expect(transform).toBe("none");
+  const robot = hero(page).getByRole("img");
+  await expect(robot).toBeVisible();
+  await expect(robot).toHaveAttribute("aria-label", /.+/);
+});
+
+test("the live robot replaces the drawing once loaded", async ({ page, browserName }) => {
+  test.skip(browserName !== "chromium", "WebGL 2 in headless Chromium only");
+  await page.goto("/");
+  await expect(hero(page).locator("canvas")).toBeVisible({ timeout: 15_000 });
+  await expect(hero(page).getByTestId("robot-still")).toHaveCount(0);
+});
+
+test("reduced motion shows the robot drawing and never starts 3D", async ({ browser }) => {
+  const context = await browser.newContext({ reducedMotion: "reduce" });
+  const page = await context.newPage();
+  await page.goto("/");
+  await expect(hero(page).getByTestId("robot-still")).toBeVisible();
+  await page.waitForTimeout(1500);
+  await expect(hero(page).locator("canvas")).toHaveCount(0);
+  await context.close();
 });
 
 test("the hero does not hijack scrolling", async ({ page, isMobile }) => {
@@ -52,18 +48,9 @@ test("the hero does not hijack scrolling", async ({ page, isMobile }) => {
   await expect(page.getByRole("heading", { level: 1 })).not.toBeInViewport();
 });
 
-test("reduced motion keeps the still poster and never loads the video", async ({ browser }) => {
-  const context = await browser.newContext({ reducedMotion: "reduce" });
-  const page = await context.newPage();
-  await page.goto("/");
-  await expect(hero(page).getByRole("img")).toBeVisible();
-  await expect(hero(page).locator("video")).toBeHidden();
-  await expect(hero(page).locator("video")).not.toHaveAttribute("src", /.+/);
-  await context.close();
-});
-
 test("English hero", async ({ page }) => {
   await page.goto("/en");
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("Digital solutions.");
-  await expect(hero(page).getByRole("link", { name: "Start a project" })).toBeVisible();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("I build");
+  await expect(hero(page).getByRole("link", { name: "See my work" })).toBeVisible();
+  await expect(hero(page).getByRole("link", { name: "Get in touch" })).toBeVisible();
 });

@@ -40,6 +40,17 @@ const outputs = [
     .resize({ height: 120 })
     .png({ compressionLevel: 9 })
     .toFile(`${OUT_DIR}/amir-wordmark.png`),
+  // Chrome (desaturated, brightened) variants for the lime-on-black portfolio theme.
+  sharp(letters)
+    .resize({ height: 120 })
+    .modulate({ saturation: 0, brightness: 1.55 })
+    .webp({ quality: 90 })
+    .toFile(`${OUT_DIR}/amir-wordmark-light.webp`),
+  sharp(trimmed)
+    .resize({ width: 1200 })
+    .modulate({ saturation: 0, brightness: 1.55 })
+    .webp({ quality: 88 })
+    .toFile(`${OUT_DIR}/amir-logo-light.webp`),
 ];
 
 const results = await Promise.all(outputs);

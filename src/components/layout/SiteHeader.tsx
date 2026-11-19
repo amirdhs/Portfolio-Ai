@@ -6,7 +6,7 @@ import { getI18n } from "@/i18n/get-i18n";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MobileNav } from "./MobileNav";
 import { NavLinks } from "./NavLinks";
-import wordmark from "../../../public/brand/amir-wordmark.webp";
+import wordmark from "../../../public/brand/amir-wordmark-light.webp";
 
 export function SiteHeader({ locale }: { locale: Locale }) {
   const { t, link } = getI18n(locale);

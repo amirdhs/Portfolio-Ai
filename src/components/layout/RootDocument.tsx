@@ -10,6 +10,9 @@ import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 import "@/styles/global.css";
 
+/** Static, author-controlled snippet (no user input): flags the document as scripted. */
+const JS_MARKER = "document.documentElement.classList.add('js')";
+
 export function rootMetadata(locale: Locale): Metadata {
   const { t, content } = getI18n(locale);
   return {
@@ -33,8 +36,13 @@ export function RootDocument({ locale, children }: { locale: Locale; children: R
     <html
       lang={LOCALE_META[locale].htmlLang}
       className={`${schibsted.variable} ${plexMono.variable} antialiased`}
+      // The inline script at the top of <body> adds "js" before hydration.
+      suppressHydrationWarning
     >
       <body className="flex min-h-dvh flex-col">
+        {/* Runs before any content paints: marks the document as scripted so reveal effects may
+            start hidden; without JS all content shows. */}
+        <script dangerouslySetInnerHTML={{ __html: JS_MARKER }} />
         <a
           href="#main"
           className="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-paper focus:not-sr-only focus:fixed focus:left-4 focus:top-4"

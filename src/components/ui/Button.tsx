@@ -1,24 +1,33 @@
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "on-night" | "on-night-outline";
+type Variant =
+  "primary" | "secondary" | "on-night" | "on-night-outline" | "on-lime" | "on-lime-outline";
 
 const BASE =
   "group inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-full px-5 py-3 text-[0.92rem] font-medium tracking-[-0.005em] transition-[background-color,color,border-color,transform,box-shadow] duration-200 ease-out active:scale-[0.98] focus-visible:outline-offset-4";
 
 const SOLID =
-  "btn-shine bg-gradient-to-b from-[oklch(89%_0.065_82)] to-[oklch(72%_0.09_68)] text-on-accent shadow-[inset_0_1px_0_oklch(100%_0_0/0.45),0_10px_30px_-12px_oklch(72%_0.09_72/0.7)] hover:from-[oklch(93%_0.055_84)] hover:to-[oklch(78%_0.09_72)]";
+  "btn-shine bg-lime text-on-accent shadow-[inset_0_1px_0_oklch(100%_0_0/0.4),0_10px_30px_-14px_oklch(85%_0.22_128/0.7)] hover:bg-accent-hover hover:shadow-[inset_0_1px_0_oklch(100%_0_0/0.4),0_0_40px_-6px_oklch(85%_0.22_128/0.75)]";
 const OUTLINE =
-  "border border-rule-strong bg-paper-2/60 text-ink backdrop-blur hover:border-bronze/60 hover:bg-paper-3";
+  "border border-rule-strong bg-paper-2/60 text-ink backdrop-blur hover:border-lime/70 hover:bg-paper-3";
+
+/** For lime slabs, where a lime button would disappear. */
+const ON_LIME =
+  "bg-on-accent text-lime shadow-[0_14px_30px_-16px_oklch(16%_0.02_140/0.9)] hover:bg-black";
+const ON_LIME_OUTLINE =
+  "border border-on-accent/40 text-on-accent hover:border-on-accent hover:bg-on-accent/5";
 
 const VARIANTS: Record<Variant, string> = {
   primary: SOLID,
   secondary: OUTLINE,
   "on-night": SOLID,
   "on-night-outline": OUTLINE,
+  "on-lime": ON_LIME,
+  "on-lime-outline": ON_LIME_OUTLINE,
 };
 
-const SOLID_VARIANTS: Variant[] = ["primary", "on-night"];
+const SOLID_VARIANTS: Variant[] = ["primary", "on-night", "on-lime"];
 
 interface ButtonLinkProps extends Omit<ComponentProps<typeof Link>, "className"> {
   variant?: Variant;

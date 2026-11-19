@@ -9,9 +9,15 @@ export interface ServiceCategory {
 }
 
 export const hero = {
-  eyebrow: "Digital · KI · Automatisierung",
-  headline: ["Digitale Lösungen.", "Intelligente Automatisierung.", "Messbarer Erfolg."],
-  lead: "Wir entwickeln moderne Websites, verbessern Ihre Sichtbarkeit bei Google und automatisieren wiederkehrende Geschäftsprozesse mit KI.",
+  eyebrow: "Amir Dehestani · Entwickler & KI-Engineer",
+  headline: [
+    "Ich baue Websites,",
+    "KI-Agenten & Automatisierungen,",
+    "die wirklich funktionieren.",
+  ],
+  /** Wörter aus der Headline, die auf dem Lime-Highlight stehen. */
+  highlight: "KI-Agenten",
+  lead: "Ich entwickle moderne Websites, verbessere Ihre Sichtbarkeit bei Google und automatisiere wiederkehrende Geschäftsprozesse mit KI.",
   audience:
     "Für kleine und mittlere Unternehmen, Dienstleister und Organisationen in Deutschland, die online mehr erreichen und im Alltag Zeit gewinnen möchten.",
   points: [
@@ -36,7 +42,7 @@ export const heroVisual = {
 };
 
 export const tools = {
-  title: "Werkzeuge und Technologien, mit denen wir arbeiten",
+  title: "Werkzeuge und Technologien, mit denen ich arbeite",
   items: [
     "Next.js",
     "React",
@@ -58,7 +64,7 @@ export const tools = {
 
 export const servicesSection = {
   title: "Leistungen",
-  heading: "Alles, was Ihr Unternehmen digital weiterbringt – aus einer Hand.",
+  heading: "Was ich baue – von der Website bis zum KI-Agenten.",
   lead: "Von der Website über die Sichtbarkeit bei Google bis zur KI-gestützten Automatisierung: Die Leistungen greifen ineinander, lassen sich aber auch einzeln beauftragen.",
 };
 
@@ -146,18 +152,18 @@ export const benefits: TitledText[] = [
 ];
 
 export const projectsSection = {
-  title: "Projekte",
-  heading: "Beispiele, wie wir Aufgaben angehen.",
-  lead: "Die folgenden Einträge sind Beispielkonzepte. Sie zeigen unsere Herangehensweise an typische Aufgaben – es handelt sich nicht um Kundenprojekte und es werden keine Ergebnisse behauptet.",
+  title: "Ausgewählte Arbeiten",
+  heading: "Beispielkonzepte – wie ich typische Aufgaben angehe.",
+  lead: "Die folgenden Einträge sind Beispielkonzepte. Sie zeigen meine Herangehensweise an typische Aufgaben – es handelt sich nicht um Kundenprojekte und es werden keine Ergebnisse behauptet.",
 };
 
 export const processSection = {
-  title: "Zusammenarbeit",
+  title: "So arbeite ich",
   heading: "Vier Phasen. Klare Schritte. Keine Blackbox.",
 };
 
 export const whySection = {
-  title: "Warum AMIR",
+  title: "Warum mit mir",
   heading: "Ein Ansatz, der auf Klarheit und Verlässlichkeit setzt.",
 };
 
@@ -231,6 +237,6 @@ export const faqSection = {
 };
 
 export const finalCta = {
-  heading: "Erzählen Sie uns von Ihrer Herausforderung.",
-  text: "Beschreiben Sie kurz, was Sie erreichen möchten oder wo es heute hakt. Wir melden uns mit einer ehrlichen Einschätzung – auch wenn sie lautet, dass Sie uns nicht brauchen.",
+  heading: "Erzählen Sie mir von Ihrer Herausforderung.",
+  text: "Beschreiben Sie kurz, was Sie erreichen möchten oder wo es heute hakt. Ich melde mich mit einer ehrlichen Einschätzung – auch wenn sie lautet, dass Sie mich nicht brauchen.",
 };

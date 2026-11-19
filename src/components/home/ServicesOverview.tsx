@@ -10,7 +10,23 @@ export function ServicesOverview({ locale }: { locale: Locale }) {
   const { content } = getI18n(locale);
   const section = content.home.servicesSection;
   return (
-    <section aria-labelledby="services-heading" className="section grain">
+    <section aria-labelledby="services-heading" className="section slab relative overflow-hidden">
+      {/* Oversized ticker, as on the reference's lime slabs. Decorative; static for reduced motion. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none -mt-6 mb-10 select-none md:-mt-10 md:mb-16"
+      >
+        <div className="flex w-max motion-safe:animate-[marquee_28s_linear_infinite]">
+          {[0, 1].map((copy) => (
+            <p
+              key={copy}
+              className="whitespace-nowrap pr-[0.4em] text-[clamp(3.5rem,1rem+12vw,13rem)] font-bold uppercase leading-[0.8] tracking-[-0.06em]"
+            >
+              Build · Automate · Ship ·
+            </p>
+          ))}
+        </div>
+      </div>
       <div className="container-page">
         <SectionHeading
           id="services-heading"

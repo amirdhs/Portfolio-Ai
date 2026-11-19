@@ -26,8 +26,8 @@
   h2,
   h3,
   h4 {
-    letter-spacing: -0.025em;
-    font-weight: 600;
+    letter-spacing: -0.035em;
+    font-weight: 700;
     text-wrap: balance;
     /* German compounds ("Prozessautomatisierung") must break inside narrow cards. */
     hyphens: auto;
@@ -90,7 +90,7 @@
     text-decoration-color: currentColor;
   }
 
-  /* Champagne and bronze light bleeding in from the corners, like the hero video. Content sits above it. */
+  /* Faint lime light bleeding in from the corners. Content sits above it. */
   .grain {
     position: relative;
     isolation: isolate;
@@ -103,8 +103,8 @@
     z-index: -1;
     pointer-events: none;
     background:
-      radial-gradient(45% 60% at 8% 0%, oklch(66% 0.1 58 / 0.2), transparent 70%),
-      radial-gradient(40% 55% at 96% 12%, oklch(56% 0.11 48 / 0.14), transparent 70%);
+      radial-gradient(45% 60% at 8% 0%, oklch(70% 0.18 130 / 0.1), transparent 70%),
+      radial-gradient(40% 55% at 96% 12%, oklch(60% 0.15 140 / 0.08), transparent 70%);
   }
 
   /* Centered glow behind a closing call to action. */
@@ -121,16 +121,16 @@
     z-index: -1;
     pointer-events: none;
     background:
-      radial-gradient(38% 55% at 50% 38%, oklch(66% 0.1 58 / 0.24), transparent 72%),
-      radial-gradient(28% 40% at 14% 80%, oklch(56% 0.11 48 / 0.12), transparent 70%),
-      radial-gradient(28% 40% at 88% 70%, oklch(56% 0.11 48 / 0.1), transparent 70%);
+      radial-gradient(38% 55% at 50% 38%, oklch(75% 0.2 128 / 0.16), transparent 72%),
+      radial-gradient(28% 40% at 14% 80%, oklch(60% 0.15 140 / 0.1), transparent 70%),
+      radial-gradient(28% 40% at 88% 70%, oklch(60% 0.15 140 / 0.08), transparent 70%);
   }
 
   /* Glass card used for every grouped piece of content. */
   .panel {
     border: 1px solid var(--color-rule);
     border-radius: 1.25rem;
-    background: linear-gradient(180deg, oklch(21% 0.008 70 / 0.7), oklch(16.5% 0.007 70 / 0.7));
+    background: linear-gradient(180deg, oklch(19% 0.016 150 / 0.75), oklch(15% 0.014 150 / 0.75));
     box-shadow: inset 0 1px 0 oklch(100% 0 0 / 0.05);
     backdrop-filter: blur(10px);
     /* "translate" (not "transform") so the hover lift composes with scroll-reveal keyframes. */
@@ -141,10 +141,10 @@
   }
 
   .panel:hover {
-    border-color: oklch(78% 0.08 66 / 0.55);
+    border-color: oklch(91% 0.21 125 / 0.55);
     box-shadow:
       inset 0 1px 0 oklch(100% 0 0 / 0.07),
-      0 24px 60px -36px oklch(66% 0.1 58 / 0.55);
+      0 24px 60px -36px oklch(85% 0.22 128 / 0.45);
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -154,10 +154,10 @@
   }
 
   .panel-featured {
-    border-color: oklch(78% 0.08 66 / 0.5);
+    border-color: oklch(91% 0.21 125 / 0.45);
     box-shadow:
       inset 0 1px 0 oklch(100% 0 0 / 0.06),
-      0 30px 80px -40px oklch(66% 0.1 58 / 0.45);
+      0 30px 80px -40px oklch(85% 0.22 128 / 0.4);
   }
 
   /* Solid backdrop behind the sticky header; faded in by the scroll timeline (see utilities). */
@@ -166,13 +166,13 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: oklch(12% 0.006 70 / 0.9);
+    background: oklch(11% 0.012 150 / 0.9);
     box-shadow: 0 12px 30px -22px oklch(0% 0 0 / 0.9);
     opacity: 0;
     pointer-events: none;
   }
 
-  /* A light sweep across the gold button on hover. */
+  /* A light sweep across the lime button on hover. */
   .btn-shine {
     position: relative;
     isolation: isolate;
@@ -193,6 +193,137 @@
     .btn-shine:hover::after {
       animation: shine 0.9s var(--ease-out-expo);
     }
+  }
+
+  /* Glowing perspective grid floor (the reference's "cyber floor"). Place inside a positioned parent. */
+  .grid-floor {
+    position: absolute;
+    inset: auto -25% 0;
+    height: 60%;
+    z-index: -1;
+    pointer-events: none;
+    perspective: 420px;
+    overflow: hidden;
+    mask-image: linear-gradient(to top, black 15%, transparent 95%);
+  }
+
+  .grid-floor::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 -60%;
+    transform: rotateX(62deg);
+    transform-origin: 50% 0;
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .grid-floor::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 40%;
+    background: radial-gradient(60% 100% at 50% 100%, var(--grid-glow), transparent 70%);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .grid-floor::before {
+      animation: grid-scroll 2.4s linear infinite;
+    }
+  }
+
+  /* Lime box behind one word of a headline, dark text on it. */
+  .highlight {
+    display: inline;
+    padding: 0 0.12em;
+    margin: 0 -0.04em;
+    background: var(--color-lime);
+    color: var(--color-on-accent);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* Lime scan-lines laid over an image or card; brightened by a parent's hover. */
+  .scanlines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background:
+      repeating-linear-gradient(to bottom, oklch(85% 0.22 128 / 0.16) 0 1px, transparent 1px 4px),
+      radial-gradient(
+        40% 40% at calc(var(--px, 0.5) * 100%) calc(var(--py, 0.5) * 100%),
+        oklch(85% 0.22 128 / 0.18),
+        transparent 70%
+      );
+    mix-blend-mode: screen;
+    opacity: 0.35;
+    transition: opacity var(--duration-normal) ease;
+  }
+
+  :where(.group):hover > .scanlines,
+  :where(.group):focus-within > .scanlines {
+    opacity: 1;
+  }
+
+  /* 3D lean towards the pointer, driven by --rx/--ry from TiltCard. */
+  .tilt-card {
+    transform-style: preserve-3d;
+    transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    transition: transform 450ms var(--ease-out-expo);
+  }
+
+  .tilt-card[data-tilt="off"] {
+    transform: none;
+  }
+
+  /* One-shot glitch the first time a block scrolls into view (GlitchReveal). Hidden start only
+     with JS running and motion allowed; otherwise the content simply shows. */
+  @media (prefers-reduced-motion: no-preference) {
+    :where(html.js) .glitch-reveal:not([data-revealed]) {
+      opacity: 0;
+      animation: glitch-failsafe 0s 3s forwards;
+    }
+
+    :where(html.js) .glitch-reveal[data-revealed] {
+      animation: glitch-in 520ms steps(1, end) both;
+    }
+  }
+
+  /* Full-bleed lime section with dark text. */
+  .slab {
+    background: var(--color-lime);
+    color: var(--color-on-accent);
+    --color-ink: var(--color-on-accent);
+    --color-ink-2: oklch(26% 0.03 140);
+    --color-ink-3: oklch(34% 0.03 140);
+    --color-rule: oklch(16% 0.02 140 / 0.25);
+    --color-rule-strong: oklch(16% 0.02 140 / 0.45);
+    --color-bronze: var(--color-on-accent);
+    --color-bronze-strong: var(--color-on-accent);
+    --grid-line: oklch(16% 0.02 140 / 0.22);
+    --grid-glow: oklch(100% 0 0 / 0.25);
+  }
+
+  /* Cards on a lime slab stay dark and use the normal light-on-dark tokens. */
+  .slab .panel {
+    --color-ink: oklch(97% 0.008 125);
+    --color-ink-2: oklch(82% 0.012 130);
+    --color-ink-3: oklch(68% 0.012 135);
+    --color-rule: oklch(26% 0.016 150);
+    --color-rule-strong: oklch(36% 0.02 150);
+    --color-bronze: oklch(90% 0.2 125);
+    --color-bronze-strong: oklch(94% 0.17 122);
+    background: oklch(13% 0.012 150);
+    color: var(--color-ink);
+    border-color: oklch(13% 0.012 150);
+    box-shadow: 0 30px 60px -40px oklch(16% 0.02 140 / 0.8);
+  }
+
+  .slab .highlight {
+    background: var(--color-on-accent);
+    color: var(--color-lime);
   }
 
   .prose-legal h2 {
@@ -271,7 +402,7 @@
       105deg,
       var(--color-gold) 0%,
       var(--color-gold) 40%,
-      oklch(96% 0.035 88) 50%,
+      oklch(98% 0.1 120) 50%,
       var(--color-gold) 60%,
       var(--color-gold) 100%
     );
@@ -316,6 +447,60 @@
   35%,
   100% {
     background-position: 0% 0;
+  }
+}
+
+@keyframes glitch-in {
+  0% {
+    opacity: 1;
+    clip-path: inset(0 0 85% 0);
+    transform: translateX(-6px);
+    text-shadow:
+      3px 0 oklch(85% 0.22 128),
+      -3px 0 oklch(70% 0.2 330);
+  }
+  15% {
+    clip-path: inset(40% 0 35% 0);
+    transform: translateX(5px);
+  }
+  30% {
+    clip-path: inset(10% 0 60% 0);
+    transform: translateX(-3px);
+  }
+  45% {
+    clip-path: inset(65% 0 5% 0);
+    transform: translateX(4px);
+    text-shadow:
+      -2px 0 oklch(85% 0.22 128),
+      2px 0 oklch(70% 0.2 330);
+  }
+  60% {
+    clip-path: inset(0 0 0 0);
+    transform: translateX(-1px);
+  }
+  75%,
+  100% {
+    opacity: 1;
+    clip-path: none;
+    transform: none;
+    text-shadow: none;
+  }
+}
+
+/* Moves the oversized, tilted grid plane by one cell: transform only, so it stays on the compositor. */
+@keyframes grid-scroll {
+  from {
+    transform: rotateX(62deg) translateY(0);
+  }
+  to {
+    transform: rotateX(62deg) translateY(56px);
+  }
+}
+
+/* Safety net: if the app never hydrates, glitch-hidden content still appears. */
+@keyframes glitch-failsafe {
+  to {
+    opacity: 1;
   }
 }
 

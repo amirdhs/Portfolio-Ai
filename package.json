@@ -16,7 +16,8 @@
     "test:e2e": "playwright test",
     "check:launch": "tsx scripts/check-launch.ts",
     "brand:build": "node scripts/build-brand-assets.mjs",
-    "build:test": "NEXT_DIST_DIR=.next-test NEXT_PUBLIC_SITE_URL=http://localhost:3100 next build"
+    "build:test": "NEXT_DIST_DIR=.next-test NEXT_PUBLIC_SITE_URL=http://localhost:3100 next build",
+    "portrait:build": "node scripts/build-portrait-assets.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",
@@ -25,6 +26,7 @@
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-hook-form": "^7.90.0",
+    "three": "0.187.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
@@ -39,6 +41,7 @@
     "@types/nodemailer": "^8.0.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "0.187.0",
     "@vitejs/plugin-react": "^6.1.2",
     "@vitest/coverage-v8": "^5.0.4",
     "eslint": "^9",
